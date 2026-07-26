@@ -1,4 +1,4 @@
-# Free-tier friendly: SQLite (no paid Postgres). Seeds on boot.
+# Render free web service — SQLite snapshot baked in (no paid DB)
 services:
   - type: web
     name: qslrm-medasarithmania
@@ -9,15 +9,12 @@ services:
     healthCheckPath: /health
     envVars:
       - key: DATABASE_URL
-        value: sqlite:///./data/processed/qslrm.db
+        value: sqlite:////app/data/processed/qslrm.db
       - key: MODEL_VERSION
         value: qslrm-v1.0.0
-      - key: MVP_DRUG_CLASS
-        value: kinase_inhibitor
       - key: QSLRM_BOOTSTRAP
-        value: "1"
+        value: "0"
       - key: QSLRM_SEED_PIPELINE
-        value: "1"
+        value: "0"
       - key: HOST
         value: "0.0.0.0"
-      # Render injects PORT automatically

@@ -1,4 +1,4 @@
-"""Container / process entrypoint — bootstrap schema, serve ASAP, seed pipeline in background."""
+"""Container entrypoint — serve immediately; optional bootstrap/seed."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 ROOT = Path(__file__).resolve().parents[1]
+DB_PATH = ROOT / "data" / "processed" / "qslrm.db"
 
 
 def _run(module: str, *args: str) -> None:
@@ -30,17 +31,15 @@ def needs_pipeline(session: Session) -> bool:
 def _seed_pipeline_bg() -> None:
   fixtures = ROOT / "tests" / "fixtures" / "phase1"
   if not fixtures.exists():
-    print("no fixtures; skip pipeline", flush=True)
     return
   try:
     from qslrm_erd.db import get_engine, reset_engine
 
     reset_engine()
     with Session(get_engine()) as session:
-      empty = needs_pipeline(session)
-    if not empty:
-      print("pipeline already populated; skip", flush=True)
-      return
+      if not needs_pipeline(session):
+        print("pipeline already populated; skip", flush=True)
+        return
     _run("scripts.run_phase1", "--offline-dir", str(fixtures))
     _run("scripts.run_phase2")
     _run("scripts.run_phase3")
@@ -53,6 +52,13 @@ def main() -> None:
   os.chdir(ROOT)
   bootstrap = os.getenv("QSLRM_BOOTSTRAP", "1") == "1"
   seed_pipeline = os.getenv("QSLRM_SEED_PIPELINE", "1") == "1"
+  has_release_db = DB_PATH.exists() and DB_PATH.stat().st_size > 100_000
+
+  if has_release_db:
+    print(f"using release sqlite snapshot ({DB_PATH.stat().st_size} bytes)", flush=True)
+    # Don't wipe migrated data
+    bootstrap = False
+    seed_pipeline = False
 
   if bootstrap:
     _run("scripts.bootstrap_db")
@@ -68,7 +74,6 @@ def main() -> None:
 
   host = os.getenv("HOST", "0.0.0.0")
   port = os.getenv("PORT", "8000")
-  # Do not execvp — keep background seed thread alive
   raise SystemExit(
     subprocess.call(
       [sys.executable, "-m", "uvicorn", "api.main:app", "--host", host, "--port", port],

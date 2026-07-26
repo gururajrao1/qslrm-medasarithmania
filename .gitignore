@@ -13,8 +13,11 @@ data/raw/**
 data/processed/**
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/qslrm.release.db
 .DS_Store
 .idea/
 .vscode/
 *.jl.cov
 Manifest.toml
+.railway/
+railway.toml

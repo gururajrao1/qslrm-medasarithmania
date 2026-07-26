@@ -1,3 +1,4 @@
+# Free-tier deploy (no paid Postgres): bake release SQLite into image
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -7,12 +8,11 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     HOST=0.0.0.0 \
     PORT=8000 \
     MODEL_VERSION=qslrm-v1.0.0 \
-    QSLRM_BOOTSTRAP=1 \
-    QSLRM_SEED_PIPELINE=1 \
-    DATABASE_URL=sqlite:///./data/processed/qslrm.db
+    DATABASE_URL=sqlite:////app/data/processed/qslrm.db \
+    QSLRM_BOOTSTRAP=0 \
+    QSLRM_SEED_PIPELINE=0
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,10 +31,12 @@ COPY tests/fixtures/phase1 ./tests/fixtures/phase1
 RUN pip install --no-cache-dir -e . \
     && mkdir -p /app/data/processed /app/data/raw
 
-# 8000 local/Render; Hugging Face Spaces sets PORT=7860
-EXPOSE 8000 7860
+# Migrated production snapshot (fused pairs preserved)
+COPY data/processed/qslrm.release.db /app/data/processed/qslrm.db
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=120s --retries=5 \
-  CMD-SHELL curl -fsS http://127.0.0.1:$${PORT:-8000}/health || exit 1
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=5 \
+  CMD curl -fsS http://127.0.0.1:${PORT}/health || exit 1
 
 CMD ["python", "-m", "scripts.entrypoint"]

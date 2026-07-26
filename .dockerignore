@@ -10,9 +10,12 @@ __pycache__/
 data/raw/
 data/processed/*.db
 data/processed/*.json
+data/processed/*.backup*
+!data/processed/qslrm.release.db
 *.md
 !README.md
 docs/
 agent-transcripts/
 .cursor/
 canvases/
+.railway/
