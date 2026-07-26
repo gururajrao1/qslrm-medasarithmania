@@ -16,7 +16,7 @@ Ranks kinase drug–ADR pairs with fused multi-omic + FAERS signals, then surfac
 | Layer | Tech |
 |-------|------|
 | API + UI | FastAPI + static `web/` |
-| DB | Postgres 16 (prod) / SQLite (local) |
+| DB | SQLite (free Render bake-in) / optional Postgres |
 | Engines | Python signals + omic fusion (`omic_engine` Julia-compatible math) |
 
 Wired sources: openFDA FAERS, ChEMBL, Open Targets, ClinVar, LINCS fixtures, CT.gov, RxNorm/CYP.
@@ -43,13 +43,15 @@ uvicorn api.main:app --host 127.0.0.1 --port 8000
 No paid Postgres. The release DB snapshot (`data/processed/qslrm.release.db`) is copied into the image so fused pairs are preserved.
 
 ```bash
-# 1) Refresh snapshot from your local DB (optional)
-copy data\processed\qslrm.db data\processed\qslrm.release.db
+# 1) Refresh snapshot from backup/local (optional)
+python -m scripts.build_release_db
 
-# 2) Push to GitHub, then one-click Render free web service
-#    https://render.com/deploy
-# Or: New → Blueprint → select this repo (render.yaml)
+# 2) Push to GitHub, then one-click Render free web service:
+#    https://render.com/deploy?repo=https://github.com/gururajrao1/qslrm-medasarithmania
+# Or: New → Blueprint → select this repo (uses render.yaml)
 ```
+
+Migrated snapshot preserves **~1499 fused pairs** / 27 drugs (not just the UI “~200” sample). Railway/Postgres not required.
 
 Local Docker (same image):
 
