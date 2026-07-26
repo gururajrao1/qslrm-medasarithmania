@@ -1,74 +1,109 @@
-# QSLRM / MedasArithmania
+# QSLRM (MedasArithmania)
 
-Hypothesis triage & decision engine for translational ADR risk.
-**Not** automated causality. **Not** an Argus/Vault replacement.
+Hypothesis triage engine for translational adverse drug reaction (ADR) risk. It ranks drug–target–MedDRA pairs using public pharmacovigilance and multi-omic signals to support dose review, genetic filtering, and signal velocity triage.
 
-Join grain: `drug ↔ target/gene ↔ MedDRA PT` (never patient UUID).
+> Disproportionality is not causality. This is not a replacement for Argus, Vault, or any regulated PV system.
 
-## What it does
+## Features
 
-Ranks kinase drug–ADR pairs with fused multi-omic + FAERS signals, then surfaces decisions:
+- Fused risk scores for drug ↔ gene/target ↔ MedDRA PT pairs
+- Ingest from openFDA FAERS, ClinicalTrials.gov, ChEMBL, Open Targets, ClinVar, and related fixtures
+- FastAPI backend with a simple web UI
+- SQLite by default; Postgres optional
+- Streaming event ledger for live ingest ticks
 
-- Dose review · genetic filter / protocol exclusion · rising-signal velocity · DSUR draft
+## Requirements
 
-## Stack
+- Python 3.11+
+- (Optional) Docker / Docker Compose
 
-| Layer | Tech |
-|-------|------|
-| API + UI | FastAPI + static `web/` |
-| DB | SQLite (free Render bake-in) / optional Postgres |
-| Engines | Python signals + omic fusion (`omic_engine` Julia-compatible math) |
-
-Wired sources: openFDA FAERS, ChEMBL, Open Targets, ClinVar, LINCS fixtures, CT.gov, RxNorm/CYP.
-
-## Local (SQLite)
+## Quick start
 
 ```bash
-cp .env.example .env
-# set DATABASE_URL=sqlite:///./data/processed/qslrm.db
+git clone https://github.com/gururajrao1/qslrm-medasarithmania.git
+cd qslrm-medasarithmania
 
-python -m venv .venv && .venv\Scripts\activate   # Windows
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+# source .venv/bin/activate
+
 pip install -e ".[dev]"
+cp .env.example .env
+```
 
+Set `DATABASE_URL` in `.env`:
+
+```env
+DATABASE_URL=sqlite:///./data/processed/qslrm.db
+MODEL_VERSION=qslrm-v1.0.0
+```
+
+Bootstrap, seed, and run the offline pipeline:
+
+```bash
 python -m scripts.bootstrap_db
 python -m scripts.seed_db
 python -m scripts.run_phase1 --offline-dir tests/fixtures/phase1
 python -m scripts.run_phase2
 python -m scripts.run_phase3
+
 uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 
-## Deploy (free — Render + baked SQLite)
+Open http://127.0.0.1:8000/
 
-No paid Postgres. The release DB snapshot (`data/processed/qslrm.release.db`) is copied into the image so fused pairs are preserved.
+## Configuration
 
-```bash
-# 1) Refresh snapshot from backup/local (optional)
-python -m scripts.build_release_db
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DATABASE_URL` | SQLAlchemy URL (`sqlite:///...` or Postgres) | required |
+| `MODEL_VERSION` | Model label shown in UI/API | `qslrm-v1.0.0` |
+| `QSLRM_BOOTSTRAP` | Create schema + seed on container start | `1` |
+| `QSLRM_SEED_PIPELINE` | Run phase1–3 ingest on start | `1` |
 
-# 2) Push to GitHub, then one-click Render free web service:
-#    https://render.com/deploy?repo=https://github.com/gururajrao1/qslrm-medasarithmania
-# Or: New → Blueprint → select this repo (uses render.yaml)
+## Project layout
+
+```
+api/            FastAPI app
+web/            Static UI
+qslrm_erd/      Models, settings, DB helpers
+ingest/         Source loaders (FAERS, CT.gov, …)
+signals/        Signal stats
+fusion/         Score fusion
+omic_engine/    Multi-omic scoring
+stream/         Event ledger / WebSocket
+scripts/        CLI entrypoints
+tests/          Pytest + fixtures
 ```
 
-Migrated snapshot preserves **~1499 fused pairs** / 27 drugs (not just the UI “~200” sample). Railway/Postgres not required.
+## Docker
 
-Local Docker (same image):
+Build and run with the baked release SQLite snapshot:
 
 ```bash
 docker build -t qslrm .
 docker run --rm -p 8000:8000 qslrm
 ```
 
-## Deployable (Docker Compose — optional Postgres)
-
-Builds API image, starts Postgres, bootstraps schema, loads offline fixtures, serves `:8000`.
+Or with Compose (optional Postgres):
 
 ```bash
 docker compose up --build
 ```
 
-Skip re-ingest on restart by setting `QSLRM_SEED_PIPELINE=0` once data exists.
+## Deploy (Render)
+
+Free web service via Docker + baked SQLite (`render.yaml`). No paid database required.
+
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/gururajrao1/qslrm-medasarithmania)
+
+To refresh the release snapshot before deploy:
+
+```bash
+python -m scripts.build_release_db
+```
 
 ## Tests
 
@@ -76,6 +111,6 @@ Skip re-ingest on restart by setting `QSLRM_SEED_PIPELINE=0` once data exists.
 pytest -q
 ```
 
-## Product claim
+## License
 
-> Rank attributable drug–ADR hypotheses for triage — dose / off-target / transcriptomic / genetic — with audit-ready exports. Disproportionality ≠ causality.
+MIT

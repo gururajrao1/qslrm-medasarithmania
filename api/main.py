@@ -295,7 +295,7 @@ def catalog(session: Session = Depends(get_db)) -> dict:
 
 @app.get("/v1/risk-scores")
 def list_risk_scores(
-  limit: int = Query(100, ge=1, le=500),
+  limit: int = Query(100, ge=1, le=5000),
   action_needed: bool | None = Query(None),
   rising_only: bool = Query(False),
   sponsor: str | None = Query(None),
@@ -355,6 +355,8 @@ def list_risk_scores(
     "n": lambda i: i.get("n_reports") or 0,
   }
   items.sort(key=key_fns.get(sort, key_fns["fused"]), reverse=True)
+  total = len(items)
+  rising_all = sum(1 for it in items if it["rising_signal"])
   items = items[:limit]
   for i, item in enumerate(items, start=1):
     item["rank"] = i
@@ -362,7 +364,9 @@ def list_risk_scores(
   return {
     "items": items,
     "limit": limit,
-    "rising_count": rising_n,
+    "total": total,
+    "rising_count": rising_all,
+    "rising_count_page": rising_n,
     "model_version": settings.model_version,
     "disclaimer": "Disproportionality ≠ causality. Ranked hypotheses for triage only.",
   }

@@ -6,6 +6,7 @@ append a small synthetic FAERS batch so the queue still grows offline.
 
 from __future__ import annotations
 
+import os
 import time
 import uuid
 from datetime import datetime, timezone
@@ -50,14 +51,34 @@ def _notify(progress: ProgressFn | None, stage: str, **extra: Any) -> None:
     progress(stage, extra)
 
 
+_SYNTH_AES = [
+  "Nausea",
+  "Rash",
+  "Hepatotoxicity",
+  "Diarrhoea",
+  "Headache",
+  "Pyrexia",
+  "Myalgia",
+  "Fatigue",
+  "Dizziness",
+  "Pruritus",
+  "Vomiting",
+  "Arthralgia",
+  "Cough",
+  "Insomnia",
+  "Constipation",
+]
+
+
 def _synthetic_faers_batch(drug: Drug, *, n: int = 8) -> list[dict]:
   """Unique safetyreportids so upserts always insert when live APIs are down."""
   ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-  aes = ["Nausea", "Rash", "Hepatotoxicity", "Diarrhoea", "Headache"]
+  # Rotate AE start by drug so each drug can gain distinct pairs over pulls
+  offset = sum(ord(c) for c in drug.drug_id) % len(_SYNTH_AES)
   events = []
   dose = "label dose"
   for i in range(n):
-    ae = aes[i % len(aes)]
+    ae = _SYNTH_AES[(offset + i) % len(_SYNTH_AES)]
     sid = f"cum{ts}{drug.drug_id[-6:]}{i:03d}"
     period = "2024q2" if i % 2 == 0 else "2024q1"
     events.append(
@@ -83,6 +104,17 @@ def _synthetic_faers_batch(drug: Drug, *, n: int = 8) -> list[dict]:
       }
     )
   return events
+
+
+def _fast_http_mode(enabled: bool) -> None:
+  """Shorter timeouts/retries so a slow openFDA/PubMed host does not stall the UI pull."""
+  if enabled:
+    os.environ["HTTP_TIMEOUT_S"] = "12"
+    os.environ["HTTP_MAX_RETRIES"] = "1"
+  else:
+    os.environ.pop("HTTP_TIMEOUT_S", None)
+    os.environ.pop("HTTP_MAX_RETRIES", None)
+  get_settings.cache_clear()
 
 
 def _pull_faers_drug(session: Session, drug: Drug, *, live: bool, limit: int) -> dict:
@@ -300,25 +332,31 @@ def run_cumulative_pull(
   }
 
   _notify(progress, "start", drugs=len(drugs), fused=before_fused)
+  _fast_http_mode(True)
+  try:
+    for i, drug in enumerate(drugs, start=1):
+      _notify(progress, "faers", drug=drug.preferred_name, i=i, n=len(drugs))
+      summary["steps"]["faers"].append(_pull_faers_drug(session, drug, live=live, limit=faers_limit))
+      session.commit()
 
-  for i, drug in enumerate(drugs, start=1):
-    _notify(progress, "faers", drug=drug.preferred_name, i=i, n=len(drugs))
-    summary["steps"]["faers"].append(_pull_faers_drug(session, drug, live=live, limit=faers_limit))
-    session.commit()
+    for i, drug in enumerate(drugs, start=1):
+      _notify(progress, "ctgov", drug=drug.preferred_name, i=i, n=len(drugs))
+      summary["steps"]["ctgov"].append(_pull_ctgov_drug(session, drug, live=live))
+      session.commit()
 
-  for i, drug in enumerate(drugs, start=1):
-    _notify(progress, "ctgov", drug=drug.preferred_name, i=i, n=len(drugs))
-    summary["steps"]["ctgov"].append(_pull_ctgov_drug(session, drug, live=live))
-    session.commit()
-
-  for i, drug in enumerate(drugs, start=1):
-    _notify(progress, "literature", drug=drug.preferred_name, i=i, n=len(drugs))
-    summary["steps"]["literature"].append(_pull_literature_drug(session, drug, live=live))
-    session.commit()
+    for i, drug in enumerate(drugs, start=1):
+      _notify(progress, "literature", drug=drug.preferred_name, i=i, n=len(drugs))
+      summary["steps"]["literature"].append(_pull_literature_drug(session, drug, live=live))
+      session.commit()
+  finally:
+    _fast_http_mode(False)
 
   if recompute:
+    # Skip NLP narratives — expensive and rarely needed for UI pull refresh
     _notify(progress, "phase2", msg="signals + velocity + omic")
-    summary["steps"]["phase2"] = run_phase2(session)
+    summary["steps"]["phase2"] = run_phase2(
+      session, steps=["signals", "velocity", "demographics", "omic"]
+    )
     _notify(progress, "phase3", msg="fusion + decisions")
     summary["steps"]["phase3"] = run_phase3(session)
 

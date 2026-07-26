@@ -207,7 +207,8 @@
   }
 
   async function loadQueue() {
-    const params = new URLSearchParams({ limit: "200", sort: sortBy.value || "fused" });
+    // Request full ranked set; chip uses API `total` (not page length)
+    const params = new URLSearchParams({ limit: "2000", sort: sortBy.value || "fused" });
     if (searchBox.value.trim()) params.set("q", searchBox.value.trim());
     if (filterSponsor.value) params.set("sponsor", filterSponsor.value);
     if (filterMolecule.value) params.set("molecule_type", filterMolecule.value);
@@ -215,8 +216,11 @@
     params.set("sort", sortBy.value);
     const data = await fetch(`/v1/risk-scores?${params}`).then((r) => r.json());
     items = data.items || [];
-    countChip.textContent = `${items.length} pairs`;
-    queueNote.textContent = `${items.length} ranked pairs`;
+    const total = Number(data.total != null ? data.total : items.length);
+    countChip.textContent = `${total} pairs`;
+    queueNote.textContent = items.length < total
+      ? `Showing ${items.length} of ${total} ranked pairs`
+      : `${total} ranked pairs`;
     const rising = data.rising_count || items.filter((i) => i.rising_signal).length;
     if (rising > 0) {
       risingBadge.textContent = `Rising · ${rising}`;
@@ -387,25 +391,29 @@
     pullAllBtn.textContent = "Pulling…";
     statusLine.textContent = "Starting cumulative pull across all sources…";
     try {
-      const res = await fetch("/v1/ingest/cumulative?live=true&faers_limit=15", { method: "POST" }).then((r) => r.json());
+      // faers_limit kept modest — pull still walks every MVP drug × FAERS/CT.gov/literature
+      const res = await fetch("/v1/ingest/cumulative?live=true&faers_limit=8", { method: "POST" }).then((r) => r.json());
       if (res.mode === "sync") {
-        statusLine.textContent = `Pull done · fused Δ${res.result?.delta?.fused_pairs ?? 0}`;
+        const d = res.result?.delta || {};
+        statusLine.textContent = `Pull done · fused Δ${d.fused_pairs ?? 0} · PV Δ${d.pv_events ?? 0}`;
         finishPullUi(true);
         await bootCatalogAndQueue();
         return;
       }
       const jobId = res.job_id;
-      statusLine.textContent = `Job ${jobId} queued…`;
+      statusLine.textContent = `Job ${jobId} queued · live APIs for all MVP drugs, then recompute…`;
       pullPoll = setInterval(async () => {
         try {
           const job = await fetch(`/v1/ingest/jobs/${jobId}`).then((r) => r.json());
           if (job.stage && job.status === "running") {
             const d = job.detail || {};
-            statusLine.textContent = `Pulling · ${job.stage}${d.drug ? ": " + d.drug : ""}${d.i ? ` (${d.i}/${d.n})` : ""}`;
+            statusLine.textContent = `Pulling · ${job.stage}${d.drug ? ": " + d.drug : ""}${d.i ? ` (${d.i}/${d.n})` : ""}${d.msg ? " · " + d.msg : ""}`;
           }
           if (job.status === "done") {
             const delta = job.result?.delta || job.detail || {};
-            statusLine.textContent = `Pull done · fused ${job.result?.before?.fused_pairs ?? "?"}→${job.result?.after?.fused_pairs ?? "?"} (Δ${delta.fused_pairs ?? 0})`;
+            statusLine.textContent =
+              `Pull done · fused ${job.result?.before?.fused_pairs ?? "?"}→${job.result?.after?.fused_pairs ?? "?"} ` +
+              `(Δ${delta.fused_pairs ?? 0}) · PV Δ${delta.pv_events ?? 0} · refreshing list…`;
             finishPullUi(true);
             await bootCatalogAndQueue();
           }
