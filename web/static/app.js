@@ -206,7 +206,7 @@
     }
   }
 
-  async function loadQueue() {
+  async function loadQueue(preferredTotal) {
     // Request full ranked set; chip uses API `total` (not page length)
     const params = new URLSearchParams({ limit: "2000", sort: sortBy.value || "fused" });
     if (searchBox.value.trim()) params.set("q", searchBox.value.trim());
@@ -216,7 +216,11 @@
     params.set("sort", sortBy.value);
     const data = await fetch(`/v1/risk-scores?${params}`).then((r) => r.json());
     items = data.items || [];
-    const total = Number(data.total != null ? data.total : items.length);
+    const total = Number(
+      preferredTotal != null
+        ? preferredTotal
+        : (data.total != null ? data.total : items.length)
+    );
     countChip.textContent = `${total} pairs`;
     queueNote.textContent = items.length < total
       ? `Showing ${items.length} of ${total} ranked pairs`
@@ -338,10 +342,12 @@
       }
       if (msg.type === "ingest_complete") {
         const delta = msg.delta || {};
+        const after = msg.after?.fused_pairs;
         statusLine.textContent = `Pull done · fused Δ${delta.fused_pairs ?? 0} · PV Δ${delta.pv_events ?? 0}`;
+        if (after != null) countChip.textContent = `${after} pairs`;
         setLive("on", "updated");
         finishPullUi(true);
-        bootCatalogAndQueue();
+        bootCatalogAndQueue(after);
         return;
       }
       if (msg.type === "ingest_error") {
@@ -376,10 +382,12 @@
     }
   }
 
-  async function bootCatalogAndQueue() {
+  async function bootCatalogAndQueue(preferredTotal) {
     try {
-      renderCatalog(await fetch("/v1/catalog").then((r) => r.json()));
-      await loadQueue();
+      const cat = await fetch("/v1/catalog").then((r) => r.json());
+      renderCatalog(cat);
+      const fused = preferredTotal != null ? preferredTotal : cat.queue?.fused_pairs;
+      await loadQueue(fused);
     } catch (err) {
       console.error(err);
     }
@@ -411,11 +419,13 @@
           }
           if (job.status === "done") {
             const delta = job.result?.delta || job.detail || {};
+            const after = job.result?.after?.fused_pairs;
             statusLine.textContent =
-              `Pull done · fused ${job.result?.before?.fused_pairs ?? "?"}→${job.result?.after?.fused_pairs ?? "?"} ` +
+              `Pull done · fused ${job.result?.before?.fused_pairs ?? "?"}→${after ?? "?"} ` +
               `(Δ${delta.fused_pairs ?? 0}) · PV Δ${delta.pv_events ?? 0} · refreshing list…`;
+            if (after != null) countChip.textContent = `${after} pairs`;
             finishPullUi(true);
-            await bootCatalogAndQueue();
+            await bootCatalogAndQueue(after);
           }
           if (job.status === "error") {
             statusLine.textContent = `Pull failed · ${job.error || "error"}`;
