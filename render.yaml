@@ -1,9 +1,12 @@
 # Render free web service — SQLite snapshot baked in (no paid DB)
+# Push to main → auto-redeploy (no Manual Deploy needed)
 services:
   - type: web
     name: qslrm-medasarithmania
     runtime: docker
     plan: free
+    branch: main
+    autoDeployTrigger: commit
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /health
