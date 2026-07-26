@@ -1,0 +1,236 @@
+{
+  "drug_imatinib": {
+    "nda_bla": "NDA021588",
+    "applicant": "Novartis",
+    "ingredient": "imatinib mesylate",
+    "trade_name": "Gleevec",
+    "molecule_type": "small_molecule",
+    "approval_year": 2001,
+    "te_code": "AB",
+    "source": "orange_book_fixture"
+  },
+  "drug_erlotinib": {
+    "nda_bla": "NDA021743",
+    "applicant": "Roche / Genentech",
+    "ingredient": "erlotinib hydrochloride",
+    "trade_name": "Tarceva",
+    "molecule_type": "small_molecule",
+    "approval_year": 2004,
+    "source": "orange_book_fixture"
+  },
+  "drug_gefitinib": {
+    "nda_bla": "NDA021399",
+    "applicant": "AstraZeneca",
+    "ingredient": "gefitinib",
+    "trade_name": "Iressa",
+    "molecule_type": "small_molecule",
+    "approval_year": 2003,
+    "source": "orange_book_fixture"
+  },
+  "drug_dasatinib": {
+    "nda_bla": "NDA021986",
+    "applicant": "Bristol Myers Squibb",
+    "ingredient": "dasatinib",
+    "trade_name": "Sprycel",
+    "molecule_type": "small_molecule",
+    "approval_year": 2006,
+    "source": "orange_book_fixture"
+  },
+  "drug_nilotinib": {
+    "nda_bla": "NDA022068",
+    "applicant": "Novartis",
+    "ingredient": "nilotinib",
+    "trade_name": "Tasigna",
+    "molecule_type": "small_molecule",
+    "approval_year": 2007,
+    "source": "orange_book_fixture"
+  },
+  "drug_sunitinib": {
+    "nda_bla": "NDA021938",
+    "applicant": "Pfizer",
+    "ingredient": "sunitinib malate",
+    "trade_name": "Sutent",
+    "molecule_type": "small_molecule",
+    "approval_year": 2006,
+    "source": "orange_book_fixture"
+  },
+  "drug_sorafenib": {
+    "nda_bla": "NDA021923",
+    "applicant": "Bayer",
+    "ingredient": "sorafenib tosylate",
+    "trade_name": "Nexavar",
+    "molecule_type": "small_molecule",
+    "approval_year": 2005,
+    "source": "orange_book_fixture"
+  },
+  "drug_lapatinib": {
+    "nda_bla": "NDA022059",
+    "applicant": "Novartis",
+    "ingredient": "lapatinib ditosylate",
+    "trade_name": "Tykerb",
+    "molecule_type": "small_molecule",
+    "approval_year": 2007,
+    "source": "orange_book_fixture"
+  },
+  "drug_pazopanib": {
+    "nda_bla": "NDA022465",
+    "applicant": "Novartis",
+    "ingredient": "pazopanib hydrochloride",
+    "trade_name": "Votrient",
+    "molecule_type": "small_molecule",
+    "approval_year": 2009,
+    "source": "orange_book_fixture"
+  },
+  "drug_axitinib": {
+    "nda_bla": "NDA202324",
+    "applicant": "Pfizer",
+    "ingredient": "axitinib",
+    "trade_name": "Inlyta",
+    "molecule_type": "small_molecule",
+    "approval_year": 2012,
+    "source": "orange_book_fixture"
+  },
+  "drug_ibrutinib": {
+    "nda_bla": "NDA205552",
+    "applicant": "AbbVie",
+    "ingredient": "ibrutinib",
+    "trade_name": "Imbruvica",
+    "molecule_type": "small_molecule",
+    "approval_year": 2013,
+    "source": "orange_book_fixture"
+  },
+  "drug_osimertinib": {
+    "nda_bla": "NDA208065",
+    "applicant": "AstraZeneca",
+    "ingredient": "osimertinib mesylate",
+    "trade_name": "Tagrisso",
+    "molecule_type": "small_molecule",
+    "approval_year": 2015,
+    "source": "orange_book_fixture"
+  },
+  "drug_tofacitinib": {
+    "nda_bla": "NDA203214",
+    "applicant": "Pfizer",
+    "ingredient": "tofacitinib citrate",
+    "trade_name": "Xeljanz",
+    "molecule_type": "small_molecule",
+    "approval_year": 2012,
+    "source": "orange_book_fixture"
+  },
+  "drug_tozinameran": {
+    "nda_bla": "BLA125742",
+    "applicant": "BioNTech",
+    "ingredient": "tozinameran",
+    "trade_name": "Comirnaty",
+    "molecule_type": "biologic",
+    "approval_year": 2021,
+    "source": "orange_book_purple_book_fixture"
+  },
+  "drug_elasomeran": {
+    "nda_bla": "BLA125769",
+    "applicant": "Moderna",
+    "ingredient": "elasomeran",
+    "trade_name": "Spikevax",
+    "molecule_type": "biologic",
+    "approval_year": 2022,
+    "source": "orange_book_purple_book_fixture"
+  },
+  "drug_pembrolizumab": {
+    "nda_bla": "BLA125514",
+    "applicant": "Merck & Co. (MSD)",
+    "ingredient": "pembrolizumab",
+    "trade_name": "Keytruda",
+    "molecule_type": "biologic",
+    "approval_year": 2014,
+    "source": "orange_book_purple_book_fixture"
+  },
+  "drug_dupilumab": {
+    "nda_bla": "BLA761055",
+    "applicant": "Sanofi",
+    "ingredient": "dupilumab",
+    "trade_name": "Dupixent",
+    "molecule_type": "biologic",
+    "approval_year": 2017,
+    "source": "orange_book_purple_book_fixture"
+  },
+  "drug_sotorasib": {
+    "nda_bla": "NDA214665",
+    "applicant": "Amgen",
+    "ingredient": "sotorasib",
+    "trade_name": "Lumakras",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_natalizumab": {
+    "nda_bla": "BLA125104",
+    "applicant": "Biogen",
+    "ingredient": "natalizumab",
+    "trade_name": "Tysabri",
+    "molecule_type": "biologic",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_nintedanib": {
+    "nda_bla": "NDA205832",
+    "applicant": "Boehringer Ingelheim",
+    "ingredient": "nintedanib",
+    "trade_name": "Ofev",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_baricitinib": {
+    "nda_bla": "NDA207924",
+    "applicant": "Eli Lilly",
+    "ingredient": "baricitinib",
+    "trade_name": "Olumiant",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_remdesivir": {
+    "nda_bla": "NDA214787",
+    "applicant": "Gilead Sciences",
+    "ingredient": "remdesivir",
+    "trade_name": "Veklury",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_trametinib": {
+    "nda_bla": "NDA204114",
+    "applicant": "GSK (GlaxoSmithKline)",
+    "ingredient": "trametinib",
+    "trade_name": "Mekinist",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_daratumumab": {
+    "nda_bla": "BLA761036",
+    "applicant": "Johnson & Johnson (Janssen)",
+    "ingredient": "daratumumab",
+    "trade_name": "Darzalex",
+    "molecule_type": "biologic",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_cemiplimab": {
+    "nda_bla": "BLA761097",
+    "applicant": "Regeneron",
+    "ingredient": "cemiplimab",
+    "trade_name": "Libtayo",
+    "molecule_type": "biologic",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_vedolizumab": {
+    "nda_bla": "BLA125476",
+    "applicant": "Takeda",
+    "ingredient": "vedolizumab",
+    "trade_name": "Entyvio",
+    "molecule_type": "biologic",
+    "source": "orange_book_openfda_fill"
+  },
+  "drug_ivacaftor": {
+    "nda_bla": "NDA203188",
+    "applicant": "Vertex Pharmaceuticals",
+    "ingredient": "ivacaftor",
+    "trade_name": "Kalydeco",
+    "molecule_type": "small_molecule",
+    "source": "orange_book_openfda_fill"
+  }
+}

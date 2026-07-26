@@ -1,0 +1,20 @@
+{
+  "drug_imatinib": [
+    {"gene_symbol": "ABL1", "chronos": -1.4},
+    {"gene_symbol": "KIT", "chronos": -0.8}
+  ],
+  "drug_erlotinib": [
+    {"gene_symbol": "EGFR", "chronos": -1.6}
+  ],
+  "drug_lapatinib": [
+    {"gene_symbol": "EGFR", "chronos": -1.2},
+    {"gene_symbol": "ERBB2", "chronos": -1.5}
+  ],
+  "drug_dasatinib": [
+    {"gene_symbol": "ABL1", "chronos": -1.7},
+    {"gene_symbol": "SRC", "chronos": -1.1}
+  ],
+  "drug_ibrutinib": [
+    {"gene_symbol": "BTK", "chronos": -1.3}
+  ]
+}

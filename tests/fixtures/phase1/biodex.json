@@ -1,0 +1,600 @@
+{
+  "drug_imatinib": [
+    {
+      "pmid": "biodex_imatinib_1",
+      "title": "BioDEX ADE extraction: imatinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for imatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_imatinib_2",
+      "title": "BioDEX ADE extraction: imatinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for imatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_imatinib_3",
+      "title": "BioDEX ADE extraction: imatinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for imatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_imatinib_adol",
+      "title": "Kidsides age-stage enrichment: imatinib \u2194 Nausea",
+      "ae": "Nausea",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for imatinib; use as hypothesis triage for Nausea, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_erlotinib": [
+    {
+      "pmid": "biodex_erlotinib_1",
+      "title": "BioDEX ADE extraction: erlotinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for erlotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_erlotinib_2",
+      "title": "BioDEX ADE extraction: erlotinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for erlotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_erlotinib_3",
+      "title": "BioDEX ADE extraction: erlotinib associated with Interstitial lung disease",
+      "ae": "Interstitial lung disease",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Interstitial lung disease among expert-coded reactions for erlotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_erlotinib_adol",
+      "title": "Kidsides age-stage enrichment: erlotinib \u2194 Rash",
+      "ae": "Rash",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for erlotinib; use as hypothesis triage for Rash, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_gefitinib": [
+    {
+      "pmid": "biodex_gefitinib_1",
+      "title": "BioDEX ADE extraction: gefitinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for gefitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_gefitinib_2",
+      "title": "BioDEX ADE extraction: gefitinib associated with Interstitial lung disease",
+      "ae": "Interstitial lung disease",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Interstitial lung disease among expert-coded reactions for gefitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_gefitinib_3",
+      "title": "BioDEX ADE extraction: gefitinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for gefitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_gefitinib_adol",
+      "title": "Kidsides age-stage enrichment: gefitinib \u2194 Rash",
+      "ae": "Rash",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for gefitinib; use as hypothesis triage for Rash, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_dasatinib": [
+    {
+      "pmid": "biodex_dasatinib_1",
+      "title": "BioDEX ADE extraction: dasatinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for dasatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_dasatinib_2",
+      "title": "BioDEX ADE extraction: dasatinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for dasatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_dasatinib_3",
+      "title": "BioDEX ADE extraction: dasatinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for dasatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_dasatinib_adol",
+      "title": "Kidsides age-stage enrichment: dasatinib \u2194 Nausea",
+      "ae": "Nausea",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for dasatinib; use as hypothesis triage for Nausea, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_nilotinib": [
+    {
+      "pmid": "biodex_nilotinib_1",
+      "title": "BioDEX ADE extraction: nilotinib associated with Electrocardiogram QT prolonged",
+      "ae": "Electrocardiogram QT prolonged",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Electrocardiogram QT prolonged among expert-coded reactions for nilotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_nilotinib_2",
+      "title": "BioDEX ADE extraction: nilotinib associated with Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Hepatotoxicity among expert-coded reactions for nilotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_nilotinib_3",
+      "title": "BioDEX ADE extraction: nilotinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for nilotinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_nilotinib_adol",
+      "title": "Kidsides age-stage enrichment: nilotinib \u2194 Electrocardiogram QT prolonged",
+      "ae": "Electrocardiogram QT prolonged",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for nilotinib; use as hypothesis triage for Electrocardiogram QT prolonged, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_sunitinib": [
+    {
+      "pmid": "biodex_sunitinib_1",
+      "title": "BioDEX ADE extraction: sunitinib associated with Hypertension",
+      "ae": "Hypertension",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Hypertension among expert-coded reactions for sunitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_sunitinib_2",
+      "title": "BioDEX ADE extraction: sunitinib associated with Palmar-plantar erythrodysaesthesia syndrome",
+      "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Palmar-plantar erythrodysaesthesia syndrome among expert-coded reactions for sunitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_sunitinib_3",
+      "title": "BioDEX ADE extraction: sunitinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for sunitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_sunitinib_adol",
+      "title": "Kidsides age-stage enrichment: sunitinib \u2194 Hypertension",
+      "ae": "Hypertension",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for sunitinib; use as hypothesis triage for Hypertension, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_sorafenib": [
+    {
+      "pmid": "biodex_sorafenib_1",
+      "title": "BioDEX ADE extraction: sorafenib associated with Palmar-plantar erythrodysaesthesia syndrome",
+      "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Palmar-plantar erythrodysaesthesia syndrome among expert-coded reactions for sorafenib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_sorafenib_2",
+      "title": "BioDEX ADE extraction: sorafenib associated with Hypertension",
+      "ae": "Hypertension",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Hypertension among expert-coded reactions for sorafenib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_sorafenib_3",
+      "title": "BioDEX ADE extraction: sorafenib associated with Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Hepatotoxicity among expert-coded reactions for sorafenib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_sorafenib_adol",
+      "title": "Kidsides age-stage enrichment: sorafenib \u2194 Palmar-plantar erythrodysaesthesia syndrome",
+      "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for sorafenib; use as hypothesis triage for Palmar-plantar erythrodysaesthesia syndrome, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_lapatinib": [
+    {
+      "pmid": "biodex_lapatinib_1",
+      "title": "BioDEX ADE extraction: lapatinib associated with Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Hepatotoxicity among expert-coded reactions for lapatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_lapatinib_2",
+      "title": "BioDEX ADE extraction: lapatinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for lapatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_lapatinib_3",
+      "title": "BioDEX ADE extraction: lapatinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for lapatinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_lapatinib_adol",
+      "title": "Kidsides age-stage enrichment: lapatinib \u2194 Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for lapatinib; use as hypothesis triage for Hepatotoxicity, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_pazopanib": [
+    {
+      "pmid": "biodex_pazopanib_1",
+      "title": "BioDEX ADE extraction: pazopanib associated with Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Hepatotoxicity among expert-coded reactions for pazopanib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_pazopanib_2",
+      "title": "BioDEX ADE extraction: pazopanib associated with Hypertension",
+      "ae": "Hypertension",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Hypertension among expert-coded reactions for pazopanib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_pazopanib_3",
+      "title": "BioDEX ADE extraction: pazopanib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for pazopanib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_pazopanib_adol",
+      "title": "Kidsides age-stage enrichment: pazopanib \u2194 Hepatotoxicity",
+      "ae": "Hepatotoxicity",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for pazopanib; use as hypothesis triage for Hepatotoxicity, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_axitinib": [
+    {
+      "pmid": "biodex_axitinib_1",
+      "title": "BioDEX ADE extraction: axitinib associated with Hypertension",
+      "ae": "Hypertension",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Hypertension among expert-coded reactions for axitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_axitinib_2",
+      "title": "BioDEX ADE extraction: axitinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for axitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_axitinib_3",
+      "title": "BioDEX ADE extraction: axitinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for axitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_axitinib_adol",
+      "title": "Kidsides age-stage enrichment: axitinib \u2194 Hypertension",
+      "ae": "Hypertension",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for axitinib; use as hypothesis triage for Hypertension, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_ibrutinib": [
+    {
+      "pmid": "biodex_ibrutinib_1",
+      "title": "BioDEX ADE extraction: ibrutinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for ibrutinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_ibrutinib_2",
+      "title": "BioDEX ADE extraction: ibrutinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for ibrutinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_ibrutinib_3",
+      "title": "BioDEX ADE extraction: ibrutinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for ibrutinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_ibrutinib_adol",
+      "title": "Kidsides age-stage enrichment: ibrutinib \u2194 Nausea",
+      "ae": "Nausea",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for ibrutinib; use as hypothesis triage for Nausea, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_osimertinib": [
+    {
+      "pmid": "biodex_osimertinib_1",
+      "title": "BioDEX ADE extraction: osimertinib associated with Rash",
+      "ae": "Rash",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Rash among expert-coded reactions for osimertinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_osimertinib_2",
+      "title": "BioDEX ADE extraction: osimertinib associated with Interstitial lung disease",
+      "ae": "Interstitial lung disease",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Interstitial lung disease among expert-coded reactions for osimertinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_osimertinib_3",
+      "title": "BioDEX ADE extraction: osimertinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for osimertinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_osimertinib_adol",
+      "title": "Kidsides age-stage enrichment: osimertinib \u2194 Rash",
+      "ae": "Rash",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for osimertinib; use as hypothesis triage for Rash, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ],
+  "drug_tofacitinib": [
+    {
+      "pmid": "biodex_tofacitinib_1",
+      "title": "BioDEX ADE extraction: tofacitinib associated with Nausea",
+      "ae": "Nausea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 5,
+      "snippet": "BioDEX-style document-level safety report lists Nausea among expert-coded reactions for tofacitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_tofacitinib_2",
+      "title": "BioDEX ADE extraction: tofacitinib associated with Hypertension",
+      "ae": "Hypertension",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 6,
+      "snippet": "BioDEX-style document-level safety report lists Hypertension among expert-coded reactions for tofacitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "biodex_tofacitinib_3",
+      "title": "BioDEX ADE extraction: tofacitinib associated with Diarrhoea",
+      "ae": "Diarrhoea",
+      "year": 2023,
+      "source": "biodex",
+      "citations": 7,
+      "snippet": "BioDEX-style document-level safety report lists Diarrhoea among expert-coded reactions for tofacitinib (literature ADE extraction benchmark).",
+      "confirmed": true,
+      "extractor": "biodex_reactions"
+    },
+    {
+      "pmid": "kidsides_tofacitinib_adol",
+      "title": "Kidsides age-stage enrichment: tofacitinib \u2194 Nausea",
+      "ae": "Nausea",
+      "year": 2022,
+      "source": "kidsides",
+      "citations": 0,
+      "snippet": "Kidsides NICHD age-stage FAERS models can enrich pediatric signals for tofacitinib; use as hypothesis triage for Nausea, not causality.",
+      "confirmed": true,
+      "extractor": "kidsides_ade_nichd"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "ae_hepatotoxicity": {
+    "meddra_pt_code": "10019851",
+    "pt_string": "Hepatotoxicity",
+    "soc": "Hepatobiliary disorders"
+  },
+  "ae_qt_prolonged": {
+    "meddra_pt_code": "10014335",
+    "pt_string": "Electrocardiogram QT prolonged",
+    "soc": "Investigations"
+  },
+  "ae_interstitial_lung": {
+    "meddra_pt_code": "10022611",
+    "pt_string": "Interstitial lung disease",
+    "soc": "Respiratory, thoracic and mediastinal disorders"
+  },
+  "ae_rash": {
+    "meddra_pt_code": "10037844",
+    "pt_string": "Rash",
+    "soc": "Skin and subcutaneous tissue disorders"
+  },
+  "ae_nausea": {
+    "meddra_pt_code": "10028813",
+    "pt_string": "Nausea",
+    "soc": "Gastrointestinal disorders"
+  },
+  "ae_diarrhoea": {
+    "meddra_pt_code": "10012735",
+    "pt_string": "Diarrhoea",
+    "soc": "Gastrointestinal disorders"
+  },
+  "ae_hypertension": {
+    "meddra_pt_code": "10020772",
+    "pt_string": "Hypertension",
+    "soc": "Vascular disorders"
+  },
+  "ae_hand_foot": {
+    "meddra_pt_code": "10048619",
+    "pt_string": "Palmar-plantar erythrodysaesthesia syndrome",
+    "soc": "Skin and subcutaneous tissue disorders"
+  },
+  "ae_myocarditis": {
+    "meddra_pt_code": "10028606",
+    "pt_string": "Myocarditis",
+    "soc": "Cardiac disorders"
+  },
+  "ae_anaphylactic_reaction": {
+    "meddra_pt_code": "10002198",
+    "pt_string": "Anaphylactic reaction",
+    "soc": "Immune system disorders"
+  },
+  "ae_immune_mediated_colitis": {
+    "meddra_pt_code": "10009887",
+    "pt_string": "Immune-mediated colitis",
+    "soc": "Gastrointestinal disorders"
+  },
+  "ae_conjunctivitis": {
+    "meddra_pt_code": "10010741",
+    "pt_string": "Conjunctivitis",
+    "soc": "Eye disorders"
+  }
+}

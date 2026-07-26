@@ -1,0 +1,3863 @@
+{
+  "drug_imatinib": [
+    {
+      "ae": "Abdominal distension",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute febrile neutrophilic dermatosis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute generalised exanthematous pustulosis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute hepatic failure",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute respiratory failure",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Agranulocytosis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaphylactic shock",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angina pectoris",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angioedema",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aplastic anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthritis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Ascites",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrial fibrillation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bladder cancer",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blast cell crisis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blepharitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood alkaline phosphatase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatine phosphokinase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood lactate dehydrogenase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood uric acid increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bone disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bone pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Brain oedema",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast enlargement",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac arrest",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure congestive",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac tamponade",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cataract",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cellulitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haemorrhage",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cheilitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chronic eosinophilic leukaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chronic myeloid leukaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Colitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Confusional state",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctival haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Contusion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Convulsion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cyst",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Deafness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Depression",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis bullous",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis exfoliative",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Discomfort",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Disturbance in sexual arousal",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diverticulitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug eruption",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug interaction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphagia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea exertional",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ecchymosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eczema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Embolism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eosinophilia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erectile dysfunction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eructation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye irritation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye pain",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_erlotinib": [
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acne",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute respiratory distress syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blister",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Bone pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiovascular disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cellulitis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haemorrhage",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebrovascular accident",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Colitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Corneal perforation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Deep vein thrombosis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Depression",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis acneiform",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis bullous",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Disease progression",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug interaction",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphagia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Flatulence",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Foetor hepaticus",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Folliculitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastritis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematemesis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematochezia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemolytic anaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic cancer metastatic",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatobiliary disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatocellular injury",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatorenal syndrome",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hirsutism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypokalaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ileus",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infestation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Inflammation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Intestinal perforation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ischaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Keratitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Liver disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Loss of consciousness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Lung disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Lung infection",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Lung infiltration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Malnutrition",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Mediastinal disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Melaena",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Mental disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Metastases to liver",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Microangiopathic haemolytic anaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Mucosal inflammation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Musculoskeletal discomfort",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Myocardial infarction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Myopathy",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nail disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nephritis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nervous system disorder",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_gefitinib": [
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acne",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alveolitis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amblyopia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angioedema",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anorectal disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrial fibrillation",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Bladder pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blepharitis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Bundle branch block",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cancer pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Corneal erosion",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cutaneous vasculitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cystitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cystitis haemorrhagic",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cystitis noninfective",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis bullous",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis exfoliative",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug interaction",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Electrocardiogram QT prolonged",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Febrile neutropenia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastric ulcer",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematuria",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoptysis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatobiliary disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypokalaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypomagnesaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypoproteinaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypotension",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypoxia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infestation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ischaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Keratitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Lip swelling",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Malaise",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Malnutrition",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Mediastinal disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Melaena",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Mouth ulceration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nail disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nervous system disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ocular hyperaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Oedema peripheral",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Oral pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pancreatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pleural effusion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Protein urine present",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Proteinuria",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pulmonary haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pulmonary toxicity",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Rash pustular",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Respiratory failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Scrotal oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Seborrhoeic dermatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Shock",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Sinus arrhythmia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Skin disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Skin fissures",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_dasatinib": [
+    {
+      "ae": "Abdominal distension",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute febrile neutrophilic dermatosis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute respiratory distress syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Affect lability",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amnesia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anal fissure",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angina pectoris",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aplasia pure red cell",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Ascites",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthma",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrial fibrillation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrial flutter",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Auricular swelling",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood calcium decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatine phosphokinase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood uric acid increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bronchospasm",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure acute",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure congestive",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiomegaly",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiomyopathy",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiovascular disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haematoma",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haemorrhage",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebrovascular accident",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cholecystitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cholestasis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Chronic myeloid leukaemia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Coagulopathy",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Colitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Confusional state",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Congestive cardiomyopathy",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctival haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctival oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Contusion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Convulsion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cor pulmonale",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cyst",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Deep vein thrombosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diastolic dysfunction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Discomfort",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Disturbance in sexual arousal",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug eruption",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphagia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ear haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ecchymosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eczema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Ejection fraction decreased",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Electrocardiogram QT prolonged",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Embolism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Enterocolitis infectious",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Epidural haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema nodosum",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythrosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Exfoliative rash",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye swelling",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eyelid oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Face oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Febrile neutropenia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Feeling abnormal",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Fluid retention",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_nilotinib": [
+    {
+      "ae": "Abdominal discomfort",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal distension",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amnesia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anal abscess",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angina pectoris",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Appetite disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arterial occlusive disease",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arteriosclerosis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthritis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrial fibrillation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Atrioventricular block",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blepharitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blister",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood albumin decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood alkaline phosphatase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin unconjugated increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatine phosphokinase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood glucose decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood glucose increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood insulin decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood insulin increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood lactate dehydrogenase increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood parathyroid hormone increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood phosphorus decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood potassium decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood pressure increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood triglycerides increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood urea increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood uric acid increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bone pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bradycardia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Brain oedema",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast induration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Bronchitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Bundle branch block left",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Candida infection",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac flutter",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac murmur",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiomegaly",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest discomfort",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cholestasis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chorioretinopathy",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Chromaturia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Confusional state",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctival haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Conjunctivitis allergic",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Contusion",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Coronary artery disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cyanosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Cyst",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Deafness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermal cyst",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis bullous",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diabetes mellitus",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diastolic dysfunction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Diplopia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Discomfort",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Disorientation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Disturbance in attention",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug eruption",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysaesthesia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyslipidaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphonia",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_sunitinib": [],
+  "drug_sorafenib": [
+    {
+      "ae": "Abdominal discomfort",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain lower",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal rigidity",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal tenderness",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaphylactic shock",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angioedema",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aphthous stomatitis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Ascites",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood potassium decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood pressure increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood pressure systolic increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood thyroid stimulating hormone increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Body temperature increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bone disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Brain cancer metastatic",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Burning mouth syndrome",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure congestive",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haemorrhage",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cholangitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cholecystitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Completed suicide",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis exfoliative",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Disease progression",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug interaction",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug-induced liver injury",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphagia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphonia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eczema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Embolism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Embolism venous",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Endocrine disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erectile dysfunction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Flushing",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Folliculitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastritis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrooesophageal reflux disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Glossitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Glossodynia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gynaecomastia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematoma",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin decreased",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic cancer",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic function abnormal",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatobiliary disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatocellular carcinoma",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hyperkeratosis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypertensive crisis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hyperthyroidism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypoalbuminaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypocalcaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypokalaemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hyponatraemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypophosphataemia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypothyroidism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Immune system disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infarction",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_lapatinib": [
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaphylactic shock",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiotoxicity",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis acneiform",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Ejection fraction decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatobiliary disease",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Hot flush",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Hyperbilirubinaemia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Immune system disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Infestation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Leukopenia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Malnutrition",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Mediastinal disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Menopausal symptoms",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Mental disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Metastatic neoplasm",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Mucosal inflammation",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Musculoskeletal discomfort",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nail disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Neoplasm malignant",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Nervous system disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Neuropathy peripheral",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Palpitations",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Peripheral sensory neuropathy",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Renal failure acute",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Skin disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_pazopanib": [
+    {
+      "ae": "Abdominal distension",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain lower",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Acute coronary syndrome",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Ageusia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Anal haemorrhage",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Angiopathy",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood albumin decreased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood albumin increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood alkaline phosphatase increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood bilirubin increased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood calcium decreased",
+      "frequency": "common",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood cholesterol abnormal",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood glucose decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood glucose increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood magnesium decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood phosphorus decreased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood potassium increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood pressure increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood pressure systolic increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood thyroid stimulating hormone increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Blood urea increased",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bradycardia",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Breast disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Bronchial haemorrhage",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cardiac failure congestive",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral haemorrhage",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebral infarction",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cerebrovascular accident",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Connective tissue disorder",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Cyst",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Deep vein thrombosis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "uncommon",
+      "source": "sider"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Drug-induced liver injury",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dysphonia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Dyspnoea",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Electrocardiogram QT prolonged",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Embolism",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Encephalopathy",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Endocrine disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Enterocutaneous fistula",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Exfoliative rash",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eye oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eyelash discolouration",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Eyelid oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Face oedema",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Fistula",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Flatulence",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Flushing",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Frequent bowel movements",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gamma-glutamyltransferase increased",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastric haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal disorder",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal fistula",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Gingival infection",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematemesis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematochezia",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haematuria",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoglobin",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemolytic uraemic syndrome",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemoptysis",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhage urinary tract",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Haemorrhoidal haemorrhage",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hair colour changes",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic enzyme increased",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatic function abnormal",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatobiliary disease",
+      "frequency": "rare",
+      "source": "sider"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "rare",
+      "source": "sider"
+    }
+  ],
+  "drug_axitinib": [],
+  "drug_ibrutinib": [],
+  "drug_osimertinib": [],
+  "drug_tofacitinib": []
+}

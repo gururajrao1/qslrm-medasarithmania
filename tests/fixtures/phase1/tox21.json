@@ -1,0 +1,28 @@
+{
+  "drug_imatinib": [
+    {"assay": "AhR", "active": true, "score": 2.4},
+    {"assay": "ARE", "active": true, "score": 1.8},
+    {"assay": "p53", "active": false, "score": 0.2}
+  ],
+  "drug_lapatinib": [
+    {"assay": "MMP", "active": true, "score": 3.1},
+    {"assay": "ARE", "active": true, "score": 2.6},
+    {"assay": "ER", "active": true, "score": 1.5}
+  ],
+  "drug_nilotinib": [
+    {"assay": "hERG", "active": true, "score": 3.5},
+    {"assay": "MMP", "active": true, "score": 2.2}
+  ],
+  "drug_pazopanib": [
+    {"assay": "ARE", "active": true, "score": 2.9},
+    {"assay": "AhR", "active": true, "score": 2.1}
+  ],
+  "drug_dasatinib": [
+    {"assay": "hERG", "active": true, "score": 2.7},
+    {"assay": "p53", "active": true, "score": 1.9}
+  ],
+  "drug_sunitinib": [
+    {"assay": "VEGFR", "active": true, "score": 3.2},
+    {"assay": "ARE", "active": true, "score": 2.0}
+  ]
+}

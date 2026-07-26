@@ -1,0 +1,4752 @@
+{
+  "drug_imatinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000101",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "400 mg",
+            "ae": "Nausea",
+            "event_count": 22,
+            "subjects_at_risk": 135,
+            "median_onset_weeks": 4.9
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Nausea",
+            "event_count": 25,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 4.5
+          },
+          {
+            "arm": "400 mg",
+            "ae": "Rash",
+            "event_count": 26,
+            "subjects_at_risk": 92,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Rash",
+            "event_count": 28,
+            "subjects_at_risk": 110,
+            "median_onset_weeks": 5.3
+          },
+          {
+            "arm": "400 mg",
+            "ae": "Diarrhoea",
+            "event_count": 13,
+            "subjects_at_risk": 86,
+            "median_onset_weeks": 4.2
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 13,
+            "subjects_at_risk": 85,
+            "median_onset_weeks": 4.7
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000102",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "400 mg",
+            "ae": "Nausea",
+            "event_count": 28,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 5.1
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Nausea",
+            "event_count": 23,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 5.4
+          },
+          {
+            "arm": "400 mg",
+            "ae": "Rash",
+            "event_count": 27,
+            "subjects_at_risk": 121,
+            "median_onset_weeks": 2.4
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Rash",
+            "event_count": 8,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 4.7
+          },
+          {
+            "arm": "400 mg",
+            "ae": "Diarrhoea",
+            "event_count": 9,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "400 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 16,
+            "subjects_at_risk": 118,
+            "median_onset_weeks": 1.7
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000101B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "400 mg",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000102B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "400 mg",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_erlotinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000103",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Rash",
+            "event_count": 22,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 4.1
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Rash",
+            "event_count": 15,
+            "subjects_at_risk": 113,
+            "median_onset_weeks": 2.9
+          },
+          {
+            "arm": "150 mg",
+            "ae": "Diarrhoea",
+            "event_count": 17,
+            "subjects_at_risk": 111,
+            "median_onset_weeks": 1.5
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 109,
+            "median_onset_weeks": 5.4
+          },
+          {
+            "arm": "150 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 21,
+            "subjects_at_risk": 115,
+            "median_onset_weeks": 7.5
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 10,
+            "subjects_at_risk": 125,
+            "median_onset_weeks": 3.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000104",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Rash",
+            "event_count": 15,
+            "subjects_at_risk": 112,
+            "median_onset_weeks": 3.2
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 116,
+            "median_onset_weeks": 6.1
+          },
+          {
+            "arm": "150 mg",
+            "ae": "Diarrhoea",
+            "event_count": 20,
+            "subjects_at_risk": 86,
+            "median_onset_weeks": 6.6
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 23,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 7.2
+          },
+          {
+            "arm": "150 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 8,
+            "subjects_at_risk": 93,
+            "median_onset_weeks": 2.8
+          },
+          {
+            "arm": "150 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 9,
+            "subjects_at_risk": 110,
+            "median_onset_weeks": 3.8
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000103B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000104B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_gefitinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000105",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "250 mg",
+            "ae": "Rash",
+            "event_count": 20,
+            "subjects_at_risk": 106,
+            "median_onset_weeks": 1.9
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Rash",
+            "event_count": 33,
+            "subjects_at_risk": 92,
+            "median_onset_weeks": 6.2
+          },
+          {
+            "arm": "250 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 16,
+            "subjects_at_risk": 101,
+            "median_onset_weeks": 2.0
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 20,
+            "subjects_at_risk": 80,
+            "median_onset_weeks": 7.3
+          },
+          {
+            "arm": "250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 11,
+            "subjects_at_risk": 88,
+            "median_onset_weeks": 3.0
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 11,
+            "subjects_at_risk": 80,
+            "median_onset_weeks": 1.9
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000106",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "250 mg",
+            "ae": "Rash",
+            "event_count": 23,
+            "subjects_at_risk": 91,
+            "median_onset_weeks": 5.6
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Rash",
+            "event_count": 15,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 4.6
+          },
+          {
+            "arm": "250 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 12,
+            "subjects_at_risk": 106,
+            "median_onset_weeks": 5.4
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 11,
+            "subjects_at_risk": 105,
+            "median_onset_weeks": 4.0
+          },
+          {
+            "arm": "250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 14,
+            "subjects_at_risk": 80,
+            "median_onset_weeks": 3.1
+          },
+          {
+            "arm": "250 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 30,
+            "subjects_at_risk": 99,
+            "median_onset_weeks": 7.5
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000105B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "250 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Interstitial lung disease",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000106B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "250 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Interstitial lung disease",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_dasatinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000107",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "100 mg",
+            "ae": "Nausea",
+            "event_count": 8,
+            "subjects_at_risk": 93,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Nausea",
+            "event_count": 31,
+            "subjects_at_risk": 121,
+            "median_onset_weeks": 5.0
+          },
+          {
+            "arm": "100 mg",
+            "ae": "Diarrhoea",
+            "event_count": 9,
+            "subjects_at_risk": 89,
+            "median_onset_weeks": 2.8
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 18,
+            "subjects_at_risk": 80,
+            "median_onset_weeks": 6.1
+          },
+          {
+            "arm": "100 mg",
+            "ae": "Rash",
+            "event_count": 18,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 3.3
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 2.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000108",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "100 mg",
+            "ae": "Nausea",
+            "event_count": 26,
+            "subjects_at_risk": 120,
+            "median_onset_weeks": 3.0
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Nausea",
+            "event_count": 31,
+            "subjects_at_risk": 103,
+            "median_onset_weeks": 3.7
+          },
+          {
+            "arm": "100 mg",
+            "ae": "Diarrhoea",
+            "event_count": 22,
+            "subjects_at_risk": 88,
+            "median_onset_weeks": 7.3
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 26,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 4.9
+          },
+          {
+            "arm": "100 mg",
+            "ae": "Rash",
+            "event_count": 20,
+            "subjects_at_risk": 91,
+            "median_onset_weeks": 5.3
+          },
+          {
+            "arm": "100 mg high",
+            "ae": "Rash",
+            "event_count": 19,
+            "subjects_at_risk": 138,
+            "median_onset_weeks": 2.9
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000107B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "100 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000108B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "100 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_nilotinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000109",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "300 mg BID",
+            "ae": "Electrocardiogram QT prolonged",
+            "event_count": 27,
+            "subjects_at_risk": 95,
+            "median_onset_weeks": 5.9
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Electrocardiogram QT prolonged",
+            "event_count": 14,
+            "subjects_at_risk": 127,
+            "median_onset_weeks": 5.3
+          },
+          {
+            "arm": "300 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 25,
+            "subjects_at_risk": 92,
+            "median_onset_weeks": 5.6
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Hepatotoxicity",
+            "event_count": 23,
+            "subjects_at_risk": 136,
+            "median_onset_weeks": 4.4
+          },
+          {
+            "arm": "300 mg BID",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 106,
+            "median_onset_weeks": 1.8
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Rash",
+            "event_count": 11,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 4.6
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Electrocardiogram QT prolonged",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000110",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "300 mg BID",
+            "ae": "Electrocardiogram QT prolonged",
+            "event_count": 16,
+            "subjects_at_risk": 95,
+            "median_onset_weeks": 5.9
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Electrocardiogram QT prolonged",
+            "event_count": 23,
+            "subjects_at_risk": 96,
+            "median_onset_weeks": 4.0
+          },
+          {
+            "arm": "300 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 27,
+            "subjects_at_risk": 111,
+            "median_onset_weeks": 3.3
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Hepatotoxicity",
+            "event_count": 14,
+            "subjects_at_risk": 139,
+            "median_onset_weeks": 5.8
+          },
+          {
+            "arm": "300 mg BID",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 88,
+            "median_onset_weeks": 2.9
+          },
+          {
+            "arm": "300 mg BID high",
+            "ae": "Rash",
+            "event_count": 29,
+            "subjects_at_risk": 121,
+            "median_onset_weeks": 6.6
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Electrocardiogram QT prolonged",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000109B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "300 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000110B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "300 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_sunitinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000111",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "50 mg",
+            "ae": "Hypertension",
+            "event_count": 27,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 3.2
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Hypertension",
+            "event_count": 15,
+            "subjects_at_risk": 127,
+            "median_onset_weeks": 1.6
+          },
+          {
+            "arm": "50 mg",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 16,
+            "subjects_at_risk": 106,
+            "median_onset_weeks": 4.2
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 9,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "50 mg",
+            "ae": "Nausea",
+            "event_count": 19,
+            "subjects_at_risk": 113,
+            "median_onset_weeks": 4.9
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Nausea",
+            "event_count": 13,
+            "subjects_at_risk": 85,
+            "median_onset_weeks": 3.7
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000112",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "50 mg",
+            "ae": "Hypertension",
+            "event_count": 22,
+            "subjects_at_risk": 101,
+            "median_onset_weeks": 5.4
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Hypertension",
+            "event_count": 28,
+            "subjects_at_risk": 117,
+            "median_onset_weeks": 7.2
+          },
+          {
+            "arm": "50 mg",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 26,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 7.0
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 26,
+            "subjects_at_risk": 138,
+            "median_onset_weeks": 3.6
+          },
+          {
+            "arm": "50 mg",
+            "ae": "Nausea",
+            "event_count": 17,
+            "subjects_at_risk": 82,
+            "median_onset_weeks": 1.6
+          },
+          {
+            "arm": "50 mg high",
+            "ae": "Nausea",
+            "event_count": 33,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 4.4
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000111B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "50 mg",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000112B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "50 mg",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_sorafenib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000113",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "400 mg BID",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 17,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 2.3
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 10,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 4.2
+          },
+          {
+            "arm": "400 mg BID",
+            "ae": "Hypertension",
+            "event_count": 19,
+            "subjects_at_risk": 127,
+            "median_onset_weeks": 1.8
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 13,
+            "subjects_at_risk": 130,
+            "median_onset_weeks": 7.3
+          },
+          {
+            "arm": "400 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 18,
+            "subjects_at_risk": 102,
+            "median_onset_weeks": 2.0
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Hepatotoxicity",
+            "event_count": 26,
+            "subjects_at_risk": 137,
+            "median_onset_weeks": 2.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000114",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "400 mg BID",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 21,
+            "subjects_at_risk": 140,
+            "median_onset_weeks": 6.2
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+            "event_count": 26,
+            "subjects_at_risk": 116,
+            "median_onset_weeks": 1.6
+          },
+          {
+            "arm": "400 mg BID",
+            "ae": "Hypertension",
+            "event_count": 20,
+            "subjects_at_risk": 104,
+            "median_onset_weeks": 5.0
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 31,
+            "subjects_at_risk": 84,
+            "median_onset_weeks": 2.0
+          },
+          {
+            "arm": "400 mg BID",
+            "ae": "Hepatotoxicity",
+            "event_count": 28,
+            "subjects_at_risk": 87,
+            "median_onset_weeks": 7.5
+          },
+          {
+            "arm": "400 mg BID high",
+            "ae": "Hepatotoxicity",
+            "event_count": 24,
+            "subjects_at_risk": 126,
+            "median_onset_weeks": 3.5
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000113B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "400 mg BID",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000114B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "400 mg BID",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_lapatinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000115",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "1250 mg",
+            "ae": "Hepatotoxicity",
+            "event_count": 26,
+            "subjects_at_risk": 109,
+            "median_onset_weeks": 4.1
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Hepatotoxicity",
+            "event_count": 29,
+            "subjects_at_risk": 85,
+            "median_onset_weeks": 4.6
+          },
+          {
+            "arm": "1250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 24,
+            "subjects_at_risk": 81,
+            "median_onset_weeks": 3.4
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 110,
+            "median_onset_weeks": 1.6
+          },
+          {
+            "arm": "1250 mg",
+            "ae": "Rash",
+            "event_count": 11,
+            "subjects_at_risk": 111,
+            "median_onset_weeks": 6.2
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Rash",
+            "event_count": 26,
+            "subjects_at_risk": 96,
+            "median_onset_weeks": 6.9
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000116",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "1250 mg",
+            "ae": "Hepatotoxicity",
+            "event_count": 19,
+            "subjects_at_risk": 99,
+            "median_onset_weeks": 2.4
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Hepatotoxicity",
+            "event_count": 31,
+            "subjects_at_risk": 92,
+            "median_onset_weeks": 4.6
+          },
+          {
+            "arm": "1250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 18,
+            "subjects_at_risk": 122,
+            "median_onset_weeks": 7.1
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 26,
+            "subjects_at_risk": 137,
+            "median_onset_weeks": 2.9
+          },
+          {
+            "arm": "1250 mg",
+            "ae": "Rash",
+            "event_count": 20,
+            "subjects_at_risk": 122,
+            "median_onset_weeks": 3.0
+          },
+          {
+            "arm": "1250 mg high",
+            "ae": "Rash",
+            "event_count": 33,
+            "subjects_at_risk": 107,
+            "median_onset_weeks": 6.3
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000115B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "1250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000116B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "1250 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_pazopanib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000117",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "800 mg",
+            "ae": "Hepatotoxicity",
+            "event_count": 14,
+            "subjects_at_risk": 136,
+            "median_onset_weeks": 2.8
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Hepatotoxicity",
+            "event_count": 16,
+            "subjects_at_risk": 117,
+            "median_onset_weeks": 7.0
+          },
+          {
+            "arm": "800 mg",
+            "ae": "Hypertension",
+            "event_count": 14,
+            "subjects_at_risk": 88,
+            "median_onset_weeks": 2.3
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Hypertension",
+            "event_count": 21,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 6.9
+          },
+          {
+            "arm": "800 mg",
+            "ae": "Diarrhoea",
+            "event_count": 9,
+            "subjects_at_risk": 125,
+            "median_onset_weeks": 1.9
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 18,
+            "subjects_at_risk": 132,
+            "median_onset_weeks": 2.5
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000118",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "800 mg",
+            "ae": "Hepatotoxicity",
+            "event_count": 22,
+            "subjects_at_risk": 110,
+            "median_onset_weeks": 3.2
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Hepatotoxicity",
+            "event_count": 15,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 4.0
+          },
+          {
+            "arm": "800 mg",
+            "ae": "Hypertension",
+            "event_count": 28,
+            "subjects_at_risk": 113,
+            "median_onset_weeks": 4.5
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Hypertension",
+            "event_count": 20,
+            "subjects_at_risk": 125,
+            "median_onset_weeks": 6.5
+          },
+          {
+            "arm": "800 mg",
+            "ae": "Diarrhoea",
+            "event_count": 27,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 3.4
+          },
+          {
+            "arm": "800 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 9,
+            "subjects_at_risk": 97,
+            "median_onset_weeks": 6.7
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hepatotoxicity",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000117B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "800 mg",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000118B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "800 mg",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_axitinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000119",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 9,
+            "subjects_at_risk": 123,
+            "median_onset_weeks": 5.8
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 30,
+            "subjects_at_risk": 102,
+            "median_onset_weeks": 3.4
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 26,
+            "subjects_at_risk": 81,
+            "median_onset_weeks": 5.3
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Diarrhoea",
+            "event_count": 23,
+            "subjects_at_risk": 109,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Nausea",
+            "event_count": 16,
+            "subjects_at_risk": 95,
+            "median_onset_weeks": 6.2
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Nausea",
+            "event_count": 9,
+            "subjects_at_risk": 120,
+            "median_onset_weeks": 2.2
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000120",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 11,
+            "subjects_at_risk": 120,
+            "median_onset_weeks": 4.7
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 33,
+            "subjects_at_risk": 131,
+            "median_onset_weeks": 3.7
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 123,
+            "median_onset_weeks": 2.7
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Diarrhoea",
+            "event_count": 26,
+            "subjects_at_risk": 96,
+            "median_onset_weeks": 2.6
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Nausea",
+            "event_count": 8,
+            "subjects_at_risk": 128,
+            "median_onset_weeks": 4.3
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Nausea",
+            "event_count": 9,
+            "subjects_at_risk": 91,
+            "median_onset_weeks": 2.9
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000119B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000120B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_ibrutinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000121",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "420 mg",
+            "ae": "Nausea",
+            "event_count": 19,
+            "subjects_at_risk": 114,
+            "median_onset_weeks": 5.7
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Nausea",
+            "event_count": 28,
+            "subjects_at_risk": 112,
+            "median_onset_weeks": 5.2
+          },
+          {
+            "arm": "420 mg",
+            "ae": "Diarrhoea",
+            "event_count": 13,
+            "subjects_at_risk": 105,
+            "median_onset_weeks": 6.6
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 16,
+            "subjects_at_risk": 85,
+            "median_onset_weeks": 4.0
+          },
+          {
+            "arm": "420 mg",
+            "ae": "Rash",
+            "event_count": 20,
+            "subjects_at_risk": 88,
+            "median_onset_weeks": 4.2
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Rash",
+            "event_count": 15,
+            "subjects_at_risk": 120,
+            "median_onset_weeks": 6.8
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000122",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "420 mg",
+            "ae": "Nausea",
+            "event_count": 8,
+            "subjects_at_risk": 104,
+            "median_onset_weeks": 4.8
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Nausea",
+            "event_count": 33,
+            "subjects_at_risk": 136,
+            "median_onset_weeks": 4.5
+          },
+          {
+            "arm": "420 mg",
+            "ae": "Diarrhoea",
+            "event_count": 18,
+            "subjects_at_risk": 109,
+            "median_onset_weeks": 3.5
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 15,
+            "subjects_at_risk": 86,
+            "median_onset_weeks": 5.8
+          },
+          {
+            "arm": "420 mg",
+            "ae": "Rash",
+            "event_count": 28,
+            "subjects_at_risk": 139,
+            "median_onset_weeks": 5.8
+          },
+          {
+            "arm": "420 mg high",
+            "ae": "Rash",
+            "event_count": 15,
+            "subjects_at_risk": 95,
+            "median_onset_weeks": 6.9
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000121B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "420 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "clarithromycin",
+            "rxnorm": "21212",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000122B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "420 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "omeprazole",
+            "rxnorm": "7646",
+            "cyp_enzymes": "CYP2C19,CYP3A4"
+          },
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Diarrhoea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_osimertinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000123",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "80 mg",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 99,
+            "median_onset_weeks": 4.7
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Rash",
+            "event_count": 20,
+            "subjects_at_risk": 96,
+            "median_onset_weeks": 7.0
+          },
+          {
+            "arm": "80 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 8,
+            "subjects_at_risk": 102,
+            "median_onset_weeks": 4.5
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 9,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 3.6
+          },
+          {
+            "arm": "80 mg",
+            "ae": "Diarrhoea",
+            "event_count": 21,
+            "subjects_at_risk": 129,
+            "median_onset_weeks": 3.2
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 8,
+            "subjects_at_risk": 93,
+            "median_onset_weeks": 6.4
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000124",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "80 mg",
+            "ae": "Rash",
+            "event_count": 10,
+            "subjects_at_risk": 107,
+            "median_onset_weeks": 6.3
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Rash",
+            "event_count": 14,
+            "subjects_at_risk": 114,
+            "median_onset_weeks": 3.5
+          },
+          {
+            "arm": "80 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 12,
+            "subjects_at_risk": 110,
+            "median_onset_weeks": 2.4
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Interstitial lung disease",
+            "event_count": 28,
+            "subjects_at_risk": 137,
+            "median_onset_weeks": 5.8
+          },
+          {
+            "arm": "80 mg",
+            "ae": "Diarrhoea",
+            "event_count": 22,
+            "subjects_at_risk": 140,
+            "median_onset_weeks": 6.8
+          },
+          {
+            "arm": "80 mg high",
+            "ae": "Diarrhoea",
+            "event_count": 30,
+            "subjects_at_risk": 140,
+            "median_onset_weeks": 5.6
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Rash",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000123B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "80 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "simvastatin",
+            "rxnorm": "36567",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Interstitial lung disease",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000124B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "80 mg",
+            "ae": "Interstitial lung disease",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "fluoxetine",
+            "rxnorm": "4493",
+            "cyp_enzymes": "CYP2D6"
+          },
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Interstitial lung disease",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_tofacitinib": {
+    "trials": [
+      {
+        "nct_id": "NCT00000125",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Nausea",
+            "event_count": 15,
+            "subjects_at_risk": 108,
+            "median_onset_weeks": 4.7
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Nausea",
+            "event_count": 19,
+            "subjects_at_risk": 133,
+            "median_onset_weeks": 5.9
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 28,
+            "subjects_at_risk": 90,
+            "median_onset_weeks": 4.6
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 29,
+            "subjects_at_risk": 96,
+            "median_onset_weeks": 3.4
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 20,
+            "subjects_at_risk": 134,
+            "median_onset_weeks": 6.7
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Diarrhoea",
+            "event_count": 31,
+            "subjects_at_risk": 93,
+            "median_onset_weeks": 3.3
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000126",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Nausea",
+            "event_count": 12,
+            "subjects_at_risk": 114,
+            "median_onset_weeks": 4.6
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Nausea",
+            "event_count": 30,
+            "subjects_at_risk": 111,
+            "median_onset_weeks": 2.7
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 25,
+            "subjects_at_risk": 87,
+            "median_onset_weeks": 4.5
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Hypertension",
+            "event_count": 31,
+            "subjects_at_risk": 104,
+            "median_onset_weeks": 1.7
+          },
+          {
+            "arm": "5 mg BID",
+            "ae": "Diarrhoea",
+            "event_count": 9,
+            "subjects_at_risk": 113,
+            "median_onset_weeks": 7.0
+          },
+          {
+            "arm": "5 mg BID high",
+            "ae": "Diarrhoea",
+            "event_count": 29,
+            "subjects_at_risk": 131,
+            "median_onset_weeks": 7.4
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Nausea",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.75
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            },
+            {
+              "week": 3,
+              "survival_prob": 0.55
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.5
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.46
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.43
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.41
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000125B",
+        "phase": "Phase 2",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "rifampin",
+            "rxnorm": "9384",
+            "cyp_enzymes": "CYP3A4"
+          },
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      },
+      {
+        "nct_id": "NCT00000126B",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "5 mg BID",
+            "ae": "Hypertension",
+            "event_count": 10,
+            "subjects_at_risk": 100,
+            "median_onset_weeks": 5.0
+          }
+        ],
+        "concomitants": [
+          {
+            "name": "warfarin",
+            "rxnorm": "11289",
+            "cyp_enzymes": "CYP2C9,CYP3A4"
+          },
+          {
+            "name": "amiodarone",
+            "rxnorm": "703",
+            "cyp_enzymes": "CYP3A4,CYP2D6"
+          },
+          {
+            "name": "ketoconazole",
+            "rxnorm": "6135",
+            "cyp_enzymes": "CYP3A4"
+          }
+        ],
+        "onset_curve": {
+          "ae": "Hypertension",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.97
+            },
+            {
+              "week": 4,
+              "survival_prob": 0.93
+            },
+            {
+              "week": 6,
+              "survival_prob": 0.88
+            },
+            {
+              "week": 8,
+              "survival_prob": 0.82
+            },
+            {
+              "week": 10,
+              "survival_prob": 0.76
+            },
+            {
+              "week": 12,
+              "survival_prob": 0.71
+            },
+            {
+              "week": 16,
+              "survival_prob": 0.66
+            },
+            {
+              "week": 20,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_tozinameran": {
+    "trials": [
+      {
+        "nct_id": "NCT04368728",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "30 ug",
+            "ae": "Myocarditis",
+            "event_count": 5,
+            "subjects_at_risk": 18000,
+            "median_onset_weeks": 0.5
+          },
+          {
+            "arm": "30 ug",
+            "ae": "Anaphylactic reaction",
+            "event_count": 3,
+            "subjects_at_risk": 18000,
+            "median_onset_weeks": 0.1
+          }
+        ],
+        "onset_curve": {
+          "ae": "Myocarditis",
+          "points": [
+            {
+              "week": 0,
+              "survival_prob": 1.0
+            },
+            {
+              "week": 0.5,
+              "survival_prob": 0.8
+            },
+            {
+              "week": 1,
+              "survival_prob": 0.7
+            },
+            {
+              "week": 2,
+              "survival_prob": 0.62
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "drug_pembrolizumab": {
+    "trials": [
+      {
+        "nct_id": "NCT01295827",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "200 mg",
+            "ae": "Immune-mediated colitis",
+            "event_count": 22,
+            "subjects_at_risk": 500,
+            "median_onset_weeks": 8.0
+          }
+        ]
+      }
+    ]
+  },
+  "drug_dupilumab": {
+    "trials": [
+      {
+        "nct_id": "NCT02260986",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "300 mg",
+            "ae": "Conjunctivitis",
+            "event_count": 40,
+            "subjects_at_risk": 350,
+            "median_onset_weeks": 4.0
+          }
+        ]
+      }
+    ]
+  },
+  "drug_elasomeran": {
+    "trials": [
+      {
+        "nct_id": "NCT04470427",
+        "phase": "Phase 3",
+        "arms": [
+          {
+            "arm": "100 ug",
+            "ae": "Myocarditis",
+            "event_count": 4,
+            "subjects_at_risk": 14000,
+            "median_onset_weeks": 0.6
+          }
+        ]
+      }
+    ]
+  }
+}

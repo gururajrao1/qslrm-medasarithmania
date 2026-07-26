@@ -1,0 +1,56 @@
+{
+  "CYP2D6": {
+    "ids": ["12345"],
+    "summaries": {
+      "12345": {
+        "title": "CYP2D6*4 (rs3892097) pathogenic",
+        "clinical_significance": "Pathogenic",
+        "variation_set": [
+          {
+            "variation_xrefs": [
+              {"db_source": "dbSNP", "db_id": "rs3892097"}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CYP3A4": {
+    "ids": ["23456"],
+    "summaries": {
+      "23456": {
+        "title": "CYP3A4 variant",
+        "clinical_significance": "Likely pathogenic",
+        "variation_set": [
+          {
+            "variation_xrefs": [
+              {"db_source": "dbSNP", "db_id": "rs2740574"}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "EGFR": {
+    "ids": ["34567"],
+    "summaries": {
+      "34567": {
+        "title": "EGFR T790M rs121434569",
+        "clinical_significance": "Pathogenic",
+        "variation_set": [
+          {
+            "variation_xrefs": [
+              {"db_source": "dbSNP", "db_id": "rs121434569"}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CYP1A2": {"ids": [], "summaries": {}},
+  "CYP2C9": {"ids": [], "summaries": {}},
+  "CYP2C19": {"ids": [], "summaries": {}},
+  "ABL1": {"ids": [], "summaries": {}},
+  "KDR": {"ids": [], "summaries": {}},
+  "KIT": {"ids": [], "summaries": {}}
+}

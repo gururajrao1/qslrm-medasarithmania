@@ -1,0 +1,218 @@
+{
+  "drug_imatinib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Oedema",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_erlotinib": [
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_gefitinib": [
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_dasatinib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Electrocardiogram QT prolonged",
+      "frequency": "openfda_spl_match",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_nilotinib": [
+    {
+      "ae": "Electrocardiogram QT prolonged",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_sunitinib": [
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_sorafenib": [
+    {
+      "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_lapatinib": [
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "boxed_warning",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_pazopanib": [
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "boxed_warning",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_axitinib": [
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_ibrutinib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_osimertinib": [
+    {
+      "ae": "Rash",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ],
+  "drug_tofacitinib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_adverse_reactions",
+      "source": "openfda_spl"
+    }
+  ]
+}

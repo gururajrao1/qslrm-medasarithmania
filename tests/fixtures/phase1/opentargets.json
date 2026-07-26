@@ -1,0 +1,24 @@
+{
+  "ENSG00000146648": [
+    {"pathwayId": "R-HSA-177929", "pathway": "Signaling by EGFR", "topLevelTerm": "Signal Transduction"},
+    {"pathwayId": "R-HSA-1227986", "pathway": "Signaling by ERBB2", "topLevelTerm": "Signal Transduction"}
+  ],
+  "ENSG00000097007": [
+    {"pathwayId": "R-HSA-203953", "pathway": "Signaling by ABL", "topLevelTerm": "Signal Transduction"}
+  ],
+  "ENSG00000128052": [
+    {"pathwayId": "R-HSA-194313", "pathway": "VEGF signaling", "topLevelTerm": "Signal Transduction"}
+  ],
+  "ENSG00000100146": [
+    {"pathwayId": "R-HSA-211981", "pathway": "Xenobiotics", "topLevelTerm": "Metabolism"}
+  ],
+  "ENSG00000160868": [
+    {"pathwayId": "R-HSA-211859", "pathway": "Biological oxidations", "topLevelTerm": "Metabolism"}
+  ],
+  "ENSG00000141736": [],
+  "ENSG00000157404": [],
+  "ENSG00000134853": [],
+  "ENSG00000102755": [],
+  "ENSG00000197122": [],
+  "ENSG00000157764": []
+}

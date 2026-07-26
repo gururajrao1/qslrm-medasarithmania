@@ -1,0 +1,344 @@
+{
+  "drug_tozinameran": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2021/01/030401",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "30 ug BNT162b2",
+            "ae": "Myocarditis",
+            "event_count": 8,
+            "subjects_at_risk": 12000,
+            "median_onset_weeks": 0.5,
+            "global_cases": 6,
+            "serious": true,
+            "report_date": "2021-07-15"
+          },
+          {
+            "arm": "30 ug BNT162b2",
+            "ae": "Anaphylactic reaction",
+            "event_count": 4,
+            "subjects_at_risk": 12000,
+            "median_onset_weeks": 0.1,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      },
+      {
+        "registry_id": "EUCTR2020-001038-36",
+        "source": "ICTRP",
+        "phase": "Phase 3",
+        "country": "BR",
+        "arms": [
+          {
+            "arm": "30 ug",
+            "ae": "Myocarditis",
+            "event_count": 5,
+            "subjects_at_risk": 8000,
+            "median_onset_weeks": 0.4,
+            "global_cases": 5,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_elasomeran": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2021/02/031000",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "100 ug mRNA-1273",
+            "ae": "Myocarditis",
+            "event_count": 6,
+            "subjects_at_risk": 9000,
+            "median_onset_weeks": 0.6,
+            "global_cases": 5,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_pembrolizumab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2019/05/019200",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "200 mg Q3W",
+            "ae": "Immune-mediated colitis",
+            "event_count": 14,
+            "subjects_at_risk": 450,
+            "median_onset_weeks": 8.0,
+            "global_cases": 6,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_dupilumab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2018/08/015400",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "300 mg Q2W",
+            "ae": "Conjunctivitis",
+            "event_count": 28,
+            "subjects_at_risk": 320,
+            "median_onset_weeks": 4.0,
+            "global_cases": 5,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_imatinib": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2015/03/005640",
+        "source": "CTRI",
+        "phase": "Phase 4",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "400 mg",
+            "ae": "Nausea",
+            "event_count": 40,
+            "subjects_at_risk": 200,
+            "median_onset_weeks": 2.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_sotorasib": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/01/030000",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "960 mg",
+            "ae": "Diarrhoea",
+            "event_count": 8,
+            "subjects_at_risk": 400,
+            "median_onset_weeks": 2.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_natalizumab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/02/030001",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "300 mg IV",
+            "ae": "Progressive multifocal leukoencephalopathy",
+            "event_count": 9,
+            "subjects_at_risk": 450,
+            "median_onset_weeks": 3.0,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_nintedanib": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/03/030002",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Diarrhoea",
+            "event_count": 10,
+            "subjects_at_risk": 500,
+            "median_onset_weeks": 4.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_baricitinib": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/04/030003",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "2 mg",
+            "ae": "Infection",
+            "event_count": 11,
+            "subjects_at_risk": 550,
+            "median_onset_weeks": 5.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_remdesivir": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/05/030004",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "100 mg IV",
+            "ae": "Hepatotoxicity",
+            "event_count": 12,
+            "subjects_at_risk": 600,
+            "median_onset_weeks": 6.0,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_trametinib": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/06/030005",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "2 mg",
+            "ae": "Rash",
+            "event_count": 13,
+            "subjects_at_risk": 650,
+            "median_onset_weeks": 2.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_daratumumab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/07/030006",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "16 mg/kg IV",
+            "ae": "Infusion related reaction",
+            "event_count": 14,
+            "subjects_at_risk": 700,
+            "median_onset_weeks": 3.0,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_cemiplimab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/08/030007",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "350 mg IV",
+            "ae": "Immune-mediated colitis",
+            "event_count": 15,
+            "subjects_at_risk": 750,
+            "median_onset_weeks": 4.0,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  },
+  "drug_vedolizumab": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/09/030008",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "300 mg IV",
+            "ae": "Infection",
+            "event_count": 16,
+            "subjects_at_risk": 800,
+            "median_onset_weeks": 5.0,
+            "global_cases": 4,
+            "serious": false
+          }
+        ]
+      }
+    ]
+  },
+  "drug_ivacaftor": {
+    "trials": [
+      {
+        "registry_id": "CTRI/2020/10/030009",
+        "source": "CTRI",
+        "phase": "Phase 3",
+        "country": "IN",
+        "arms": [
+          {
+            "arm": "150 mg",
+            "ae": "Hepatotoxicity",
+            "event_count": 17,
+            "subjects_at_risk": 850,
+            "median_onset_weeks": 6.0,
+            "global_cases": 4,
+            "serious": true
+          }
+        ]
+      }
+    ]
+  }
+}

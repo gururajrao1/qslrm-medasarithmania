@@ -1,0 +1,27 @@
+# Free local stack: API only + SQLite (no Postgres bill / install)
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: sqlite:///./data/processed/qslrm.db
+      MODEL_VERSION: qslrm-v1.0.0
+      MVP_DRUG_CLASS: kinase_inhibitor
+      QSLRM_BOOTSTRAP: "1"
+      QSLRM_SEED_PIPELINE: "1"
+      HOST: "0.0.0.0"
+      PORT: "8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - qslrm_sqlite:/app/data/processed
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 120s
+      retries: 5
+
+volumes:
+  qslrm_sqlite:

@@ -1,0 +1,23 @@
+# Free-tier friendly: SQLite (no paid Postgres). Seeds on boot.
+services:
+  - type: web
+    name: qslrm-medasarithmania
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./data/processed/qslrm.db
+      - key: MODEL_VERSION
+        value: qslrm-v1.0.0
+      - key: MVP_DRUG_CLASS
+        value: kinase_inhibitor
+      - key: QSLRM_BOOTSTRAP
+        value: "1"
+      - key: QSLRM_SEED_PIPELINE
+        value: "1"
+      - key: HOST
+        value: "0.0.0.0"
+      # Render injects PORT automatically

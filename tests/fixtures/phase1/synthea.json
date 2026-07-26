@@ -1,0 +1,78 @@
+{
+  "drug_tozinameran": {
+    "cohorts": [
+      {
+        "cohort_id": "synthea_bnt_myocarditis",
+        "ae": "Myocarditis",
+        "n_exposed": 25000,
+        "n_events": 42,
+        "dose_regimen": "30 ug IM day 0/21",
+        "median_onset_days": 3,
+        "points": [
+          {"week": 0, "survival_prob": 1.0},
+          {"week": 0.2, "survival_prob": 0.92},
+          {"week": 0.5, "survival_prob": 0.78},
+          {"week": 1.0, "survival_prob": 0.65},
+          {"week": 2.0, "survival_prob": 0.55},
+          {"week": 4.0, "survival_prob": 0.48}
+        ]
+      }
+    ]
+  },
+  "drug_elasomeran": {
+    "cohorts": [
+      {
+        "cohort_id": "synthea_moderna_myocarditis",
+        "ae": "Myocarditis",
+        "n_exposed": 18000,
+        "n_events": 30,
+        "dose_regimen": "100 ug IM day 0/28",
+        "median_onset_days": 4
+      }
+    ]
+  },
+  "drug_pembrolizumab": {
+    "cohorts": [
+      {
+        "cohort_id": "synthea_pembro_colitis",
+        "ae": "Immune-mediated colitis",
+        "n_exposed": 5000,
+        "n_events": 180,
+        "dose_regimen": "200 mg IV Q3W",
+        "median_onset_days": 56,
+        "points": [
+          {"week": 0, "survival_prob": 1.0},
+          {"week": 4, "survival_prob": 0.95},
+          {"week": 8, "survival_prob": 0.88},
+          {"week": 12, "survival_prob": 0.82},
+          {"week": 16, "survival_prob": 0.78},
+          {"week": 24, "survival_prob": 0.72}
+        ]
+      }
+    ]
+  },
+  "drug_dupilumab": {
+    "cohorts": [
+      {
+        "cohort_id": "synthea_dupi_conjunctivitis",
+        "ae": "Conjunctivitis",
+        "n_exposed": 8000,
+        "n_events": 720,
+        "dose_regimen": "300 mg SC Q2W",
+        "median_onset_days": 28
+      }
+    ]
+  },
+  "drug_lapatinib": {
+    "cohorts": [
+      {
+        "cohort_id": "synthea_lap_hepatotox",
+        "ae": "Hepatotoxicity",
+        "n_exposed": 3000,
+        "n_events": 90,
+        "dose_regimen": "1250 mg PO daily",
+        "median_onset_days": 42
+      }
+    ]
+  }
+}

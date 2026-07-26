@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QSLRM · MedasArithmania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div>
+        <div class="wordmark">QSLRM</div>
+        <div class="brand-sub">MedasArithmania</div>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span id="liveChip" class="chip muted" title="WebSocket /v1/stream">● Live off</span>
+      <span id="risingBadge" class="badge rising hidden">Rising · 0</span>
+      <span id="modelChip" class="chip">qslrm-v1.0.0</span>
+      <span id="countChip" class="chip muted">— pairs</span>
+      <button type="button" class="btn primary" id="pullAllBtn" title="Cumulative pull from all wired public datasets">Pull all sources</button>
+      <button type="button" class="btn ghost icon" id="themeToggle" title="Light / dark">◐</button>
+      <a class="btn ghost" href="/v1/audit?format=csv" download>CSV</a>
+      <a class="btn ghost" href="/v1/dsur?format=html" target="_blank">DSUR</a>
+    </div>
+  </header>
+
+  <section class="toolbar" aria-label="Filters">
+    <input id="searchBox" class="search" type="search" placeholder="Search drug, ADR, sponsor…" />
+    <select id="filterSponsor" class="select"><option value="">All sponsors</option></select>
+    <select id="filterMolecule" class="select">
+      <option value="">All molecules</option>
+      <option value="small_molecule">Small molecule</option>
+      <option value="biologic">Biologic</option>
+    </select>
+    <select id="filterRegion" class="select">
+      <option value="">All regions</option>
+      <option value="US">US</option>
+      <option value="EU">EU</option>
+      <option value="Global">Global</option>
+    </select>
+    <select id="sortBy" class="select">
+      <option value="fused">Fused risk</option>
+      <option value="velocity">ΔROR</option>
+      <option value="serious">Seriousness</option>
+      <option value="n">Report count</option>
+    </select>
+  </section>
+
+  <section class="sources compact" aria-label="Inventory">
+    <div class="source-grid" id="sourceGrid"></div>
+  </section>
+
+  <main class="layout">
+    <section class="panel queue">
+      <div class="panel-head">
+        <h2>Action queue</h2>
+        <p class="panel-note" id="queueNote">Click a row for deep dive</p>
+      </div>
+      <div class="table-wrap">
+        <table id="queueTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Drug</th>
+              <th>Sponsor</th>
+              <th>ADR</th>
+              <th>Fused</th>
+              <th>Flag</th>
+              <th>ΔROR</th>
+              <th>Dose</th>
+              <th>Off</th>
+              <th>Trans</th>
+              <th>Gen</th>
+              <th>N</th>
+            </tr>
+          </thead>
+          <tbody id="queueBody">
+            <tr><td colspan="12" class="empty">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-kicker">Inspector</div>
+        <h2 id="drawerTitle">Select a pair</h2>
+        <p class="panel-note" id="drawerSub"></p>
+      </div>
+      <button type="button" class="btn ghost" id="drawerClose">Close</button>
+    </div>
+
+    <div class="score-row">
+      <div class="score-block">
+        <div class="score-label">Fused risk</div>
+        <div class="score-value" id="fusedValue">—</div>
+      </div>
+      <div class="flag-stack" id="flagStack"></div>
+    </div>
+
+    <div class="bars">
+      <div class="bar-row">
+        <div class="bar-meta"><span>Dose</span><span id="attrDosePct">0%</span></div>
+        <div class="track"><div class="fill dose" id="attrDoseFill"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span>Off-target</span><span id="attrOffPct">0%</span></div>
+        <div class="track"><div class="fill off" id="attrOffFill"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span>Transcriptomic</span><span id="attrTrPct">0%</span></div>
+        <div class="track"><div class="fill trans" id="attrTrFill"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span>Genetic</span><span id="attrGenPct">0%</span></div>
+        <div class="track"><div class="fill gen" id="attrGenFill"></div></div>
+      </div>
+    </div>
+
+    <nav class="tabs" id="tabs">
+      <button type="button" data-tab="decisions" class="active">Decisions</button>
+      <button type="button" data-tab="proteomics">Proteomics</button>
+      <button type="button" data-tab="transcriptomics">Transcriptomics</button>
+      <button type="button" data-tab="genomics">Genomics</button>
+      <button type="button" data-tab="trials">Trials</button>
+      <button type="button" data-tab="class">Class</button>
+      <button type="button" data-tab="pv">PV</button>
+      <button type="button" data-tab="literature">Literature</button>
+      <button type="button" data-tab="protocol">Protocol</button>
+    </nav>
+
+    <div class="tab-panels">
+      <section class="tab-panel active" id="tab-decisions"></section>
+      <section class="tab-panel" id="tab-proteomics"></section>
+      <section class="tab-panel" id="tab-transcriptomics"></section>
+      <section class="tab-panel" id="tab-genomics"></section>
+      <section class="tab-panel" id="tab-trials"></section>
+      <section class="tab-panel" id="tab-class"></section>
+      <section class="tab-panel" id="tab-pv"></section>
+      <section class="tab-panel" id="tab-literature"></section>
+      <section class="tab-panel" id="tab-protocol"></section>
+    </div>
+
+    <p class="disclaimer">Hypothesis triage only — disproportionality ≠ causality.</p>
+  </aside>
+
+  <footer class="foot">
+    <span>MedasArithmania</span>
+    <span id="statusLine">…</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

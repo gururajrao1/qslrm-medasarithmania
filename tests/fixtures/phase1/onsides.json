@@ -1,0 +1,4703 @@
+{
+  "drug_imatinib": [
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=6.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=6.00",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rigors",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle cramp",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral edema",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalemia",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypotension",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight increased",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pleural effusion",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fluid retention",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Leukopenia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight increase",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lacrimation increased",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Face edema",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea exertional",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rhinitis",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal distension",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypophosphatemia",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle cramps",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypocalcemia",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pharyngolaryngeal pain",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Periorbital edema",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Night sweats",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscular weakness",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sinusitis",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Palpitations",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonitis",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nasopharyngitis",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oropharyngeal pain",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperglycemia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sweating",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neuropathy peripheral",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasm",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye edema",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypoalbuminemia",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Joint swelling",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Palpitation",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vision blurred",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Paresthesia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalaemia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Periorbital oedema",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Joint pain",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pharyngitis",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Renal pain",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasms",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema peripheral",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperkalemia",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Depression",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Photosensitivity",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelid oedema",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Influenza",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Flatulence",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increase",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelid edema",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperkalaemia",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypothyroidism",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastroenteritis",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "GI perforation",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Platelet count decreased",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decrease",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    }
+  ],
+  "drug_erlotinib": [
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=6.07",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Depression",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rigors",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Flatulence",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Keratoconjunctivitis sicca",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neuropathy",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bone pain",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucosal inflammation",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decreased",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decrease",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myopathy",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "label_confirmed; pred=5.45",
+      "source": "onsides"
+    },
+    {
+      "ae": "Microangiopathic hemolytic anemia",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myocardial infarction",
+      "frequency": "label_confirmed; pred=5.40",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=5.36",
+      "source": "onsides"
+    },
+    {
+      "ae": "Toxic epidermal necrolysis",
+      "frequency": "label_confirmed; pred=5.31",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myocardial infarct",
+      "frequency": "label_confirmed; pred=5.27",
+      "source": "onsides"
+    },
+    {
+      "ae": "Keratoconjunctivitis",
+      "frequency": "label_confirmed; pred=5.24",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pancreatic cancer",
+      "frequency": "label_confirmed; pred=5.21",
+      "source": "onsides"
+    },
+    {
+      "ae": "CVA",
+      "frequency": "label_confirmed; pred=5.15",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.13",
+      "source": "onsides"
+    },
+    {
+      "ae": "GI bleed",
+      "frequency": "label_confirmed; pred=5.13",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "label_confirmed; pred=5.12",
+      "source": "onsides"
+    },
+    {
+      "ae": "Renal failure",
+      "frequency": "label_confirmed; pred=5.05",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bleeding",
+      "frequency": "label_confirmed; pred=4.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cerebrovascular accident",
+      "frequency": "label_confirmed; pred=4.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=4.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=4.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelash changes",
+      "frequency": "label_confirmed; pred=4.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Corneal ulceration",
+      "frequency": "label_confirmed; pred=4.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Liver function test abnormal",
+      "frequency": "label_confirmed; pred=4.15",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight",
+      "frequency": "label_confirmed; pred=4.00",
+      "source": "onsides"
+    },
+    {
+      "ae": "Corneal ulcer",
+      "frequency": "label_confirmed; pred=3.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "INR",
+      "frequency": "label_confirmed; pred=3.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Embryo-fetal toxicity",
+      "frequency": "label_confirmed; pred=3.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatorenal syndrome",
+      "frequency": "label_confirmed; pred=3.53",
+      "source": "onsides"
+    }
+  ],
+  "drug_gefitinib": [
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Conjunctival hyperemia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Conjunctivitis",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nail bed infection",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Ingrowing nail",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glossodynia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tongue ulceration",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oral mucosal blistering",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mouth ulceration",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye irritation",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Xeroderma",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cheilitis",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dermatitis exfoliative",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blepharitis",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Onycholysis",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucosal inflammation",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aphthous stomatitis",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nail disorder",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Keratitis",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nail infection",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Onychoclasis",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry eye",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus generalized",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dermatitis",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelid irritation",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye swelling",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Acne pustular",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Feces soft",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Folliculitis",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Drug eruption",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye pruritus",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash vesicular",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelid edema",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash pustular",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash maculo-papular",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash macular",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash pruritic",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dermatitis acneiform",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash papular",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash erythematous",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin exfoliation",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Acne",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tongue disorder",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin toxicity",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Exfoliative rash",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increase",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Proteinuria",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Frequent bowel movements",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alanine aminotransferase increase",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelids pruritus",
+      "frequency": "label_confirmed; pred=5.59",
+      "source": "onsides"
+    },
+    {
+      "ae": "Toxic epidermal necrolysis",
+      "frequency": "label_confirmed; pred=5.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aphthous stoma",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "label_confirmed; pred=5.40",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=5.38",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mouth ulcer",
+      "frequency": "label_confirmed; pred=5.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "label_confirmed; pred=5.35",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cutaneous vasculitis",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "Palmar-plantar erythrodysaesthesia syndrome",
+      "frequency": "label_confirmed; pred=5.20",
+      "source": "onsides"
+    },
+    {
+      "ae": "Corneal erosion",
+      "frequency": "label_confirmed; pred=5.20",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "label_confirmed; pred=5.15",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "label_confirmed; pred=5.12",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.08",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cystitis",
+      "frequency": "label_confirmed; pred=4.98",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin reaction",
+      "frequency": "label_confirmed; pred=4.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gas",
+      "frequency": "label_confirmed; pred=4.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemorrhagic cystitis",
+      "frequency": "label_confirmed; pred=4.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=4.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=4.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pancreatitis",
+      "frequency": "label_confirmed; pred=4.34",
+      "source": "onsides"
+    },
+    {
+      "ae": "Allergic reaction",
+      "frequency": "label_confirmed; pred=4.18",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "label_confirmed; pred=4.16",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cyst",
+      "frequency": "label_confirmed; pred=4.06",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye disorder",
+      "frequency": "label_confirmed; pred=4.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemorrhagic cyst",
+      "frequency": "label_confirmed; pred=4.00",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatitis",
+      "frequency": "label_confirmed; pred=3.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alanine aminotransferase",
+      "frequency": "label_confirmed; pred=3.26",
+      "source": "onsides"
+    }
+  ],
+  "drug_dasatinib": [
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=6.00",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.97",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypocalcemia",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pleural effusion",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Febrile neutropenia",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myelosuppression",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pericardial effusion",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arrhythmia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalemia",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasms",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary edema",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal bleeding",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "CMV infection",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dehydration",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fluid retention",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypotension",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin rash",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Depression",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Generalized edema",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fungal infection",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary hypertension",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary arterial hypertension",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral neuropathy",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Genital swelling",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Clostridial infection",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Altered state of consciousness",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumor lysis syndrome",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal bleed",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Renal insufficiency",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Ascites",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fluid overload",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle inflammation",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anaemia",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyponatremia",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bacteremia",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sepsis",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sinusitis",
+      "frequency": "label_confirmed; pred=5.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rhabdomyolysis",
+      "frequency": "label_confirmed; pred=5.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypophosphatemia",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anxiety",
+      "frequency": "label_confirmed; pred=5.59",
+      "source": "onsides"
+    },
+    {
+      "ae": "Congestive heart failure",
+      "frequency": "label_confirmed; pred=5.59",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bleeding",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphadenopathy",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bilirubin",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Creatinine",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neuropathy",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary oedema",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Generalised oedema",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Viral infection",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "label_confirmed; pred=5.46",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasm",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Conjunctival oedema",
+      "frequency": "label_confirmed; pred=5.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucositis",
+      "frequency": "label_confirmed; pred=5.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutrophilic dermatosis",
+      "frequency": "label_confirmed; pred=5.39",
+      "source": "onsides"
+    },
+    {
+      "ae": "VIIth nerve paralysis",
+      "frequency": "label_confirmed; pred=5.39",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.33",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumour lysis syndrome",
+      "frequency": "label_confirmed; pred=5.33",
+      "source": "onsides"
+    },
+    {
+      "ae": "Protein-losing gastroenteropathy",
+      "frequency": "label_confirmed; pred=5.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "label_confirmed; pred=5.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "CBC",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Visual impairment",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pancreatitis",
+      "frequency": "label_confirmed; pred=5.27",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral oedema",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "SGPT",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epiphyses delayed fusion",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decreased",
+      "frequency": "label_confirmed; pred=5.24",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary embolism",
+      "frequency": "label_confirmed; pred=5.17",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gravitational oedema",
+      "frequency": "label_confirmed; pred=5.12",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatitis",
+      "frequency": "label_confirmed; pred=5.12",
+      "source": "onsides"
+    }
+  ],
+  "drug_nilotinib": [
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral edema",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Night sweat",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypophosphatemia",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasms",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain upper",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myelosuppression",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Face edema",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalemia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperglycemia",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oropharyngeal pain",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypocalcemia",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pancreatitis",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperkalemia",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bone pain",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Periorbital edema",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastroenteritis",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyponatremia",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nasopharyngitis",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Influenza",
+      "frequency": "label_confirmed; pred=5.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasm",
+      "frequency": "label_confirmed; pred=5.61",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "GI hemorrhage",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Growth retardation",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eyelid edema",
+      "frequency": "label_confirmed; pred=5.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumor lysis syndrome",
+      "frequency": "label_confirmed; pred=5.30",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sudden death",
+      "frequency": "label_confirmed; pred=5.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=4.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Effusion",
+      "frequency": "label_confirmed; pred=4.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "CML",
+      "frequency": "label_confirmed; pred=4.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Flu",
+      "frequency": "label_confirmed; pred=4.30",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT prolonged",
+      "frequency": "label_confirmed; pred=4.23",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT interval",
+      "frequency": "label_confirmed; pred=3.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Death",
+      "frequency": "label_confirmed; pred=3.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Philadelphia chromosome positive",
+      "frequency": "label_confirmed; pred=3.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gas",
+      "frequency": "label_confirmed; pred=3.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vascular disorder",
+      "frequency": "label_confirmed; pred=3.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "QTc",
+      "frequency": "label_confirmed; pred=3.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nervous",
+      "frequency": "label_confirmed; pred=3.30",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "label_confirmed; pred=3.27",
+      "source": "onsides"
+    }
+  ],
+  "drug_sunitinib": [
+    {
+      "ae": "Depression",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucositis",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "TSH increased",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "TSH increase",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral edema",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Proteinuria",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nasopharyngitis",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decreased",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypoglycemia",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry mouth",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decrease",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "ALT increased",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oropharyngeal pain",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lipase increased",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Face oedema",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Necrotizing fasciitis",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=5.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemoglobin decreased",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Flatulence",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hair color changes",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dermatitis psoriasiform",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Creatinine increased",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bleeding",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Amylase",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Albumin decreased",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Chills",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glossodynia",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sodium increased",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glucose increased",
+      "frequency": "label_confirmed; pred=5.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Reversible posterior leukoencephalopathy syndrome",
+      "frequency": "label_confirmed; pred=5.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alkaline phosphatase increased",
+      "frequency": "label_confirmed; pred=5.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oral pain",
+      "frequency": "label_confirmed; pred=5.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Potassium decreased",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "AST increased",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperthyroidism",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Edema peripheral",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Indirect bilirubin increased",
+      "frequency": "label_confirmed; pred=5.61",
+      "source": "onsides"
+    },
+    {
+      "ae": "Potassium increased",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Platelets decreased",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fever",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal abscess",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhoids",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin reaction",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Calcium decreased",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bronchitis",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Influenza like illness",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Uric acid increased",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Calcium increased",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Potassium",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary hemorrhage",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Seizure",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphocytes decreased",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemoglobin",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin discoloration",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sepsis",
+      "frequency": "label_confirmed; pred=5.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "label_confirmed; pred=5.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Seizures",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sodium decreased",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Magnesium",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombotic microangiopathy",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sodium",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Creatine kinase increased",
+      "frequency": "label_confirmed; pred=5.45",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glucose decreased",
+      "frequency": "label_confirmed; pred=5.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Magnesium decreased",
+      "frequency": "label_confirmed; pred=5.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "TSH",
+      "frequency": "label_confirmed; pred=5.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abscess",
+      "frequency": "label_confirmed; pred=5.40",
+      "source": "onsides"
+    },
+    {
+      "ae": "DVT",
+      "frequency": "label_confirmed; pred=5.39",
+      "source": "onsides"
+    },
+    {
+      "ae": "GERD",
+      "frequency": "label_confirmed; pred=5.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Yellow skin",
+      "frequency": "label_confirmed; pred=5.37",
+      "source": "onsides"
+    }
+  ],
+  "drug_sorafenib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypocalcemia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight loss",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasms",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphopenia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypoalbuminemia",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypophosphatemia",
+      "frequency": "label_confirmed; pred=5.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hemorrhage",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "AST increased",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperkeratosis",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal perforation",
+      "frequency": "label_confirmed; pred=5.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalemia",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oral pain",
+      "frequency": "label_confirmed; pred=5.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Palmar-plantar erythrodysesthesia syndrome",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "ALT increased",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lipase increased",
+      "frequency": "label_confirmed; pred=5.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bilirubin increased",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.59",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasm",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rhabdomyolysis",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "INR abnormal",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dysphonia",
+      "frequency": "label_confirmed; pred=5.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "INR",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bleeding",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Renal failure",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypophosphataemia",
+      "frequency": "label_confirmed; pred=5.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypocalcaemia",
+      "frequency": "label_confirmed; pred=5.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Amylase increased",
+      "frequency": "label_confirmed; pred=5.34",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombotic microangiopathy",
+      "frequency": "label_confirmed; pred=5.28",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=4.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Drug-induced liver injury",
+      "frequency": "label_confirmed; pred=4.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "TEN",
+      "frequency": "label_confirmed; pred=4.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=4.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Angioedema",
+      "frequency": "label_confirmed; pred=4.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neuropathy",
+      "frequency": "label_confirmed; pred=4.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nervous",
+      "frequency": "label_confirmed; pred=4.46",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight",
+      "frequency": "label_confirmed; pred=4.35",
+      "source": "onsides"
+    },
+    {
+      "ae": "Investigation",
+      "frequency": "label_confirmed; pred=4.28",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT interval",
+      "frequency": "label_confirmed; pred=4.22",
+      "source": "onsides"
+    },
+    {
+      "ae": "Congestive heart failure",
+      "frequency": "label_confirmed; pred=4.14",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eczema",
+      "frequency": "label_confirmed; pred=3.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cancer",
+      "frequency": "label_confirmed; pred=3.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Wound",
+      "frequency": "label_confirmed; pred=3.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Squamous cell carcinoma of skin",
+      "frequency": "label_confirmed; pred=3.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erectile dysfunction",
+      "frequency": "label_confirmed; pred=3.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gas",
+      "frequency": "label_confirmed; pred=3.40",
+      "source": "onsides"
+    }
+  ],
+  "drug_lapatinib": [
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=6.02",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.97",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nail disorder",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain in extremity",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperbilirubinaemia",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonitis",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alanine aminotransferase increased",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypersensitivity reaction",
+      "frequency": "label_confirmed; pred=5.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=5.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increase",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alanine aminotransferase increase",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Insomnia",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspartate aminotransferase increased",
+      "frequency": "label_confirmed; pred=5.46",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Severe cutaneous adverse reaction",
+      "frequency": "label_confirmed; pred=5.38",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.10",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypersensitivity",
+      "frequency": "label_confirmed; pred=5.03",
+      "source": "onsides"
+    },
+    {
+      "ae": "TEN",
+      "frequency": "label_confirmed; pred=5.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Ventricular arrhythmia",
+      "frequency": "label_confirmed; pred=4.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucosal inflammation",
+      "frequency": "label_confirmed; pred=4.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=4.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "label_confirmed; pred=4.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT prolonged",
+      "frequency": "label_confirmed; pred=4.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hot flush",
+      "frequency": "label_confirmed; pred=4.33",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=4.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bilirubin",
+      "frequency": "label_confirmed; pred=4.21",
+      "source": "onsides"
+    },
+    {
+      "ae": "Electrocardiogram",
+      "frequency": "label_confirmed; pred=4.17",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=4.11",
+      "source": "onsides"
+    },
+    {
+      "ae": "ECG",
+      "frequency": "label_confirmed; pred=3.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT interval",
+      "frequency": "label_confirmed; pred=3.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pulmonary arterial hypertension",
+      "frequency": "label_confirmed; pred=3.37",
+      "source": "onsides"
+    }
+  ],
+  "drug_pazopanib": [
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral edema",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Asthenia",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Mucositis",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin hypopigmentation",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Leukopenia",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Chest pain",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.84",
+      "source": "onsides"
+    },
+    {
+      "ae": "Potassium increased",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphocytopenia",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Proteinuria",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anorexia",
+      "frequency": "label_confirmed; pred=5.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hair color changes",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Abdominal pain",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myalgia",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonitis",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Exfoliative rash",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "AST increased",
+      "frequency": "label_confirmed; pred=5.74",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glucose increased",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decreased",
+      "frequency": "label_confirmed; pred=5.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dysgeusia",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alkaline phosphatase increased",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sodium decreased",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight decrease",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "ALT increased",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypothyroidism",
+      "frequency": "label_confirmed; pred=5.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=5.61",
+      "source": "onsides"
+    },
+    {
+      "ae": "Magnesium decreased",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Albumin decreased",
+      "frequency": "label_confirmed; pred=5.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glucose decreased",
+      "frequency": "label_confirmed; pred=5.58",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumor lysis syndrome",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gastrointestinal pain",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.47",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bradycardia",
+      "frequency": "label_confirmed; pred=5.35",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumor pain",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Glucose",
+      "frequency": "label_confirmed; pred=5.26",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumothorax",
+      "frequency": "label_confirmed; pred=5.26",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pancreatitis",
+      "frequency": "label_confirmed; pred=5.15",
+      "source": "onsides"
+    },
+    {
+      "ae": "Magnesium",
+      "frequency": "label_confirmed; pred=5.11",
+      "source": "onsides"
+    },
+    {
+      "ae": "Congestive heart failure",
+      "frequency": "label_confirmed; pred=5.10",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac dysfunction",
+      "frequency": "label_confirmed; pred=5.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin disorder",
+      "frequency": "label_confirmed; pred=4.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatotoxicity",
+      "frequency": "label_confirmed; pred=4.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombotic microangiopathy",
+      "frequency": "label_confirmed; pred=4.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sodium",
+      "frequency": "label_confirmed; pred=4.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Retinal detachment",
+      "frequency": "label_confirmed; pred=4.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fistula",
+      "frequency": "label_confirmed; pred=4.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Weight",
+      "frequency": "label_confirmed; pred=4.26",
+      "source": "onsides"
+    },
+    {
+      "ae": "Polycythemia",
+      "frequency": "label_confirmed; pred=4.03",
+      "source": "onsides"
+    },
+    {
+      "ae": "ECG abnormal",
+      "frequency": "label_confirmed; pred=3.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "ECG",
+      "frequency": "label_confirmed; pred=3.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gas",
+      "frequency": "label_confirmed; pred=3.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "QT interval",
+      "frequency": "label_confirmed; pred=3.39",
+      "source": "onsides"
+    }
+  ],
+  "drug_axitinib": [
+    {
+      "ae": "disease progression",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "neoplasm progression",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "renal cancer",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "dysphonia",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "diarrhoea",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "hypertension",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "palmar-plantar erythrodysaesthesia syndrome",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "metastatic renal cell carcinoma",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "decreased appetite",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "renal cell carcinoma",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "blood pressure increased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "stomatitis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "hypothyroidism",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "fatigue",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "neoplasm malignant",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "weight decreased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "proteinuria",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "dehydration",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "oral pain",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    }
+  ],
+  "drug_ibrutinib": [
+    {
+      "ae": "Hypertension",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasms",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspepsia",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "Atrial fibrillation",
+      "frequency": "label_confirmed; pred=5.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.36",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac arrhythmia",
+      "frequency": "label_confirmed; pred=5.34",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.31",
+      "source": "onsides"
+    },
+    {
+      "ae": "Petechiae",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.24",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatic failure",
+      "frequency": "label_confirmed; pred=5.19",
+      "source": "onsides"
+    },
+    {
+      "ae": "Arthralgia",
+      "frequency": "label_confirmed; pred=5.16",
+      "source": "onsides"
+    },
+    {
+      "ae": "Urticaria",
+      "frequency": "label_confirmed; pred=5.15",
+      "source": "onsides"
+    },
+    {
+      "ae": "Petechia",
+      "frequency": "label_confirmed; pred=5.13",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumour lysis syndrome",
+      "frequency": "label_confirmed; pred=5.08",
+      "source": "onsides"
+    },
+    {
+      "ae": "Febrile neutropenia",
+      "frequency": "label_confirmed; pred=5.07",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin infection",
+      "frequency": "label_confirmed; pred=4.97",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperuricaemia",
+      "frequency": "label_confirmed; pred=4.97",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bleeding",
+      "frequency": "label_confirmed; pred=4.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Splenic rupture",
+      "frequency": "label_confirmed; pred=4.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatitis B reactivation",
+      "frequency": "label_confirmed; pred=4.88",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumocystis jiroveci infection",
+      "frequency": "label_confirmed; pred=4.85",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac arrest",
+      "frequency": "label_confirmed; pred=4.82",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cryptococcosis",
+      "frequency": "label_confirmed; pred=4.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=4.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Peripheral neuropathy",
+      "frequency": "label_confirmed; pred=4.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspergillus infection",
+      "frequency": "label_confirmed; pred=4.76",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oedema peripheral",
+      "frequency": "label_confirmed; pred=4.73",
+      "source": "onsides"
+    },
+    {
+      "ae": "Angioedema",
+      "frequency": "label_confirmed; pred=4.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=4.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "label_confirmed; pred=4.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyogenic granuloma",
+      "frequency": "label_confirmed; pred=4.70",
+      "source": "onsides"
+    },
+    {
+      "ae": "Subdural haematoma",
+      "frequency": "label_confirmed; pred=4.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aspergillosis",
+      "frequency": "label_confirmed; pred=4.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Tumor flare",
+      "frequency": "label_confirmed; pred=4.61",
+      "source": "onsides"
+    },
+    {
+      "ae": "Eye haemorrhage",
+      "frequency": "label_confirmed; pred=4.61",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphocytosis",
+      "frequency": "label_confirmed; pred=4.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=4.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Death",
+      "frequency": "label_confirmed; pred=4.59",
+      "source": "onsides"
+    },
+    {
+      "ae": "Onychoclasis",
+      "frequency": "label_confirmed; pred=4.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Ventricular tachyarrhythmia",
+      "frequency": "label_confirmed; pred=4.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Basal cell carcinoma",
+      "frequency": "label_confirmed; pred=4.52",
+      "source": "onsides"
+    },
+    {
+      "ae": "Acute kidney injury",
+      "frequency": "label_confirmed; pred=4.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cerebrovascular accident",
+      "frequency": "label_confirmed; pred=4.51",
+      "source": "onsides"
+    },
+    {
+      "ae": "Muscle spasm",
+      "frequency": "label_confirmed; pred=4.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "label_confirmed; pred=4.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Leukostasis",
+      "frequency": "label_confirmed; pred=4.42",
+      "source": "onsides"
+    },
+    {
+      "ae": "Leukostasis syndrome",
+      "frequency": "label_confirmed; pred=4.41",
+      "source": "onsides"
+    },
+    {
+      "ae": "Bruising",
+      "frequency": "label_confirmed; pred=4.40",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cutaneous vasculitis",
+      "frequency": "label_confirmed; pred=4.37",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sepsis",
+      "frequency": "label_confirmed; pred=4.36",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemophagocytic lymphohistiocytosis",
+      "frequency": "label_confirmed; pred=4.34",
+      "source": "onsides"
+    },
+    {
+      "ae": "Sinusitis",
+      "frequency": "label_confirmed; pred=4.21",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vision blurred",
+      "frequency": "label_confirmed; pred=4.21",
+      "source": "onsides"
+    },
+    {
+      "ae": "Flu",
+      "frequency": "label_confirmed; pred=4.06",
+      "source": "onsides"
+    },
+    {
+      "ae": "CLL",
+      "frequency": "label_confirmed; pred=4.01",
+      "source": "onsides"
+    },
+    {
+      "ae": "Oedema",
+      "frequency": "label_confirmed; pred=4.00",
+      "source": "onsides"
+    },
+    {
+      "ae": "Panniculitis",
+      "frequency": "label_confirmed; pred=3.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemorrhage",
+      "frequency": "label_confirmed; pred=3.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Urinary tract infection",
+      "frequency": "label_confirmed; pred=3.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatitis B",
+      "frequency": "label_confirmed; pred=3.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Squamous cell carcinoma",
+      "frequency": "label_confirmed; pred=3.78",
+      "source": "onsides"
+    },
+    {
+      "ae": "Disease progression",
+      "frequency": "label_confirmed; pred=3.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hepatitis",
+      "frequency": "label_confirmed; pred=3.62",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=3.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Transient ischaemic attack",
+      "frequency": "label_confirmed; pred=3.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Ischaemic stroke",
+      "frequency": "label_confirmed; pred=3.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Carcinogenicity",
+      "frequency": "label_confirmed; pred=3.27",
+      "source": "onsides"
+    }
+  ],
+  "drug_osimertinib": [
+    {
+      "ae": "Dizziness",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stomatitis",
+      "frequency": "label_confirmed; pred=5.99",
+      "source": "onsides"
+    },
+    {
+      "ae": "Anemia",
+      "frequency": "label_confirmed; pred=5.95",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pyrexia",
+      "frequency": "label_confirmed; pred=5.94",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nausea",
+      "frequency": "label_confirmed; pred=5.93",
+      "source": "onsides"
+    },
+    {
+      "ae": "Fatigue",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pruritus",
+      "frequency": "label_confirmed; pred=5.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Neutropenia",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhea",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Decreased appetite",
+      "frequency": "label_confirmed; pred=5.89",
+      "source": "onsides"
+    },
+    {
+      "ae": "Constipation",
+      "frequency": "label_confirmed; pred=5.87",
+      "source": "onsides"
+    },
+    {
+      "ae": "Thrombocytopenia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dry skin",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypermagnesemia",
+      "frequency": "label_confirmed; pred=5.86",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vomiting",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cough",
+      "frequency": "label_confirmed; pred=5.83",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphopenia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Leukopenia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Stevens-Johnson syndrome",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyponatremia",
+      "frequency": "label_confirmed; pred=5.81",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperglycemia",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Rash",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Dyspnea",
+      "frequency": "label_confirmed; pred=5.80",
+      "source": "onsides"
+    },
+    {
+      "ae": "Upper respiratory tract infection",
+      "frequency": "label_confirmed; pred=5.79",
+      "source": "onsides"
+    },
+    {
+      "ae": "Toxic epidermal necrolysis",
+      "frequency": "label_confirmed; pred=5.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonitis",
+      "frequency": "label_confirmed; pred=5.75",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nasopharyngitis",
+      "frequency": "label_confirmed; pred=5.72",
+      "source": "onsides"
+    },
+    {
+      "ae": "Musculoskeletal pain",
+      "frequency": "label_confirmed; pred=5.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Alopecia",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nail toxicity",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hyperbilirubinemia",
+      "frequency": "label_confirmed; pred=5.68",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumonia",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Urticaria",
+      "frequency": "label_confirmed; pred=5.67",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema multiforme",
+      "frequency": "label_confirmed; pred=5.65",
+      "source": "onsides"
+    },
+    {
+      "ae": "Headache",
+      "frequency": "label_confirmed; pred=5.64",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema multiforme major",
+      "frequency": "label_confirmed; pred=5.57",
+      "source": "onsides"
+    },
+    {
+      "ae": "Paronychia",
+      "frequency": "label_confirmed; pred=5.56",
+      "source": "onsides"
+    },
+    {
+      "ae": "Radiation pneumonitis",
+      "frequency": "label_confirmed; pred=5.55",
+      "source": "onsides"
+    },
+    {
+      "ae": "Diarrhoea",
+      "frequency": "label_confirmed; pred=5.54",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pneumocystis jiroveci pneumonia",
+      "frequency": "label_confirmed; pred=5.53",
+      "source": "onsides"
+    },
+    {
+      "ae": "Haemophilus pneumonia",
+      "frequency": "label_confirmed; pred=5.49",
+      "source": "onsides"
+    },
+    {
+      "ae": "Hypokalemia",
+      "frequency": "label_confirmed; pred=5.48",
+      "source": "onsides"
+    },
+    {
+      "ae": "Interstitial lung disease",
+      "frequency": "label_confirmed; pred=5.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatinine",
+      "frequency": "label_confirmed; pred=5.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatinine increased",
+      "frequency": "label_confirmed; pred=5.44",
+      "source": "onsides"
+    },
+    {
+      "ae": "IgA vasculitis",
+      "frequency": "label_confirmed; pred=5.43",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiomyopathy",
+      "frequency": "label_confirmed; pred=5.36",
+      "source": "onsides"
+    },
+    {
+      "ae": "Keratitis",
+      "frequency": "label_confirmed; pred=5.35",
+      "source": "onsides"
+    },
+    {
+      "ae": "Platelet count decreased",
+      "frequency": "label_confirmed; pred=5.30",
+      "source": "onsides"
+    },
+    {
+      "ae": "TEN",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Epistaxis",
+      "frequency": "label_confirmed; pred=5.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infection",
+      "frequency": "label_confirmed; pred=5.27",
+      "source": "onsides"
+    },
+    {
+      "ae": "COVID-19 pneumonia",
+      "frequency": "label_confirmed; pred=5.25",
+      "source": "onsides"
+    },
+    {
+      "ae": "Lymphocytes decreased",
+      "frequency": "label_confirmed; pred=5.24",
+      "source": "onsides"
+    },
+    {
+      "ae": "Back pain",
+      "frequency": "label_confirmed; pred=5.16",
+      "source": "onsides"
+    },
+    {
+      "ae": "COVID-19",
+      "frequency": "label_confirmed; pred=5.14",
+      "source": "onsides"
+    },
+    {
+      "ae": "Skin hyperpigmentation",
+      "frequency": "label_confirmed; pred=5.08",
+      "source": "onsides"
+    },
+    {
+      "ae": "Myositis",
+      "frequency": "label_confirmed; pred=4.97",
+      "source": "onsides"
+    },
+    {
+      "ae": "Left ventricular ejection fraction decreased",
+      "frequency": "label_confirmed; pred=4.96",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac failure",
+      "frequency": "label_confirmed; pred=4.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aplastic anaemia",
+      "frequency": "label_confirmed; pred=4.91",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatine phosphokinase increased",
+      "frequency": "label_confirmed; pred=4.90",
+      "source": "onsides"
+    },
+    {
+      "ae": "QTc",
+      "frequency": "label_confirmed; pred=4.77",
+      "source": "onsides"
+    },
+    {
+      "ae": "Erythema",
+      "frequency": "label_confirmed; pred=4.66",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cutaneous vasculitis",
+      "frequency": "label_confirmed; pred=4.63",
+      "source": "onsides"
+    },
+    {
+      "ae": "Pain",
+      "frequency": "label_confirmed; pred=4.50",
+      "source": "onsides"
+    },
+    {
+      "ae": "Nervous",
+      "frequency": "label_confirmed; pred=4.30",
+      "source": "onsides"
+    },
+    {
+      "ae": "Aplastic anemia",
+      "frequency": "label_confirmed; pred=4.29",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cancer",
+      "frequency": "label_confirmed; pred=4.07",
+      "source": "onsides"
+    },
+    {
+      "ae": "Gas",
+      "frequency": "label_confirmed; pred=3.92",
+      "source": "onsides"
+    },
+    {
+      "ae": "Cardiac disorder",
+      "frequency": "label_confirmed; pred=3.71",
+      "source": "onsides"
+    },
+    {
+      "ae": "ECG",
+      "frequency": "label_confirmed; pred=3.69",
+      "source": "onsides"
+    },
+    {
+      "ae": "Vasculitis",
+      "frequency": "label_confirmed; pred=3.60",
+      "source": "onsides"
+    },
+    {
+      "ae": "Infestation",
+      "frequency": "label_confirmed; pred=3.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "Blood creatine",
+      "frequency": "label_confirmed; pred=3.32",
+      "source": "onsides"
+    },
+    {
+      "ae": "UTI",
+      "frequency": "label_confirmed; pred=3.29",
+      "source": "onsides"
+    }
+  ],
+  "drug_tofacitinib": [
+    {
+      "ae": "rheumatoid arthritis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "synovitis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "joint swelling",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "arthralgia",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "hand deformity",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "pain",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "musculoskeletal stiffness",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "condition aggravated",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "anti-cyclic citrullinated peptide antibody positive",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "pemphigus",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "arthropathy",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "drug intolerance",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "swelling",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "abdominal discomfort",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "glossodynia",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "alopecia",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "wound",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "systemic lupus erythematosus",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "peripheral swelling",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "pericarditis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "treatment failure",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "therapeutic product effect decreased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "rheumatoid factor positive",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "discomfort",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "hepatic enzyme increased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "duodenal ulcer perforation",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "pain in extremity",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "fatigue",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "nasopharyngitis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "herpes zoster",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "helicobacter infection",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "blood cholesterol increased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "loss of personal independence in daily activities",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "therapeutic product effect incomplete",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "c-reactive protein abnormal",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "infection",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "headache",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "sinusitis",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "infusion related reaction",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "hypersensitivity",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "joint range of motion decreased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "joint stiffness",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "rash",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "rheumatic fever",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "musculoskeletal pain",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "muscle injury",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "sleep disorder due to general medical condition, insomnia type",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "swollen joint count increased",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "tenderness",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    },
+    {
+      "ae": "red blood cell sedimentation rate abnormal",
+      "frequency": "label_confirmed_from_ot_lrt",
+      "source": "onsides"
+    }
+  ]
+}

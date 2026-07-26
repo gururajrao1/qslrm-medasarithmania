@@ -1,0 +1,29 @@
+{
+  "drug_imatinib": [
+    {"target_id": "tgt_abl1", "affinity_nm": 18.0, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_src", "affinity_nm": 380.0, "affinity_type": "IC50", "is_off_target": true},
+    {"target_id": "tgt_cyp3a4", "affinity_nm": 1200.0, "affinity_type": "IC50", "is_off_target": true}
+  ],
+  "drug_dasatinib": [
+    {"target_id": "tgt_abl1", "affinity_nm": 0.4, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_src", "affinity_nm": 0.3, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_kdr", "affinity_nm": 90.0, "affinity_type": "IC50", "is_off_target": true}
+  ],
+  "drug_lapatinib": [
+    {"target_id": "tgt_egfr", "affinity_nm": 8.5, "affinity_type": "Ki", "is_off_target": false},
+    {"target_id": "tgt_erbb2", "affinity_nm": 7.1, "affinity_type": "Ki", "is_off_target": false},
+    {"target_id": "tgt_cyp3a4", "affinity_nm": 950.0, "affinity_type": "IC50", "is_off_target": true}
+  ],
+  "drug_nilotinib": [
+    {"target_id": "tgt_abl1", "affinity_nm": 15.0, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_kit", "affinity_nm": 200.0, "affinity_type": "IC50", "is_off_target": true}
+  ],
+  "drug_pazopanib": [
+    {"target_id": "tgt_kdr", "affinity_nm": 22.0, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_flt1", "affinity_nm": 8.0, "affinity_type": "IC50", "is_off_target": false}
+  ],
+  "drug_ibrutinib": [
+    {"target_id": "tgt_btk", "affinity_nm": 0.5, "affinity_type": "IC50", "is_off_target": false},
+    {"target_id": "tgt_egfr", "affinity_nm": 45.0, "affinity_type": "IC50", "is_off_target": true}
+  ]
+}

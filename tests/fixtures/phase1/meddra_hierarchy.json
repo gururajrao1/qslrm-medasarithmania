@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {"code": "10007541", "term": "Cardiac disorders", "level": "SOC", "parent_code": null},
+    {"code": "10007554", "term": "Myocardial disorders", "level": "HLT", "parent_code": "10007541"},
+    {"code": "10028606", "term": "Myocarditis", "level": "PT", "parent_code": "10007554"},
+    {"code": "10021428", "term": "Immune system disorders", "level": "SOC", "parent_code": null},
+    {"code": "10021433", "term": "Anaphylactic and anaphylactoid responses", "level": "HLT", "parent_code": "10021428"},
+    {"code": "10002198", "term": "Anaphylactic reaction", "level": "PT", "parent_code": "10021433"},
+    {"code": "10017947", "term": "Gastrointestinal disorders", "level": "SOC", "parent_code": null},
+    {"code": "10017999", "term": "Colitis (excl infective)", "level": "HLT", "parent_code": "10017947"},
+    {"code": "10009887", "term": "Immune-mediated colitis", "level": "PT", "parent_code": "10017999"},
+    {"code": "10015919", "term": "Eye disorders", "level": "SOC", "parent_code": null},
+    {"code": "10010741", "term": "Conjunctivitis", "level": "PT", "parent_code": "10015919"},
+    {"code": "10019805", "term": "Hepatobiliary disorders", "level": "SOC", "parent_code": null},
+    {"code": "10019663", "term": "Hepatic disorders NEC", "level": "HLT", "parent_code": "10019805"},
+    {"code": "10019851", "term": "Hepatotoxicity", "level": "PT", "parent_code": "10019663"}
+  ],
+  "ae_map": {
+    "ae_myocarditis": {
+      "pt_string": "Myocarditis",
+      "pt_code": "10028606",
+      "hlt": "Myocardial disorders",
+      "hlt_code": "10007554",
+      "soc": "Cardiac disorders",
+      "soc_code": "10007541"
+    },
+    "ae_anaphylactic_reaction": {
+      "pt_string": "Anaphylactic reaction",
+      "pt_code": "10002198",
+      "hlt": "Anaphylactic and anaphylactoid responses",
+      "hlt_code": "10021433",
+      "soc": "Immune system disorders",
+      "soc_code": "10021428"
+    },
+    "ae_immune_mediated_colitis": {
+      "pt_string": "Immune-mediated colitis",
+      "pt_code": "10009887",
+      "hlt": "Colitis (excl infective)",
+      "hlt_code": "10017999",
+      "soc": "Gastrointestinal disorders",
+      "soc_code": "10017947"
+    },
+    "ae_conjunctivitis": {
+      "pt_string": "Conjunctivitis",
+      "pt_code": "10010741",
+      "hlt": "Conjunctival infections and inflammations",
+      "hlt_code": "10010740",
+      "soc": "Eye disorders",
+      "soc_code": "10015919"
+    },
+    "ae_hepatotoxicity": {
+      "pt_string": "Hepatotoxicity",
+      "pt_code": "10019851",
+      "hlt": "Hepatic disorders NEC",
+      "hlt_code": "10019663",
+      "soc": "Hepatobiliary disorders",
+      "soc_code": "10019805"
+    },
+    "ae_rash": {
+      "pt_string": "Rash",
+      "pt_code": "10037844",
+      "hlt": "Rashes, eruptions and exanthems NEC",
+      "hlt_code": "10037844",
+      "soc": "Skin and subcutaneous tissue disorders",
+      "soc_code": "10040785"
+    },
+    "ae_qt_prolonged": {
+      "pt_string": "Electrocardiogram QT prolonged",
+      "pt_code": "10014335",
+      "hlt": "ECG investigations",
+      "hlt_code": "10014320",
+      "soc": "Investigations",
+      "soc_code": "10022891"
+    },
+    "ae_interstitial_lung": {
+      "pt_string": "Interstitial lung disease",
+      "pt_code": "10022611",
+      "hlt": "Lower respiratory tract disorders (excl obstruction and infection)",
+      "hlt_code": "10024972",
+      "soc": "Respiratory, thoracic and mediastinal disorders",
+      "soc_code": "10038738"
+    }
+  }
+}

@@ -1,0 +1,1432 @@
+{
+  "CHEMBL941": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL1862",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL2007",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL203",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL1862",
+        "standard_type": "IC50",
+        "standard_value": 25,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 100,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL2007",
+        "standard_type": "IC50",
+        "standard_value": 100,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 450,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL203",
+        "standard_type": "IC50",
+        "standard_value": 800,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL941",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1200,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL1862": {
+        "pref_name": "Tyrosine-protein kinase ABL",
+        "target_components": [
+          {
+            "gene_symbol": "ABL1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00519"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000097007"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL2007": {
+        "pref_name": "PDGF receptor alpha",
+        "target_components": [
+          {
+            "gene_symbol": "PDGFRA",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P16234"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000134853"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL203": {
+        "pref_name": "Epidermal growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "EGFR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00533"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000146648"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL553": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL203",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL1824",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL203",
+        "standard_type": "IC50",
+        "standard_value": 2,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL1824",
+        "standard_type": "IC50",
+        "standard_value": 350,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 900,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL553",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1500,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL203": {
+        "pref_name": "Epidermal growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "EGFR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00533"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000146648"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1824": {
+        "pref_name": "Receptor tyrosine-protein kinase erbB-2",
+        "target_components": [
+          {
+            "gene_symbol": "ERBB2",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P04626"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000141736"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL939": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL203",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL1824",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL203",
+        "standard_type": "IC50",
+        "standard_value": 3,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL1824",
+        "standard_type": "IC50",
+        "standard_value": 400,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 1100,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL939",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1400,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL203": {
+        "pref_name": "Epidermal growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "EGFR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00533"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000146648"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1824": {
+        "pref_name": "Receptor tyrosine-protein kinase erbB-2",
+        "target_components": [
+          {
+            "gene_symbol": "ERBB2",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P04626"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000141736"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL1421": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL1862",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL203",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL1862",
+        "standard_type": "IC50",
+        "standard_value": 0.6,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 0.5,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 5,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL203",
+        "standard_type": "IC50",
+        "standard_value": 180,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1421",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 900,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL1862": {
+        "pref_name": "Tyrosine-protein kinase ABL",
+        "target_components": [
+          {
+            "gene_symbol": "ABL1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00519"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000097007"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL203": {
+        "pref_name": "Epidermal growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "EGFR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00533"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000146648"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL1168": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL1862",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL1862",
+        "standard_type": "IC50",
+        "standard_value": 20,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 60,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 200,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1168",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1100,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL1862": {
+        "pref_name": "Tyrosine-protein kinase ABL",
+        "target_components": [
+          {
+            "gene_symbol": "ABL1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00519"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000097007"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL535": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL279",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL1868",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL279",
+        "standard_type": "IC50",
+        "standard_value": 10,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 10,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL1868",
+        "standard_type": "IC50",
+        "standard_value": 15,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 500,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL535",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1300,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL279": {
+        "pref_name": "Vascular endothelial growth factor receptor 2",
+        "target_components": [
+          {
+            "gene_symbol": "KDR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P35968"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000128052"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1868": {
+        "pref_name": "Vascular endothelial growth factor receptor 1",
+        "target_components": [
+          {
+            "gene_symbol": "FLT1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P17948"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000102755"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL1336": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL5145",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL279",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL1868",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL5145",
+        "standard_type": "IC50",
+        "standard_value": 38,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL279",
+        "standard_type": "IC50",
+        "standard_value": 90,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL1868",
+        "standard_type": "IC50",
+        "standard_value": 120,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 68,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1336",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1000,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL5145": {
+        "pref_name": "Serine/threonine-protein kinase B-raf",
+        "target_components": [
+          {
+            "gene_symbol": "BRAF",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P15056"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157764"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL279": {
+        "pref_name": "Vascular endothelial growth factor receptor 2",
+        "target_components": [
+          {
+            "gene_symbol": "KDR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P35968"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000128052"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1868": {
+        "pref_name": "Vascular endothelial growth factor receptor 1",
+        "target_components": [
+          {
+            "gene_symbol": "FLT1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P17948"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000102755"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL554": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL203",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL1824",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL267",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL203",
+        "standard_type": "IC50",
+        "standard_value": 10.8,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL1824",
+        "standard_type": "IC50",
+        "standard_value": 9.2,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL267",
+        "standard_type": "IC50",
+        "standard_value": 600,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL554",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 800,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL203": {
+        "pref_name": "Epidermal growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "EGFR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P00533"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000146648"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1824": {
+        "pref_name": "Receptor tyrosine-protein kinase erbB-2",
+        "target_components": [
+          {
+            "gene_symbol": "ERBB2",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P04626"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000141736"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL267": {
+        "pref_name": "Proto-oncogene tyrosine-protein kinase Src",
+        "target_components": [
+          {
+            "gene_symbol": "SRC",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P12931"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000197122"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL119929": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL279",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL1868",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL279",
+        "standard_type": "IC50",
+        "standard_value": 30,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL1868",
+        "standard_type": "IC50",
+        "standard_value": 10,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 74,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL119929",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1250,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL279": {
+        "pref_name": "Vascular endothelial growth factor receptor 2",
+        "target_components": [
+          {
+            "gene_symbol": "KDR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P35968"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000128052"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1868": {
+        "pref_name": "Vascular endothelial growth factor receptor 1",
+        "target_components": [
+          {
+            "gene_symbol": "FLT1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P17948"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000102755"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "CHEMBL1289926": {
+    "mechanisms": [
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL279",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL1868",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL1936",
+        "action_type": "INHIBITOR"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL340",
+        "action_type": "INHIBITOR"
+      }
+    ],
+    "activities": [
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL279",
+        "standard_type": "IC50",
+        "standard_value": 0.2,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL1868",
+        "standard_type": "IC50",
+        "standard_value": 0.1,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL1936",
+        "standard_type": "IC50",
+        "standard_value": 1.6,
+        "standard_units": "nM"
+      },
+      {
+        "molecule_chembl_id": "CHEMBL1289926",
+        "target_chembl_id": "CHEMBL340",
+        "standard_type": "IC50",
+        "standard_value": 1100,
+        "standard_units": "nM"
+      }
+    ],
+    "targets": {
+      "CHEMBL279": {
+        "pref_name": "Vascular endothelial growth factor receptor 2",
+        "target_components": [
+          {
+            "gene_symbol": "KDR",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P35968"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000128052"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1868": {
+        "pref_name": "Vascular endothelial growth factor receptor 1",
+        "target_components": [
+          {
+            "gene_symbol": "FLT1",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P17948"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000102755"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL1936": {
+        "pref_name": "Stem cell growth factor receptor",
+        "target_components": [
+          {
+            "gene_symbol": "KIT",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P10721"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000157404"
+              }
+            ]
+          }
+        ]
+      },
+      "CHEMBL340": {
+        "pref_name": "Cytochrome P450 3A4",
+        "target_components": [
+          {
+            "gene_symbol": "CYP3A4",
+            "target_component_xrefs": [
+              {
+                "xref_src_db": "UniProt",
+                "xref_id": "P08684"
+              },
+              {
+                "xref_src_db": "EnsemblGene",
+                "xref_id": "ENSG00000160868"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

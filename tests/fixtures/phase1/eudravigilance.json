@@ -1,0 +1,408 @@
+{
+  "drug_lapatinib": [
+    {
+      "case_id": "EU-LAP-0001",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-03-12",
+      "meddra_pt_code": "10019851",
+      "narrative": "EU spontaneous report of severe hepatotoxicity."
+    },
+    {
+      "case_id": "EU-LAP-0002",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2023-06-01",
+      "meddra_pt_code": "10019851"
+    },
+    {
+      "case_id": "EU-LAP-0003",
+      "ae": "Diarrhoea",
+      "serious": false,
+      "country": "IT",
+      "report_date": "2022-11-20"
+    },
+    {
+      "case_id": "EU-LAP-0004",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "ES",
+      "report_date": "2024-01-15",
+      "meddra_pt_code": "10019851"
+    },
+    {
+      "case_id": "EU-LAP-0005",
+      "ae": "Rash",
+      "serious": false,
+      "country": "NL",
+      "report_date": "2023-09-08"
+    }
+  ],
+  "drug_pazopanib": [
+    {
+      "case_id": "EU-PAZ-0001",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-02-02",
+      "meddra_pt_code": "10019851"
+    },
+    {
+      "case_id": "EU-PAZ-0002",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "SE",
+      "report_date": "2023-08-19",
+      "meddra_pt_code": "10019851"
+    },
+    {
+      "case_id": "EU-PAZ-0003",
+      "ae": "Hypertension",
+      "serious": false,
+      "country": "PL",
+      "report_date": "2022-05-11"
+    },
+    {
+      "case_id": "EU-PAZ-0004",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "BE",
+      "report_date": "2024-02-28",
+      "meddra_pt_code": "10019851"
+    }
+  ],
+  "drug_nilotinib": [
+    {
+      "case_id": "EU-NIL-0001",
+      "ae": "Electrocardiogram QT prolonged",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-04-04",
+      "meddra_pt_code": "10014335"
+    },
+    {
+      "case_id": "EU-NIL-0002",
+      "ae": "Electrocardiogram QT prolonged",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2023-07-22",
+      "meddra_pt_code": "10014335"
+    },
+    {
+      "case_id": "EU-NIL-0003",
+      "ae": "Rash",
+      "serious": false,
+      "country": "AT",
+      "report_date": "2022-12-01"
+    },
+    {
+      "case_id": "EU-NIL-0004",
+      "ae": "Electrocardiogram QT prolonged",
+      "serious": true,
+      "country": "IE",
+      "report_date": "2024-03-10",
+      "meddra_pt_code": "10014335"
+    }
+  ],
+  "drug_gefitinib": [
+    {
+      "case_id": "EU-GEF-0001",
+      "ae": "Interstitial lung disease",
+      "serious": true,
+      "country": "JP",
+      "report_date": "2023-01-18",
+      "meddra_pt_code": "10022611"
+    },
+    {
+      "case_id": "EU-GEF-0002",
+      "ae": "Interstitial lung disease",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-05-30",
+      "meddra_pt_code": "10022611"
+    }
+  ],
+  "drug_erlotinib": [
+    {
+      "case_id": "EU-ERL-0001",
+      "ae": "Interstitial lung disease",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2023-09-14",
+      "meddra_pt_code": "10022611"
+    },
+    {
+      "case_id": "EU-ERL-0002",
+      "ae": "Rash",
+      "serious": false,
+      "country": "ES",
+      "report_date": "2022-08-08"
+    }
+  ],
+  "drug_imatinib": [
+    {
+      "case_id": "EU-IMA-0001",
+      "ae": "Nausea",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-10-01"
+    },
+    {
+      "case_id": "EU-IMA-0002",
+      "ae": "Rash",
+      "serious": false,
+      "country": "IT",
+      "report_date": "2023-11-12"
+    }
+  ],
+  "drug_tozinameran": [
+    {
+      "case_id": "EU-BNT-0001",
+      "ae": "Myocarditis",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2021-08-01",
+      "meddra_pt_code": "10028606"
+    },
+    {
+      "case_id": "EU-BNT-0002",
+      "ae": "Myocarditis",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2021-09-12",
+      "meddra_pt_code": "10028606"
+    },
+    {
+      "case_id": "EU-BNT-0003",
+      "ae": "Anaphylactic reaction",
+      "serious": true,
+      "country": "IT",
+      "report_date": "2021-06-20",
+      "meddra_pt_code": "10002198"
+    }
+  ],
+  "drug_elasomeran": [
+    {
+      "case_id": "EU-MOD-0001",
+      "ae": "Myocarditis",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2021-10-05",
+      "meddra_pt_code": "10028606"
+    },
+    {
+      "case_id": "EU-MOD-0002",
+      "ae": "Myocarditis",
+      "serious": true,
+      "country": "ES",
+      "report_date": "2021-11-18",
+      "meddra_pt_code": "10028606"
+    }
+  ],
+  "drug_pembrolizumab": [
+    {
+      "case_id": "EU-PEM-0001",
+      "ae": "Immune-mediated colitis",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2022-04-01",
+      "meddra_pt_code": "10009887"
+    },
+    {
+      "case_id": "EU-PEM-0002",
+      "ae": "Immune-mediated colitis",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2022-06-15",
+      "meddra_pt_code": "10009887"
+    },
+    {
+      "case_id": "EU-PEM-0003",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "NL",
+      "report_date": "2023-01-09",
+      "meddra_pt_code": "10019851"
+    }
+  ],
+  "drug_dupilumab": [
+    {
+      "case_id": "EU-DUP-0001",
+      "ae": "Conjunctivitis",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2022-02-02",
+      "meddra_pt_code": "10010741"
+    },
+    {
+      "case_id": "EU-DUP-0002",
+      "ae": "Conjunctivitis",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2022-05-20",
+      "meddra_pt_code": "10010741"
+    }
+  ],
+  "drug_sotorasib": [
+    {
+      "case_id": "EU-SOTORA-0001",
+      "ae": "Diarrhoea",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-SOTORA-0002",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_natalizumab": [
+    {
+      "case_id": "EU-NATALI-0001",
+      "ae": "Progressive multifocal leukoencephalopathy",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-NATALI-0002",
+      "ae": "Hypersensitivity",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_nintedanib": [
+    {
+      "case_id": "EU-NINTED-0001",
+      "ae": "Diarrhoea",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-NINTED-0002",
+      "ae": "Nausea",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_baricitinib": [
+    {
+      "case_id": "EU-BARICI-0001",
+      "ae": "Infection",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-BARICI-0002",
+      "ae": "Thrombosis",
+      "serious": true,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_remdesivir": [
+    {
+      "case_id": "EU-REMDES-0001",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-REMDES-0002",
+      "ae": "Nausea",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_trametinib": [
+    {
+      "case_id": "EU-TRAMET-0001",
+      "ae": "Rash",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-TRAMET-0002",
+      "ae": "Diarrhoea",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_daratumumab": [
+    {
+      "case_id": "EU-DARATU-0001",
+      "ae": "Infusion related reaction",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-DARATU-0002",
+      "ae": "Infection",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_cemiplimab": [
+    {
+      "case_id": "EU-CEMIPL-0001",
+      "ae": "Immune-mediated colitis",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-CEMIPL-0002",
+      "ae": "Rash",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_vedolizumab": [
+    {
+      "case_id": "EU-VEDOLI-0001",
+      "ae": "Infection",
+      "serious": false,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-VEDOLI-0002",
+      "ae": "Nasopharyngitis",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ],
+  "drug_ivacaftor": [
+    {
+      "case_id": "EU-IVACAF-0001",
+      "ae": "Hepatotoxicity",
+      "serious": true,
+      "country": "DE",
+      "report_date": "2023-01-15"
+    },
+    {
+      "case_id": "EU-IVACAF-0002",
+      "ae": "Headache",
+      "serious": false,
+      "country": "FR",
+      "report_date": "2023-02-15"
+    }
+  ]
+}
