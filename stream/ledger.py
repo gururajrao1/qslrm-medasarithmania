@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy import select
@@ -99,7 +99,7 @@ def ledger_to_patch(row: EventLedger) -> dict[str, Any]:
     "ae_term_id": row.ae_term_id,
     "summary": row.summary,
     "payload_sha256": row.payload_sha256,
-    "ts": (row.created_at or datetime.now(timezone.utc)).isoformat(),
+    "ts": (row.created_at or datetime.now(UTC)).isoformat(),
   }
 
 
@@ -110,7 +110,7 @@ def schedule_broadcast(message: dict[str, Any]) -> None:
     return
   try:
     asyncio.run_coroutine_threadsafe(broadcast(message), loop)
-  except Exception:  # noqa: BLE001
+  except Exception:  # noqa: BLE001, S110 -- tick broadcast is best-effort
     pass
 
 

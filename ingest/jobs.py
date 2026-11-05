@@ -5,7 +5,7 @@ from __future__ import annotations
 import threading
 import traceback
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy.orm import Session
@@ -26,8 +26,8 @@ def create_job() -> str:
       "detail": {},
       "result": None,
       "error": None,
-      "created_at": datetime.now(timezone.utc).isoformat(),
-      "updated_at": datetime.now(timezone.utc).isoformat(),
+      "created_at": datetime.now(UTC).isoformat(),
+      "updated_at": datetime.now(UTC).isoformat(),
     }
   return job_id
 
@@ -44,7 +44,24 @@ def _update(job_id: str, **fields: Any) -> None:
     if not job:
       return
     job.update(fields)
-    job["updated_at"] = datetime.now(timezone.utc).isoformat()
+    job["updated_at"] = datetime.now(UTC).isoformat()
+
+
+class JobCancelled(Exception):
+  """Cooperative cancellation inside the pull worker."""
+
+
+def cancel_job(job_id: str) -> dict[str, Any] | None:
+  """Mark a queued/running job cancelled; the worker stops at the next checkpoint."""
+  with _lock:
+    job = _jobs.get(job_id)
+    if not job:
+      return None
+    if job["status"] in ("done", "error", "cancelled"):
+      return dict(job)
+    job.update({"status": "cancelled", "stage": "cancelled"})
+    job["updated_at"] = datetime.now(UTC).isoformat()
+    return dict(job)
 
 
 def start_cumulative_job(*, live: bool = True, faers_limit: int = 25) -> str:
@@ -55,8 +72,12 @@ def start_cumulative_job(*, live: bool = True, faers_limit: int = 25) -> str:
     from stream.ledger import schedule_broadcast
 
     _update(job_id, status="running", stage="start")
+    if (get_job(job_id) or {}).get("status") == "cancelled":
+      return
 
     def progress(stage: str, detail: dict) -> None:
+      if (get_job(job_id) or {}).get("status") == "cancelled":
+        raise JobCancelled(job_id)
       _update(job_id, stage=stage, detail=detail)
       schedule_broadcast(
         {
@@ -86,6 +107,8 @@ def start_cumulative_job(*, live: bool = True, faers_limit: int = 25) -> str:
           "after": result.get("after"),
         }
       )
+    except JobCancelled:
+      _update(job_id, stage="cancelled", detail={"note": "cancelled by user"})
     except Exception as exc:  # noqa: BLE001
       _update(
         job_id,

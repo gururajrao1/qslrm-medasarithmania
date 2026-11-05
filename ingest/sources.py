@@ -45,6 +45,12 @@ SOURCES: list[DataSource] = [
   DataSource("biodex", "BioDEX", "literature", "https://github.com/KarelDO/BioDEX", "benchmark / fixtures", "19k full-text + 65k abstracts ADE extraction benchmark (HF: BioDEX)"),
   DataSource("kidsides", "Kidsides", "literature", "https://github.com/ngiangre/kidsides", "fixtures MVP", "Pediatric age-stage FAERS ADE risk enrichment"),
   DataSource("drug_repurposing_hub", "Broad Drug Repurposing Hub", "multiomic", "https://www.broadinstitute.org/drug-repurposing-hub", "download / fixtures", "~6k clinical compounds · targets · phase metadata"),
+  DataSource("sec_edgar", "SEC EDGAR", "regulatory", "https://www.sec.gov/files/company_tickers.json", "none", "Sponsor ticker -> CIK + filing index + submissions/companyfacts URLs (fixture-backed, live resolve)"),
+  DataSource("alphafold", "AlphaFold DB (EBI)", "multiomic", "https://alphafold.ebi.ac.uk/api", "none", "Pharmacogene -> UniProt -> structure prediction refs (fixture-backed, live resolve)"),
+  DataSource("vigibase", "VigiBase (UMC/WHO)", "pharmacovigilance", "https://www.vigiaccess.org", "UMC credentials - documented, not wired", "WHO global ICSR base; public dashboard only without UMC access"),
+  DataSource("ctis_eu", "EU CTIS", "clinical_trials", "https://euclinicaltrials.eu", "public search only - documented, not wired", "EU Clinical Trials Information System; no stable open API"),
+  DataSource("tggates", "Open TG-GATEs", "multiomic", "https://dbarchive.biosciencedbc.jp/en/open-tggates", "download / fixtures", "Toxicogenomics: rat/human hepatocyte compound exposures"),
+  DataSource("msso_meddra", "MedDRA (MSSO)", "ontology", "https://www.meddra.org", "license required - documented, not wired", "PT/LLT coding dictionary; subscription license, no open API"),
 ]
 
 

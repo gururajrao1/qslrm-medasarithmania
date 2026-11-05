@@ -93,7 +93,21 @@ def split_omic_attribution(attr_omic_mass: float, s_off: float, s_gen: float) ->
   return attr_omic_mass * abs(s_off) / denom, attr_omic_mass * abs(s_gen) / denom
 
 
-def signal_strength(prr: float | None, ror: float | None, ebgm: float | None) -> float:
+def signal_strength(
+  prr: float | None,
+  ror: float | None,
+  ebgm: float | None,
+  *,
+  ror_ci_low: float | None = None,
+  ic025: float | None = None,
+  eb05: float | None = None,
+) -> float:
+  # Prefer lower credibility limits so wide-CI pairs score below tight ones.
+  for v in (eb05, ror_ci_low):
+    if v is not None and np.isfinite(v) and v > 0:
+      return float(np.log(v))
+  if ic025 is not None and np.isfinite(ic025):
+    return float(ic025 * np.log(2.0))
   for v in (ebgm, ror, prr):
     if v is not None and np.isfinite(v) and v > 0:
       return float(np.log(v))

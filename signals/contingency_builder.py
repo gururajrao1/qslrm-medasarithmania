@@ -14,7 +14,7 @@ from signals.disproportionality import Contingency
 def build_contingency_map(session: Session) -> dict[tuple[str, str], Contingency]:
   """Return (drug_id, ae_term_id) → Contingency for all observed pairs.
 
-  Counting grain = distinct case_id links in pv_drug_event (one row per case–drug–PT).
+  Counting grain = distinct cases; n11 counts pair links, margins count cases.
   """
   rows = session.execute(
     select(
@@ -50,18 +50,15 @@ def build_contingency_map(session: Session) -> dict[tuple[str, str], Contingency
   for ae_term_id, _case in ae_case:
     ae_n[ae_term_id] += 1
 
-  # Total reporting units = number of drug–event link rows (standard FAERS 2×2 on reports)
-  # Here n__ = total link rows
-  n_total = len(rows)
+  # Reporting units = distinct cases; margins count cases, not link rows.
+  # n__ = distinct cases; n11 counts pair links within those cases.
+  n_total = len(all_cases)
   if n_total == 0:
     return {}
 
-  # Recompute using link-row margins (more standard for PRR on event rows)
-  drug_link: dict[str, int] = defaultdict(int)
-  ae_link: dict[str, int] = defaultdict(int)
-  for drug_id, ae_term_id, _case_id, _serious in rows:
-    drug_link[drug_id] += 1
-    ae_link[ae_term_id] += 1
+  # Case-based margins reuse the distinct-case counts built above.
+  drug_link: dict[str, int] = drug_n
+  ae_link: dict[str, int] = ae_n
 
   out: dict[tuple[str, str], Contingency] = {}
   for (drug_id, ae_term_id), n11 in pair_n.items():

@@ -21,6 +21,10 @@ class Settings(BaseSettings):
   processed_data_dir: str = "data/processed"
   action_fused_threshold: float = 60.0
   rising_velocity_threshold: float = 0.5
+  allowed_origins: str = "http://localhost:8000,http://127.0.0.1:8000"
+
+  def cors_origins(self) -> list[str]:
+    return [o.strip() for o in self.allowed_origins.split(",") if o.strip()]
 
 
 @lru_cache

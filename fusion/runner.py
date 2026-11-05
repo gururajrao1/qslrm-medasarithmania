@@ -6,10 +6,28 @@ import numpy as np
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from fusion.calibration import resolve_stats, resolve_weights
 from fusion.decisions import action_flag_from_cards, build_decisions
 from fusion.scoring import fuse_risk, signal_strength, zscore
-from qslrm_erd.models import AeTerm, Drug, GroundTruthLabel, OmicScore, RiskScore, SignalStat, SignalVelocity
+from qslrm_erd.models import (
+  AeTerm,
+  Drug,
+  GroundTruthLabel,
+  OmicScore,
+  RiskScore,
+  SignalStat,
+  SignalVelocity,
+)
 from qslrm_erd.settings import get_settings
+from signals.disproportionality import triage_decision
+
+
+def _watchlist_pair(sig, n_reports: int | None) -> bool:
+  """True when PV support is too thin for triage (flagged watchlist-only)."""
+  if sig is not None and sig.n11 is not None and sig.n1_ and sig.n_1 and sig.n__:
+    _masked, watch, _metrics = triage_decision(sig.n11, sig.n1_ or 0, sig.n_1 or 0, sig.n__ or 0)
+    return watch
+  return (n_reports or 0) < 3
 
 
 def run_fusion(session: Session) -> dict:
@@ -62,6 +80,9 @@ def run_fusion(session: Session) -> dict:
       sig.prr if sig else rs.prr,
       sig.ror if sig else rs.ror,
       sig.ebgm if sig else None,
+      ror_ci_low=sig.ror_ci_low if sig else None,
+      ic025=sig.ic025 if sig else None,
+      eb05=sig.eb05 if sig else None,
     )
     omic = float(om.omic_risk) if om and om.omic_risk is not None else float(rs.omic_risk or 0.0)
     dose = float(rs.dose_risk or 0.0)
@@ -76,6 +97,9 @@ def run_fusion(session: Session) -> dict:
     for v in (sig_vals, omic_vals, dose_vals, serious_vals)
   ]
 
+  stats, stats_source = resolve_stats(model_version, stats)
+  weights = resolve_weights(model_version)
+
   fused_n = 0
   for rs, key, sv, ov, dv, sev in zip(
     risk_rows, keys, sig_vals, omic_vals, dose_vals, serious_vals, strict=True
@@ -89,6 +113,10 @@ def run_fusion(session: Session) -> dict:
       s_off=float(om.s_off) if om else 0.0,
       s_trans=float(om.s_trans) if om else 0.0,
       s_gen=float(om.s_gen) if om else 0.0,
+      w_signal=weights["w_signal"],
+      w_omic=weights["w_omic"],
+      w_dose=weights["w_dose"],
+      w_serious=weights["w_serious"],
     )
     rs.fused_score = result.fused_score
     rs.attr_dose = result.attr_dose
@@ -115,12 +143,17 @@ def run_fusion(session: Session) -> dict:
     needed, flag = action_flag_from_cards(cards, rs.fused_score, is_rising)
     rs.action_needed = needed
     rs.action_flag = flag
+    if _watchlist_pair(signals.get(key), rs.n_reports):
+      rs.action_needed = False
+      rs.action_flag = "watchlist"
     fused_n += 1
 
   session.commit()
   scores = [r.fused_score for r in risk_rows if r.fused_score is not None]
   return {
     "fused": fused_n,
+    "stats_source": stats_source,
+    "weights": weights,
     "fused_score_min": min(scores) if scores else None,
     "fused_score_max": max(scores) if scores else None,
     "fused_score_mean": float(np.mean(scores)) if scores else None,

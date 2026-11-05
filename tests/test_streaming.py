@@ -46,3 +46,57 @@ def test_append_event_idempotent(tmp_path):
     patch = ledger_to_patch(row1)
     assert patch["type"] == "ledger_event"
     assert patch["source"] == "openfda_faers"
+def test_schedule_broadcast_without_loop_is_noop():
+  from stream import ledger
+
+  ledger.set_event_loop(None)
+  ledger.schedule_broadcast({"type": "tick"})  # must not raise
+  assert ledger._loop is None
+
+
+def test_broadcast_prunes_dead_subscribers():
+  import asyncio
+
+  from stream import ledger
+
+  class Dead:
+    async def send_text(self, _msg):
+      raise RuntimeError("gone")
+
+  received = []
+
+  class Live:
+    async def send_text(self, msg):
+      received.append(msg)
+
+  dead, live = Dead(), Live()
+  ledger.register_subscriber(dead)
+  ledger.register_subscriber(live)
+  try:
+    asyncio.run(ledger.broadcast({"type": "tick"}))
+  finally:
+    ledger.unregister_subscriber(live)
+    ledger.unregister_subscriber(dead)
+  assert len(received) == 1
+  assert dead not in ledger._subscribers
+
+
+def test_ledger_patch_carries_identity():
+  import json
+
+  from sqlalchemy import create_engine
+  from sqlalchemy.orm import Session
+
+  engine = create_engine("sqlite://")
+  Base.metadata.create_all(engine)
+  with Session(engine) as session:
+    row = append_event(
+      session, source="test", entity_key="k|1", payload={"n": 1}, broadcast=False
+    )
+    session.commit()
+    assert row is not None and row.id is not None
+    patch = ledger_to_patch(row)
+    assert patch["event_id"] == row.id
+    assert patch["payload_sha256"] == payload_sha256({"n": 1})
+    assert patch["ts"]
+    json.dumps(patch)  # WS-serializable

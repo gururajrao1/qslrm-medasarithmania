@@ -14,8 +14,21 @@
   const filterSponsor = document.getElementById("filterSponsor");
   const filterMolecule = document.getElementById("filterMolecule");
   const filterRegion = document.getElementById("filterRegion");
+  const filterDrugClass = document.getElementById("filterDrugClass");
+  const risingOnly = document.getElementById("risingOnly");
+  const prevPage = document.getElementById("prevPage");
+  const nextPage = document.getElementById("nextPage");
+  const pageInfo = document.getElementById("pageInfo");
   const sortBy = document.getElementById("sortBy");
   const themeToggle = document.getElementById("themeToggle");
+  const filterAction = document.getElementById("filterAction");
+  const minFused = document.getElementById("minFused");
+  const minN = document.getElementById("minN");
+  const pageSizeSel = document.getElementById("pageSize");
+  const firstPage = document.getElementById("firstPage");
+  const lastPage = document.getElementById("lastPage");
+  const cancelJobBtn = document.getElementById("cancelJobBtn");
+  const jobProgress = document.getElementById("jobProgress");
 
   const liveChip = document.getElementById("liveChip");
   const pullAllBtn = document.getElementById("pullAllBtn");
@@ -23,7 +36,14 @@
   let deep = null;
   let streamSocket = null;
   let streamEvents = 0;
+  let page = 0;
+  let pageSize = 100;
   let pullPoll = null;
+  let selectedKey = null;
+  let activeJob = null;
+  let lastTotal = 0;
+  let narrShown = 5;
+  let litShown = 8;
 
   const fmt = (v, d = 2) => (v == null || Number.isNaN(v) ? "—" : Number(v).toFixed(d));
   const pct = (v) => (v == null ? "0%" : `${Math.round(Number(v) * 100)}%`);
@@ -50,6 +70,14 @@
     backdrop.hidden = true;
   }
   document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+  document.getElementById("drawer").addEventListener("click", (e) => {
+    const t = e.target;
+    if (!t || !t.id) return;
+    if (t.id === "moreNarr") { narrShown = 10000; if (deep) renderTabs(deep); }
+    if (t.id === "moreLit") { litShown = 10000; if (deep) renderTabs(deep); }
+    if (t.id === "draftClause") { draftClause(); }
+  });
   backdrop.addEventListener("click", closeDrawer);
 
   document.getElementById("tabs").addEventListener("click", (e) => {
@@ -63,6 +91,13 @@
 
   function setAttrs(item) {
     document.getElementById("fusedValue").textContent = fmt(item.fused_score, 1);
+    const band = item.fused_band;
+    if (band) {
+      document.getElementById("fusedValue").textContent += ` (${fmt(band.lo, 1)}-${fmt(band.hi, 1)})`;
+      document.getElementById("fusedValue").title = "Uncertainty band from weight perturbation; weights fitted vs boxed-warning labels";
+    } else {
+      document.getElementById("fusedValue").title = "Band unavailable — run Phase 3 calibration";
+    }
     [
       ["attrDosePct", "attrDoseFill", item.attr_dose],
       ["attrOffPct", "attrOffFill", item.attr_offtarget],
@@ -96,10 +131,27 @@
     </svg></div>`;
   }
 
+  function sparkline(hist) {
+    if (!hist || hist.length < 2) return `<p class="panel-note">Not enough periods for a trend.</p>`;
+    const w = 620, h2 = 90, pad = 14;
+    const ys = hist.map((p) => Number(p.ror) || 0);
+    const ymin = Math.min(...ys), ymax = Math.max(...ys);
+    const sx = (i) => pad + (i / Math.max(1, hist.length - 1)) * (w - 2 * pad);
+    const sy = (y) => h2 - pad - ((y - ymin) / ((ymax - ymin) || 1)) * (h2 - 2 * pad);
+    const dAttr = ys.map((y, i) => `${i ? "L" : "M"}${sx(i).toFixed(1)},${sy(y).toFixed(1)}`).join(" ");
+    const labels = hist.map((p) => esc(p.period)).join(" | ");
+    return `<div class="km"><svg viewBox="0 0 ${w} ${h2}" preserveAspectRatio="none"><path d="${dAttr}" fill="none" stroke-width="2.5" stroke="currentColor"/></svg><p class="panel-note">${labels}</p></div>`;
+  }
+
   function renderTabs(d) {
     document.getElementById("tab-decisions").innerHTML = (d.decisions || []).map((c) => `
       <div class="card kind-${esc(c.kind)}"><h3>${esc(c.title)}</h3><p>${esc(c.body)}</p></div>`
-    ).join("") || `<p class="panel-note">No decisions.</p>`;
+    ).join("") || `<p class="panel-note">No decision cards — pair is below action thresholds. Keep monitoring.</p>`;
+    document.getElementById("tab-decisions").insertAdjacentHTML("beforeend", `
+      <div class="pair-actions">
+        <a class="btn ghost" target="_blank" href="/v1/dsur?format=html&drug_id=${encodeURIComponent(d.drug_id || "")}">Pair DSUR</a>
+        <a class="btn ghost" target="_blank" href="/v1/deep-dive/${encodeURIComponent(d.drug_id || "")}/${encodeURIComponent(d.ae_term_id || "")}">Pair JSON</a>
+      </div>`);
 
     document.getElementById("tab-proteomics").innerHTML = `
       <p class="section-label">ChEMBL · S<sub>off</sub> ${fmt(d.s_off, 3)}</p>
@@ -154,14 +206,27 @@
     document.getElementById("tab-pv").innerHTML = `
       <div class="kv">
         <div><span class="k">PRR</span><span class="v">${fmt(d.prr)}</span></div>
-        <div><span class="k">ROR</span><span class="v">${fmt(d.ror)}</span></div>
+        <div><span class="k">ROR (95% CI)</span><span class="v">${fmt(d.ror)} [${fmt(d.ror_ci_low)}, ${fmt(d.ror_ci_high)}]</span></div>
         <div><span class="k">ΔROR</span><span class="v">${v ? fmt(v.delta_ror) : "—"}</span></div>
         <div><span class="k">Serious</span><span class="v">${pct(d.serious_rate)}</span></div>
+        <div><span class="k">n reports</span><span class="v">${d.n_reports ?? "none"}</span></div>
+        <div><span class="k">PRR chi2</span><span class="v">${fmt(d.prr_chi2, 1)}</span></div>
+        <div><span class="k">IC025</span><span class="v">${fmt(d.ic025)}</span></div>
+        <div><span class="k">EB05</span><span class="v">${fmt(d.eb05)}</span></div>
+      </div>
+      <p class="section-label">ROR trend with 95% CI per period</p>
+      ${sparkline(d.velocity_history)}
+      <table class="mini-table"><thead><tr><th>Period</th><th>ROR</th><th>CI</th><th>n</th></tr></thead>
+      <tbody>${(d.velocity_history || []).map((h) =>
+        `<tr><td>${esc(h.period)}</td><td class="mono">${fmt(h.ror)}</td>
+         <td class="mono">[${fmt(h.ror_ci_low)}, ${fmt(h.ror_ci_high)}]</td><td class="mono">${h.n11 ?? "none"}</td></tr>`
+      ).join("") || `<tr><td colspan="4">No period history</td></tr>`}</tbody></table>
+      <div class="kv" style="display:none">
       </div>
       <table class="mini-table"><thead><tr><th>Stratum</th><th>Value</th><th>Lift</th></tr></thead>
-      <tbody>${(d.demographics || []).slice(0, 8).map((x) =>
+      <tbody>${(d.demographics || []).map((x) =>
         `<tr><td>${esc(x.stratum_type)}</td><td>${esc(x.stratum_value)}</td>
-         <td class="mono">${x.lift_vs_background == null ? "—" : fmt(x.lift_vs_background)}</td></tr>`
+         <td class="mono">${x.mh_ror != null ? "MH " + fmt(x.mh_ror) : x.lift_vs_background == null ? "—" : fmt(x.lift_vs_background)}</td></tr>`
       ).join("") || `<tr><td colspan="3">None</td></tr>`}</tbody></table>`;
 
     const lit = d.literature || [];
@@ -176,21 +241,63 @@
          <td>${esc(s.frequency || "—")}</td><td>${s.matches_pair ? "pair" : "—"}</td></tr>`
       ).join("") || `<tr><td colspan="4">No label rows</td></tr>`}</tbody></table>
       <p class="section-label" style="margin-top:1rem">PubMed / Europe PMC / BioDEX / Kidsides</p>
-      ${lit.map((p) => `
+      ${lit.slice(0, litShown).map((p) => `
         <div class="lit-card ${p.matches_pair ? "match" : ""}">
           <div class="lit-meta">${esc(p.source)}${p.extractor ? ` · ${esc(p.extractor)}` : ""} · ${esc(p.pmid)}${p.year ? ` · ${p.year}` : ""}${p.citation_count != null ? ` · ${p.citation_count} cites` : ""}</div>
           <div class="lit-title">${esc(p.title)}</div>
           <p class="panel-note">${esc(p.snippet || "")}</p>
         </div>`
-      ).join("") || `<p class="panel-note">No literature evidence.</p>`}`;
+      ).join("") || `<p class="panel-note">No literature evidence.</p>`}
+      ${lit.length > litShown ? `<button type="button" class="btn ghost" id="moreLit">Show all (${lit.length})</button>` : ""}`;
 
     document.getElementById("tab-protocol").innerHTML = (d.protocol_exclusions || []).map((p) => `
       <div class="clause">${esc(p.clause_text)}</div>
       <p class="panel-note">${esc(p.rationale)}</p>`
-    ).join("") || `<p class="panel-note">No exclusion clause.</p>`;
+    ).join("") || `<p class="panel-note">No exclusion clause yet — generate a draft from the top variant below.</p>`;
+    document.getElementById("tab-protocol").insertAdjacentHTML("beforeend", `
+      <button type="button" class="btn primary" id="draftClause">Generate draft clause</button>
+      <p class="panel-note">Drafts persist for review; validate before protocol use.</p>`);
+    document.getElementById("tab-ddi").innerHTML = `
+      <table class="mini-table"><thead><tr><th>Concomitant</th><th>Enzyme</th><th>Risk</th><th>Mechanism</th></tr></thead>
+      <tbody>${(d.ddi || []).map((x) =>
+        `<tr><td>${esc(x.concomitant)}</td><td>${esc(x.enzyme || "—")}</td>
+         <td>${esc(x.risk_level || "—")}</td><td>${esc(x.mechanism || x.notes || "—")}</td></tr>`
+      ).join("") || `<tr><td colspan="4">No DDI rows</td></tr>`}</tbody></table>`;
+    document.getElementById("tab-narratives").innerHTML = `
+      ${(d.narratives || []).slice(0, narrShown).map((x) =>
+        `<div class="lit-card"><div class="lit-meta">${esc(x.case_id)}${x.country ? ` · ${esc(x.country)}` : ""}</div>
+         <p class="panel-note">${esc(x.narrative || "")}</p></div>`
+      ).join("") || `<p class="panel-note">No narratives.</p>`}
+      ${(d.narratives || []).length > narrShown ? `<button type="button" class="btn ghost" id="moreNarr">Show all (${(d.narratives || []).length})</button>` : ""}
+      <p class="section-label">Extracted entities (${(d.narrative_entities || []).length})</p>
+      <table class="mini-table"><thead><tr><th>Case</th><th>Type</th><th>Text</th><th>Conf</th></tr></thead>
+      <tbody>${(d.narrative_entities || []).slice(0, 12).map((x) =>
+        `<tr><td>${esc(x.case_id)}</td><td>${esc(x.entity_type)}</td>
+         <td>${esc(x.entity_text)}</td><td class="mono">${fmt(x.confidence)}</td></tr>`
+      ).join("") || `<tr><td colspan="4">None</td></tr>`}</tbody></table>`;
+  }
+
+  async function draftClause() {
+    if (!deep || !deep.drug_id || !deep.ae_term_id) return;
+    try {
+      const r = await fetch(`/v1/protocol/draft?drug_id=${encodeURIComponent(deep.drug_id)}&ae_term_id=${encodeURIComponent(deep.ae_term_id)}`, { method: "POST" });
+      if (!r.ok) throw new Error(`draft ${r.status}`);
+      await r.json();
+      const dr = await fetch(`/v1/deep-dive/${encodeURIComponent(deep.drug_id)}/${encodeURIComponent(deep.ae_term_id)}`);
+      if (!dr.ok) throw new Error(`deep-dive ${dr.status}`);
+      deep = await dr.json();
+      setAttrs(deep);
+      renderTabs(deep);
+      statusLine.textContent = "Draft clause saved to protocol tab";
+    } catch (err) {
+      statusLine.textContent = `Draft failed: ${err.message}`;
+    }
   }
 
   async function selectRow(item, tr) {
+    selectedKey = `${item.drug_id}||${item.ae_term_id}`;
+    narrShown = 5;
+    litShown = 8;
     document.querySelectorAll("#queueBody tr").forEach((el) => el.classList.remove("active"));
     if (tr) tr.classList.add("active");
     drawerTitle.textContent = `${item.drug_name} ↔ ${item.pt_string}`;
@@ -198,7 +305,9 @@
     setAttrs(item);
     openDrawer();
     try {
-      deep = await fetch(`/v1/deep-dive/${encodeURIComponent(item.drug_id)}/${encodeURIComponent(item.ae_term_id)}`).then((r) => r.json());
+      const dr = await fetch(`/v1/deep-dive/${encodeURIComponent(item.drug_id)}/${encodeURIComponent(item.ae_term_id)}`);
+      if (!dr.ok) throw new Error(`deep-dive ${dr.status}`);
+      deep = await dr.json();
       setAttrs(deep);
       renderTabs(deep);
     } catch (err) {
@@ -207,14 +316,38 @@
   }
 
   async function loadQueue(preferredTotal) {
-    // Request full ranked set; chip uses API `total` (not page length)
-    const params = new URLSearchParams({ limit: "2000", sort: sortBy.value || "fused" });
+    // Paged ranked set; chip uses API `total` (not page length)
+    const params = new URLSearchParams({ limit: String(pageSize), offset: String(page * pageSize), sort: sortBy.value || "fused" });
     if (searchBox.value.trim()) params.set("q", searchBox.value.trim());
     if (filterSponsor.value) params.set("sponsor", filterSponsor.value);
     if (filterMolecule.value) params.set("molecule_type", filterMolecule.value);
     if (filterRegion.value) params.set("region", filterRegion.value);
+    if (filterDrugClass && filterDrugClass.value) params.set("drug_class", filterDrugClass.value);
+    if (risingOnly && risingOnly.checked) params.set("rising_only", "true");
+    if (filterAction && filterAction.value === "needed") params.set("action_needed", "true");
+    if (filterAction && filterAction.value === "none") params.set("action_needed", "false");
+    if (minFused && minFused.value !== "") params.set("min_fused", minFused.value);
+    if (minN && minN.value !== "") params.set("min_n", minN.value);
     params.set("sort", sortBy.value);
-    const data = await fetch(`/v1/risk-scores?${params}`).then((r) => r.json());
+    const resp = await fetch(`/v1/risk-scores?${params}`);
+    if (!resp.ok) throw new Error(`queue ${resp.status}`);
+    const data = await resp.json();
+    if (pageInfo) pageInfo.textContent = `Page ${page + 1} · ${pageSize}/page`;
+    if (prevPage) prevPage.disabled = page === 0;
+    if (nextPage) nextPage.disabled = (page + 1) * pageSize >= (data.total ?? 0);
+    lastTotal = data.total ?? 0;
+    if (pageInfo) {
+      const pages = Math.max(1, Math.ceil(lastTotal / pageSize));
+      pageInfo.textContent = `Page ${page + 1} of ${pages}`;
+    }
+    if (firstPage) firstPage.disabled = page === 0;
+    if (lastPage) lastPage.disabled = (page + 1) * pageSize >= lastTotal;
+    const ex = new URLSearchParams(params);
+    ex.delete("limit"); ex.delete("offset"); ex.delete("sort");
+    const csvLink = document.getElementById("csvLink");
+    if (csvLink) csvLink.href = `/v1/audit?format=csv&limit=500&${ex}`;
+    const dsurLink = document.getElementById("dsurLink");
+    if (dsurLink) dsurLink.href = "/v1/dsur?format=html";
     items = data.items || [];
     const total = Number(
       preferredTotal != null
@@ -254,10 +387,19 @@
         <td class="mono">${pct(item.attr_transcriptomic)}</td>
         <td class="mono">${pct(item.attr_genetic)}</td>
         <td class="mono">${item.n_reports ?? "—"}</td>`;
-      tr.addEventListener("click", () => selectRow(item, tr));
+      tr.tabIndex = 0;
+      tr.addEventListener("click", () => { selectRow(item, tr); drawer.setAttribute("tabindex", "-1"); drawer.focus({ preventScroll: true }); });
+      tr.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectRow(item, tr); } });
       body.appendChild(tr);
     });
-    selectRow(items[0], body.querySelector("tr"));
+    const hit = selectedKey && items.find((it) => `${it.drug_id}||${it.ae_term_id}` === selectedKey);
+    if (hit) {
+      const tr = body.children[items.indexOf(hit)];
+      selectRow(hit, tr || undefined);
+    } else {
+      selectedKey = null;
+      closeDrawer();
+    }
   }
 
   function renderCatalog(cat) {
@@ -287,16 +429,36 @@
           return `<option value="${esc(s.name)}">${esc(label)}</option>`;
         })
         .join("");
+    if (filterDrugClass) {
+      const classes = cat.filters?.drug_classes || [];
+      const kept = filterDrugClass.value;
+      filterDrugClass.innerHTML = `<option value="">All classes</option>` +
+        classes.map((c) => `<option value="${esc(c)}">${esc(c)}</option>`).join("");
+      if (classes.includes(kept)) filterDrugClass.value = kept;
+    }
   }
 
+  // drug-class options are populated in renderCatalog above
   let debounce;
   const reload = () => {
     clearTimeout(debounce);
     debounce = setTimeout(() => loadQueue().catch(console.error), 150);
   };
-  [searchBox, filterSponsor, filterMolecule, filterRegion, sortBy].forEach((el) => {
-    el.addEventListener("change", reload);
-    el.addEventListener("input", reload);
+  const resetPage = () => { page = 0; };
+  [searchBox, filterSponsor, filterMolecule, filterRegion, sortBy, filterDrugClass, risingOnly, filterAction, minFused, minN, pageSizeSel].forEach((el) => {
+    if (!el) return;
+    el.addEventListener("change", () => { resetPage(); reload(); });
+    el.addEventListener("input", () => { resetPage(); reload(); });
+  });
+  if (prevPage) prevPage.addEventListener("click", () => { if (page > 0) { page -= 1; loadQueue().catch((e) => { statusLine.textContent = `Queue failed · ${e.message}`; }); } });
+  if (nextPage) nextPage.addEventListener("click", () => { page += 1; loadQueue().catch((e) => { statusLine.textContent = `Queue failed · ${e.message}`; }); });
+  const pageErr = (e) => { statusLine.textContent = `Queue failed: ${e.message}`; };
+  if (firstPage) firstPage.addEventListener("click", () => { page = 0; loadQueue().catch(pageErr); });
+  if (lastPage) lastPage.addEventListener("click", () => { page = Math.max(0, Math.ceil(lastTotal / pageSize) - 1); loadQueue().catch(pageErr); });
+  if (pageSizeSel) pageSizeSel.addEventListener("change", () => { pageSize = Number(pageSizeSel.value) || 100; });
+  [].forEach((el) => { // superseded by the resetPage wiring above
+    el.addEventListener("change", () => {});
+    el.addEventListener("input", () => {});
   });
 
   function setLive(state, detail) {
@@ -375,6 +537,9 @@
     if (pullAllBtn) {
       pullAllBtn.disabled = false;
       pullAllBtn.textContent = "Pull all sources";
+    if (cancelJobBtn) cancelJobBtn.classList.add("hidden");
+    if (jobProgress) jobProgress.classList.add("hidden");
+    activeJob = null;
     }
     if (pullPoll) {
       clearInterval(pullPoll);
@@ -396,6 +561,8 @@
   async function startPullAll() {
     if (!pullAllBtn || pullAllBtn.disabled) return;
     pullAllBtn.disabled = true;
+    if (cancelJobBtn) cancelJobBtn.classList.remove("hidden");
+    if (jobProgress) { jobProgress.classList.remove("hidden"); jobProgress.value = 0; }
     pullAllBtn.textContent = "Pulling…";
     statusLine.textContent = "Starting cumulative pull across all sources…";
     try {
@@ -409,13 +576,23 @@
         return;
       }
       const jobId = res.job_id;
+      activeJob = jobId;
       statusLine.textContent = `Job ${jobId} queued · live APIs for all MVP drugs, then recompute…`;
       pullPoll = setInterval(async () => {
         try {
           const job = await fetch(`/v1/ingest/jobs/${jobId}`).then((r) => r.json());
           if (job.stage && job.status === "running") {
             const d = job.detail || {};
+            if (jobProgress && d.n && d.i != null) {
+              jobProgress.classList.remove("hidden");
+              jobProgress.max = d.n;
+              jobProgress.value = d.i;
+            }
             statusLine.textContent = `Pulling · ${job.stage}${d.drug ? ": " + d.drug : ""}${d.i ? ` (${d.i}/${d.n})` : ""}${d.msg ? " · " + d.msg : ""}`;
+          }
+          if (job.status === "cancelled") {
+            statusLine.textContent = "Pull cancelled by user";
+            finishPullUi(false);
           }
           if (job.status === "done") {
             const delta = job.result?.delta || job.detail || {};
@@ -442,6 +619,15 @@
   }
 
   if (pullAllBtn) pullAllBtn.addEventListener("click", () => startPullAll());
+  if (cancelJobBtn) cancelJobBtn.addEventListener("click", async () => {
+    if (!activeJob) return;
+    try {
+      await fetch(`/v1/ingest/jobs/${activeJob}/cancel`, { method: "POST" });
+      statusLine.textContent = "Cancelling pull…";
+    } catch (err) {
+      statusLine.textContent = `Cancel failed: ${err.message}`;
+    }
+  });
 
   async function boot() {
     try {

@@ -24,34 +24,57 @@
       <span id="modelChip" class="chip">qslrm-v1.0.0</span>
       <span id="countChip" class="chip muted">— pairs</span>
       <button type="button" class="btn primary" id="pullAllBtn" title="Cumulative pull from all wired public datasets">Pull all sources</button>
+      <button type="button" class="btn ghost hidden" id="cancelJobBtn">Cancel</button>
+      <progress id="jobProgress" class="hidden" max="100" value="0" aria-label="Pull progress"></progress>
       <button type="button" class="btn ghost icon" id="themeToggle" title="Light / dark">◐</button>
-      <a class="btn ghost" href="/v1/audit?format=csv" download>CSV</a>
-      <a class="btn ghost" href="/v1/dsur?format=html" target="_blank">DSUR</a>
+      <a class="btn ghost" href="#" id="csvLink" download>CSV</a>
+      <a class="btn ghost" href="#" id="dsurLink" target="_blank">DSUR</a>
     </div>
   </header>
 
   <section class="toolbar" aria-label="Filters">
     <input id="searchBox" class="search" type="search" placeholder="Search drug, ADR, sponsor…" />
-    <select id="filterSponsor" class="select"><option value="">All sponsors</option></select>
-    <select id="filterMolecule" class="select">
+    <select id="filterSponsor" class="select" aria-label="Sponsor"><option value="">All sponsors</option></select>
+    <select id="filterMolecule" class="select" aria-label="Molecule type">
       <option value="">All molecules</option>
       <option value="small_molecule">Small molecule</option>
       <option value="biologic">Biologic</option>
     </select>
-    <select id="filterRegion" class="select">
+    <select id="filterDrugClass" class="select" aria-label="Drug class"><option value="">All classes</option></select>
+    <select id="filterRegion" class="select" aria-label="Region">
       <option value="">All regions</option>
       <option value="US">US</option>
       <option value="EU">EU</option>
       <option value="Global">Global</option>
     </select>
-    <select id="sortBy" class="select">
+    <select id="filterAction" class="select" aria-label="Action flag"><option value="">All flags</option><option value="needed">Action needed</option><option value="none">No action</option></select>
+    <input id="minFused" class="mini-input" type="number" min="0" max="100" step="5" placeholder="Min fused" aria-label="Minimum fused score" />
+    <input id="minN" class="mini-input" type="number" min="1" step="1" placeholder="Min n" aria-label="Minimum report count" />
+    <select id="sortBy" class="select" aria-label="Sort by">
       <option value="fused">Fused risk</option>
       <option value="velocity">ΔROR</option>
       <option value="serious">Seriousness</option>
       <option value="n">Report count</option>
+      <option value="ebgm">EBGM (adjusted)</option>
+      <option value="ic">IC (information component)</option>
     </select>
   </section>
 
+  <section class="legend" aria-label="Legend">
+    <details>
+      <summary>Headers: Fused 0-100 risk score · Flag action state · ROR odds ratio with CI · N reports · EB05/IC025 conservative lower bounds · MH Mantel-Haenszel adjusted ROR. How is fused computed?</summary>
+      <p>Fused = 100 x sigmoid over z-scored signal, omic, dose and seriousness channels plus off-target / transcriptomic / genetic attribution. Weights are fitted against boxed-warning labels when available, otherwise defaults. Scores are triage hypotheses, never causality.</p>
+    </details>
+  </section>
+  <section class="pager" aria-label="Page">
+    <label class="check"><input type="checkbox" id="risingOnly" /> Rising only</label>
+    <button type="button" class="btn ghost" id="prevPage">Prev</button>
+    <span id="pageInfo" class="chip muted">Page 1</span>
+    <button type="button" class="btn ghost" id="firstPage" title="First page">First</button>
+    <button type="button" class="btn ghost" id="nextPage">Next</button>
+    <button type="button" class="btn ghost" id="lastPage" title="Last page">Last</button>
+    <select id="pageSize" class="select" aria-label="Page size"><option value="50">50/page</option><option value="100" selected>100/page</option><option value="200">200/page</option></select>
+  </section>
   <section class="sources compact" aria-label="Inventory">
     <div class="source-grid" id="sourceGrid"></div>
   </section>
@@ -70,13 +93,13 @@
               <th>Drug</th>
               <th>Sponsor</th>
               <th>ADR</th>
-              <th>Fused</th>
-              <th>Flag</th>
+              <th title="Fused risk 0-100: 100 x sigmoid over z-scored signal, omic, dose, seriousness">Fused</th>
+              <th title="Action state: RISING, GENETIC_FILTER, DOSE_REVIEW, HIGH_RISK, watchlist, or none">Flag</th>
               <th>ΔROR</th>
-              <th>Dose</th>
-              <th>Off</th>
-              <th>Trans</th>
-              <th>Gen</th>
+              <th title="Dose-response attribution share">Dose</th>
+              <th title="Off-target attribution share">Off</th>
+              <th title="Transcriptomic attribution share">Trans</th>
+              <th title="Genetic attribution share">Gen</th>
               <th>N</th>
             </tr>
           </thead>
@@ -136,6 +159,8 @@
       <button type="button" data-tab="pv">PV</button>
       <button type="button" data-tab="literature">Literature</button>
       <button type="button" data-tab="protocol">Protocol</button>
+      <button type="button" data-tab="ddi">DDI</button>
+      <button type="button" data-tab="narratives">Narratives</button>
     </nav>
 
     <div class="tab-panels">
@@ -148,16 +173,18 @@
       <section class="tab-panel" id="tab-pv"></section>
       <section class="tab-panel" id="tab-literature"></section>
       <section class="tab-panel" id="tab-protocol"></section>
+      <section class="tab-panel" id="tab-ddi"></section>
+      <section class="tab-panel" id="tab-narratives"></section>
     </div>
 
     <p class="disclaimer">Hypothesis triage only — disproportionality ≠ causality.</p>
   </aside>
 
-  <footer class="foot">
+  <footer class="foot" aria-live="polite">
     <span>MedasArithmania</span>
     <span id="statusLine">…</span>
   </footer>
 
-  <script src="/static/app.js?v=20260727a"></script>
+  <script src="/static/app.js?v=20261105b"></script>
 </body>
 </html>

@@ -40,23 +40,29 @@ def run_signal_detection(session: Session, *, period: str = "all") -> dict:
         SignalStat.model_version == model_version,
       )
     )
-    payload = dict(
-      drug_id=drug_id,
-      ae_term_id=ae_term_id,
-      period=period,
-      n11=metrics.n11,
-      n1_=metrics.n1_,
-      n_1=metrics.n_1,
-      n__=metrics.n__,
-      prr=_finite(metrics.prr),
-      ror=_finite(metrics.ror),
-      ror_ci_low=_finite(metrics.ror_ci_low),
-      ror_ci_high=_finite(metrics.ror_ci_high),
-      ic=_finite(metrics.ic),
-      ebgm=_finite(metrics.ebgm),
-      serious_rate=sr,
-      model_version=model_version,
-    )
+    payload = {
+      "drug_id": drug_id,
+      "ae_term_id": ae_term_id,
+      "period": period,
+      "n11": metrics.n11,
+      "n1_": metrics.n1_,
+      "n_1": metrics.n_1,
+      "n__": metrics.n__,
+      "prr": _finite(metrics.prr),
+      "ror": _finite(metrics.ror),
+      "ror_ci_low": _finite(metrics.ror_ci_low),
+      "ror_ci_high": _finite(metrics.ror_ci_high),
+      "ic": _finite(metrics.ic),
+      "ebgm": _finite(metrics.ebgm),
+      "prr_chi2": _finite(metrics.prr_chi2),
+      "prr_ci_low": _finite(metrics.prr_ci_low),
+      "prr_ci_high": _finite(metrics.prr_ci_high),
+      "ic025": _finite(metrics.ic025),
+      "eb05": _finite(metrics.eb05),
+      "eb95": _finite(metrics.eb95),
+      "serious_rate": sr,
+      "model_version": model_version,
+    }
     if existing is None:
       session.add(SignalStat(**payload))
       inserted += 1
@@ -130,23 +136,23 @@ def seed_period_signals_for_velocity(session: Session) -> dict:
         )
       )
       ror = max(0.1, float(s.ror) * factor)
-      payload = dict(
-        drug_id=s.drug_id,
-        ae_term_id=s.ae_term_id,
-        period=period,
-        n11=s.n11,
-        n1_=s.n1_,
-        n_1=s.n_1,
-        n__=s.n__,
-        prr=_finite((s.prr or ror) * factor),
-        ror=_finite(ror),
-        ror_ci_low=s.ror_ci_low,
-        ror_ci_high=s.ror_ci_high,
-        ic=s.ic,
-        ebgm=s.ebgm,
-        serious_rate=s.serious_rate,
-        model_version=model_version,
-      )
+      payload = {
+        "drug_id": s.drug_id,
+        "ae_term_id": s.ae_term_id,
+        "period": period,
+        "n11": s.n11,
+        "n1_": s.n1_,
+        "n_1": s.n_1,
+        "n__": s.n__,
+        "prr": _finite((s.prr or ror) * factor),
+        "ror": _finite(ror),
+        "ror_ci_low": s.ror_ci_low,
+        "ror_ci_high": s.ror_ci_high,
+        "ic": s.ic,
+        "ebgm": s.ebgm,
+        "serious_rate": s.serious_rate,
+        "model_version": model_version,
+      }
       if existing is None:
         session.add(SignalStat(**payload))
         inserted += 1

@@ -75,8 +75,9 @@ Public / fixture-backed layers include:
 - **PV:** openFDA FAERS, EudraVigilance fixtures  
 - **Trials:** ClinicalTrials.gov, ICTRP / CTRI fixtures  
 - **Labels / literature:** DailyMed / openFDA labels, PubMed, Europe PMC, SIDER, OnSIDES  
-- **Multi-omic:** ChEMBL, BindingDB, LINCS, ClinVar / PharmGKB, Open Targets, Tox21, DepMap  
-- **Regulatory context:** Orange Book / RxNorm sponsor–product mapping  
+- **Multi-omic:** ChEMBL, BindingDB, LINCS, ClinVar / PharmGKB, Open Targets, Tox21, DepMap, AlphaFold (structure refs), Open TG-GATEs (fixtures path)  
+- **Regulatory context:** Orange Book / RxNorm sponsor–product mapping, SEC EDGAR (CIK + filing/companyfacts links)
+- **Documented, not wired (need access):** VigiBase (UMC credentials), EU CTIS (no open API), MedDRA MSSO (license)  
 
 ---
 
@@ -92,6 +93,8 @@ python -m venv .venv
 
 pip install -e ".[dev]"
 cp .env.example .env
+# Windows PowerShell instead: Copy-Item .env.example .env
+# Or run everything in one go: .\run_local.ps1
 ```
 
 In `.env`:
@@ -99,7 +102,11 @@ In `.env`:
 ```env
 DATABASE_URL=sqlite:///./data/processed/qslrm.db
 MODEL_VERSION=qslrm-v1.0.0
+ALLOWED_ORIGINS=http://localhost:8000,http://127.0.0.1:8000
 ```
+
+`ALLOWED_ORIGINS` controls browser CORS access to the API; set it to your
+deployed frontend origin in production (Render: add it as an env var).
 
 Build data and run:
 

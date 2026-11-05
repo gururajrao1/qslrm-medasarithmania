@@ -6,7 +6,6 @@ Join grain (MVP): drug ↔ target/gene ↔ MedDRA/openFDA PT — never patient U
 from __future__ import annotations
 
 from datetime import date, datetime
-from typing import Optional
 
 from sqlalchemy import (
   Boolean,
@@ -31,18 +30,18 @@ class Drug(Base):
 
   drug_id: Mapped[str] = mapped_column(String(64), primary_key=True)
   preferred_name: Mapped[str] = mapped_column(String(256), nullable=False, index=True)
-  brand_name: Mapped[Optional[str]] = mapped_column(String(128))
+  brand_name: Mapped[str | None] = mapped_column(String(128))
   drug_class: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
-  therapeutic_class: Mapped[Optional[str]] = mapped_column(String(64), index=True)
+  therapeutic_class: Mapped[str | None] = mapped_column(String(64), index=True)
   molecule_type: Mapped[str] = mapped_column(String(32), default="small_molecule", nullable=False, index=True)
-  sponsor_company: Mapped[Optional[str]] = mapped_column(String(128), index=True)
-  nda_bla: Mapped[Optional[str]] = mapped_column(String(32))
-  atc_code: Mapped[Optional[str]] = mapped_column(String(32))
-  rxnorm_cui: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  chembl_id: Mapped[Optional[str]] = mapped_column(String(32), index=True)
+  sponsor_company: Mapped[str | None] = mapped_column(String(128), index=True)
+  nda_bla: Mapped[str | None] = mapped_column(String(32))
+  atc_code: Mapped[str | None] = mapped_column(String(32))
+  rxnorm_cui: Mapped[str | None] = mapped_column(String(32), index=True)
+  chembl_id: Mapped[str | None] = mapped_column(String(32), index=True)
   is_mvp_seed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
-  cyp_substrates: Mapped[Optional[str]] = mapped_column(String(256))  # e.g. CYP3A4,CYP2D6
-  notes: Mapped[Optional[str]] = mapped_column(Text)
+  cyp_substrates: Mapped[str | None] = mapped_column(String(256))  # e.g. CYP3A4,CYP2D6
+  notes: Mapped[str | None] = mapped_column(Text)
   created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
   targets: Mapped[list[DrugTarget]] = relationship(back_populates="drug")
@@ -53,10 +52,10 @@ class Target(Base):
 
   target_id: Mapped[str] = mapped_column(String(64), primary_key=True)
   gene_symbol: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
-  uniprot_id: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  ensembl_id: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  pdb_id: Mapped[Optional[str]] = mapped_column(String(16))
-  protein_name: Mapped[Optional[str]] = mapped_column(String(256))
+  uniprot_id: Mapped[str | None] = mapped_column(String(32), index=True)
+  ensembl_id: Mapped[str | None] = mapped_column(String(32), index=True)
+  pdb_id: Mapped[str | None] = mapped_column(String(16))
+  protein_name: Mapped[str | None] = mapped_column(String(256))
   is_admet_relevant: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
 
   drugs: Mapped[list[DrugTarget]] = relationship(back_populates="target")
@@ -69,9 +68,9 @@ class DrugTarget(Base):
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False, index=True)
   target_id: Mapped[str] = mapped_column(ForeignKey("target.target_id"), nullable=False, index=True)
-  affinity_nm: Mapped[Optional[float]] = mapped_column(Float)
-  affinity_type: Mapped[Optional[str]] = mapped_column(String(16))
-  action_type: Mapped[Optional[str]] = mapped_column(String(64))
+  affinity_nm: Mapped[float | None] = mapped_column(Float)
+  affinity_type: Mapped[str | None] = mapped_column(String(16))
+  action_type: Mapped[str | None] = mapped_column(String(64))
   is_off_target: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
   source: Mapped[str] = mapped_column(String(64), default="chembl", nullable=False)
 
@@ -85,7 +84,7 @@ class Pathway(Base):
   pathway_id: Mapped[str] = mapped_column(String(64), primary_key=True)
   name: Mapped[str] = mapped_column(String(256), nullable=False)
   source: Mapped[str] = mapped_column(String(64), default="opentargets", nullable=False)
-  tox_tag: Mapped[Optional[str]] = mapped_column(String(64))
+  tox_tag: Mapped[str | None] = mapped_column(String(64))
 
 
 class PathwayTarget(Base):
@@ -101,16 +100,16 @@ class Variant(Base):
   __tablename__ = "variant"
 
   variant_id: Mapped[str] = mapped_column(String(64), primary_key=True)
-  rsid: Mapped[Optional[str]] = mapped_column(String(32), index=True)
+  rsid: Mapped[str | None] = mapped_column(String(32), index=True)
   gene_symbol: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
-  clinvar_id: Mapped[Optional[str]] = mapped_column(String(32))
-  pharmgkb_id: Mapped[Optional[str]] = mapped_column(String(64))
-  metabolizer_impact: Mapped[Optional[str]] = mapped_column(String(64))  # e.g. CYP2D6_PM
-  consequence: Mapped[Optional[str]] = mapped_column(String(128))
-  allele_freq: Mapped[Optional[float]] = mapped_column(Float)
-  effect_size: Mapped[Optional[float]] = mapped_column(Float)
-  related_pt: Mapped[Optional[str]] = mapped_column(String(128), index=True)
-  notes: Mapped[Optional[str]] = mapped_column(Text)
+  clinvar_id: Mapped[str | None] = mapped_column(String(32))
+  pharmgkb_id: Mapped[str | None] = mapped_column(String(64))
+  metabolizer_impact: Mapped[str | None] = mapped_column(String(64))  # e.g. CYP2D6_PM
+  consequence: Mapped[str | None] = mapped_column(String(128))
+  allele_freq: Mapped[float | None] = mapped_column(Float)
+  effect_size: Mapped[float | None] = mapped_column(Float)
+  related_pt: Mapped[str | None] = mapped_column(String(128), index=True)
+  notes: Mapped[str | None] = mapped_column(Text)
 
 
 class TranscriptSignature(Base):
@@ -126,7 +125,7 @@ class TranscriptSignature(Base):
   gene_symbol: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
   z_score: Mapped[float] = mapped_column(Float, nullable=False)
   tox_weight: Mapped[float] = mapped_column(Float, nullable=False, default=1.0)
-  direction: Mapped[Optional[str]] = mapped_column(String(16))  # up | down
+  direction: Mapped[str | None] = mapped_column(String(16))  # up | down
   source: Mapped[str] = mapped_column(String(64), default="lincs_fixture", nullable=False)
 
 
@@ -135,13 +134,13 @@ class AeTerm(Base):
 
   ae_term_id: Mapped[str] = mapped_column(String(64), primary_key=True)
   pt_string: Mapped[str] = mapped_column(String(256), nullable=False, unique=True, index=True)
-  meddra_pt_code: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  meddra_hlt: Mapped[Optional[str]] = mapped_column(String(128))
-  meddra_hlt_code: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  meddra_soc_code: Mapped[Optional[str]] = mapped_column(String(32), index=True)
-  soc: Mapped[Optional[str]] = mapped_column(String(128))
-  snomed_id: Mapped[Optional[str]] = mapped_column(String(64))
-  hpo_id: Mapped[Optional[str]] = mapped_column(String(32))
+  meddra_pt_code: Mapped[str | None] = mapped_column(String(32), index=True)
+  meddra_hlt: Mapped[str | None] = mapped_column(String(128))
+  meddra_hlt_code: Mapped[str | None] = mapped_column(String(32), index=True)
+  meddra_soc_code: Mapped[str | None] = mapped_column(String(32), index=True)
+  soc: Mapped[str | None] = mapped_column(String(128))
+  snomed_id: Mapped[str | None] = mapped_column(String(64))
+  hpo_id: Mapped[str | None] = mapped_column(String(32))
   source: Mapped[str] = mapped_column(String(64), default="openfda_pt", nullable=False)
 
 
@@ -166,15 +165,15 @@ class PvCase(Base):
   __tablename__ = "pv_case"
 
   case_id: Mapped[str] = mapped_column(String(64), primary_key=True)
-  report_date: Mapped[Optional[date]] = mapped_column(Date)
-  country: Mapped[Optional[str]] = mapped_column(String(8))
-  source_region: Mapped[Optional[str]] = mapped_column(String(16), index=True)  # US | EU | Global
-  sex: Mapped[Optional[str]] = mapped_column(String(16))
-  age_group: Mapped[Optional[str]] = mapped_column(String(32))
-  serious: Mapped[Optional[bool]] = mapped_column(Boolean)
-  outcome: Mapped[Optional[str]] = mapped_column(String(64))
-  source_period: Mapped[Optional[str]] = mapped_column(String(16))
-  narrative: Mapped[Optional[str]] = mapped_column(Text)
+  report_date: Mapped[date | None] = mapped_column(Date)
+  country: Mapped[str | None] = mapped_column(String(8))
+  source_region: Mapped[str | None] = mapped_column(String(16), index=True)  # US | EU | Global
+  sex: Mapped[str | None] = mapped_column(String(16))
+  age_group: Mapped[str | None] = mapped_column(String(32))
+  serious: Mapped[bool | None] = mapped_column(Boolean)
+  outcome: Mapped[str | None] = mapped_column(String(64))
+  source_period: Mapped[str | None] = mapped_column(String(16))
+  narrative: Mapped[str | None] = mapped_column(Text)
 
 
 class PvDrugEvent(Base):
@@ -188,9 +187,9 @@ class PvDrugEvent(Base):
   case_id: Mapped[str] = mapped_column(ForeignKey("pv_case.case_id"), nullable=False)
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False, index=True)
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
-  drug_role: Mapped[Optional[str]] = mapped_column(String(8))
-  dose_text: Mapped[Optional[str]] = mapped_column(String(256))
-  dose_proxy: Mapped[Optional[float]] = mapped_column(Float)
+  drug_role: Mapped[str | None] = mapped_column(String(8))
+  dose_text: Mapped[str | None] = mapped_column(String(256))
+  dose_proxy: Mapped[float | None] = mapped_column(Float)
 
 
 class NarrativeEntity(Base):
@@ -201,7 +200,7 @@ class NarrativeEntity(Base):
 
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   case_id: Mapped[str] = mapped_column(ForeignKey("pv_case.case_id"), nullable=False)
-  drug_id: Mapped[Optional[str]] = mapped_column(ForeignKey("drug.drug_id"))
+  drug_id: Mapped[str | None] = mapped_column(ForeignKey("drug.drug_id"))
   entity_type: Mapped[str] = mapped_column(String(64), nullable=False)  # symptom|dose|offlabel|timing
   entity_text: Mapped[str] = mapped_column(String(256), nullable=False)
   confidence: Mapped[float] = mapped_column(Float, default=0.7, nullable=False)
@@ -214,14 +213,14 @@ class TrialAe(Base):
 
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   nct_id: Mapped[str] = mapped_column(String(32), nullable=False, index=True)
-  drug_id: Mapped[Optional[str]] = mapped_column(ForeignKey("drug.drug_id"))
-  phase: Mapped[Optional[str]] = mapped_column(String(16))
+  drug_id: Mapped[str | None] = mapped_column(ForeignKey("drug.drug_id"))
+  phase: Mapped[str | None] = mapped_column(String(16))
   arm: Mapped[str] = mapped_column(String(128), nullable=False)
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
-  event_count: Mapped[Optional[int]] = mapped_column(Integer)
-  subjects_at_risk: Mapped[Optional[int]] = mapped_column(Integer)
-  dose_text: Mapped[Optional[str]] = mapped_column(String(256))
-  median_onset_weeks: Mapped[Optional[float]] = mapped_column(Float)
+  event_count: Mapped[int | None] = mapped_column(Integer)
+  subjects_at_risk: Mapped[int | None] = mapped_column(Integer)
+  dose_text: Mapped[str | None] = mapped_column(String(256))
+  median_onset_weeks: Mapped[float | None] = mapped_column(Float)
 
 
 class TrialOnsetCurve(Base):
@@ -251,8 +250,8 @@ class TrialConcomitant(Base):
   nct_id: Mapped[str] = mapped_column(String(32), nullable=False, index=True)
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False)
   concomitant_name: Mapped[str] = mapped_column(String(128), nullable=False)
-  concomitant_rxnorm: Mapped[Optional[str]] = mapped_column(String(32))
-  cyp_enzymes: Mapped[Optional[str]] = mapped_column(String(128))
+  concomitant_rxnorm: Mapped[str | None] = mapped_column(String(32))
+  cyp_enzymes: Mapped[str | None] = mapped_column(String(128))
 
 
 class DdiRisk(Base):
@@ -267,7 +266,7 @@ class DdiRisk(Base):
   enzyme: Mapped[str] = mapped_column(String(32), nullable=False)
   risk_level: Mapped[str] = mapped_column(String(16), nullable=False)  # high|moderate|low
   mechanism: Mapped[str] = mapped_column(String(128), nullable=False)
-  notes: Mapped[Optional[str]] = mapped_column(Text)
+  notes: Mapped[str | None] = mapped_column(Text)
 
 
 class SignalStat(Base):
@@ -284,13 +283,19 @@ class SignalStat(Base):
   n1_: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
   n_1: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
   n__: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
-  prr: Mapped[Optional[float]] = mapped_column(Float)
-  ror: Mapped[Optional[float]] = mapped_column(Float)
-  ror_ci_low: Mapped[Optional[float]] = mapped_column(Float)
-  ror_ci_high: Mapped[Optional[float]] = mapped_column(Float)
-  ic: Mapped[Optional[float]] = mapped_column(Float)
-  ebgm: Mapped[Optional[float]] = mapped_column(Float)
-  serious_rate: Mapped[Optional[float]] = mapped_column(Float)
+  prr: Mapped[float | None] = mapped_column(Float)
+  ror: Mapped[float | None] = mapped_column(Float)
+  ror_ci_low: Mapped[float | None] = mapped_column(Float)
+  ror_ci_high: Mapped[float | None] = mapped_column(Float)
+  ic: Mapped[float | None] = mapped_column(Float)
+  ebgm: Mapped[float | None] = mapped_column(Float)
+  prr_chi2: Mapped[float | None] = mapped_column(Float)
+  prr_ci_low: Mapped[float | None] = mapped_column(Float)
+  prr_ci_high: Mapped[float | None] = mapped_column(Float)
+  ic025: Mapped[float | None] = mapped_column(Float)
+  eb05: Mapped[float | None] = mapped_column(Float)
+  eb95: Mapped[float | None] = mapped_column(Float)
+  serious_rate: Mapped[float | None] = mapped_column(Float)
   model_version: Mapped[str] = mapped_column(String(32), nullable=False)
   computed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
@@ -331,7 +336,8 @@ class DemographicSignal(Base):
   stratum_value: Mapped[str] = mapped_column(String(64), nullable=False)
   n_reports: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
   share: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
-  lift_vs_background: Mapped[Optional[float]] = mapped_column(Float)
+  lift_vs_background: Mapped[float | None] = mapped_column(Float)
+  mh_ror: Mapped[float | None] = mapped_column(Float)
   model_version: Mapped[str] = mapped_column(String(32), nullable=False)
 
 
@@ -345,18 +351,18 @@ class RiskScore(Base):
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False, index=True)
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
   n_reports: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
-  prr: Mapped[Optional[float]] = mapped_column(Float)
-  ror: Mapped[Optional[float]] = mapped_column(Float)
-  omic_risk: Mapped[Optional[float]] = mapped_column(Float)
-  dose_risk: Mapped[Optional[float]] = mapped_column(Float)
-  serious_rate: Mapped[Optional[float]] = mapped_column(Float)
-  fused_score: Mapped[Optional[float]] = mapped_column(Float)
-  attr_dose: Mapped[Optional[float]] = mapped_column(Float)
-  attr_offtarget: Mapped[Optional[float]] = mapped_column(Float)
-  attr_transcriptomic: Mapped[Optional[float]] = mapped_column(Float)
-  attr_genetic: Mapped[Optional[float]] = mapped_column(Float)
+  prr: Mapped[float | None] = mapped_column(Float)
+  ror: Mapped[float | None] = mapped_column(Float)
+  omic_risk: Mapped[float | None] = mapped_column(Float)
+  dose_risk: Mapped[float | None] = mapped_column(Float)
+  serious_rate: Mapped[float | None] = mapped_column(Float)
+  fused_score: Mapped[float | None] = mapped_column(Float)
+  attr_dose: Mapped[float | None] = mapped_column(Float)
+  attr_offtarget: Mapped[float | None] = mapped_column(Float)
+  attr_transcriptomic: Mapped[float | None] = mapped_column(Float)
+  attr_genetic: Mapped[float | None] = mapped_column(Float)
   action_needed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
-  action_flag: Mapped[Optional[str]] = mapped_column(String(64))
+  action_flag: Mapped[str | None] = mapped_column(String(64))
   rising_signal: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
   model_version: Mapped[str] = mapped_column(String(32), nullable=False)
   computed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
@@ -392,10 +398,10 @@ class ProtocolExclusion(Base):
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False)
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
-  variant_id: Mapped[Optional[str]] = mapped_column(ForeignKey("variant.variant_id"))
+  variant_id: Mapped[str | None] = mapped_column(ForeignKey("variant.variant_id"))
   clause_text: Mapped[str] = mapped_column(Text, nullable=False)
   rationale: Mapped[str] = mapped_column(Text, nullable=False)
-  estimated_adr_reduction: Mapped[Optional[float]] = mapped_column(Float)
+  estimated_adr_reduction: Mapped[float | None] = mapped_column(Float)
 
 
 class LiteratureEvidence(Base):
@@ -411,10 +417,10 @@ class LiteratureEvidence(Base):
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
   pmid: Mapped[str] = mapped_column(String(32), nullable=False)
   title: Mapped[str] = mapped_column(String(512), nullable=False)
-  year: Mapped[Optional[int]] = mapped_column(Integer)
+  year: Mapped[int | None] = mapped_column(Integer)
   source: Mapped[str] = mapped_column(String(32), nullable=False, default="pubmed")
-  citation_count: Mapped[Optional[int]] = mapped_column(Integer)
-  abstract_snippet: Mapped[Optional[str]] = mapped_column(Text)
+  citation_count: Mapped[int | None] = mapped_column(Integer)
+  abstract_snippet: Mapped[str | None] = mapped_column(Text)
   relation_confirmed: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
   extractor: Mapped[str] = mapped_column(String(64), default="fixture", nullable=False)
 
@@ -430,7 +436,7 @@ class SideEffectLabel(Base):
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   drug_id: Mapped[str] = mapped_column(ForeignKey("drug.drug_id"), nullable=False, index=True)
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
-  frequency: Mapped[Optional[str]] = mapped_column(String(64))  # common|uncommon|rare|postmarketing
+  frequency: Mapped[str | None] = mapped_column(String(64))  # common|uncommon|rare|postmarketing
   source: Mapped[str] = mapped_column(String(32), default="sider", nullable=False)
 
 
@@ -443,7 +449,7 @@ class GroundTruthLabel(Base):
   ae_term_id: Mapped[str] = mapped_column(ForeignKey("ae_term.ae_term_id"), nullable=False)
   label_type: Mapped[str] = mapped_column(String(32), nullable=False)
   source: Mapped[str] = mapped_column(String(128), nullable=False)
-  notes: Mapped[Optional[str]] = mapped_column(Text)
+  notes: Mapped[str | None] = mapped_column(Text)
 
 
 class EventLedger(Base):
@@ -462,10 +468,10 @@ class EventLedger(Base):
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   source: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
   entity_key: Mapped[str] = mapped_column(String(256), nullable=False, index=True)
-  drug_id: Mapped[Optional[str]] = mapped_column(ForeignKey("drug.drug_id"), index=True)
-  ae_term_id: Mapped[Optional[str]] = mapped_column(ForeignKey("ae_term.ae_term_id"), index=True)
+  drug_id: Mapped[str | None] = mapped_column(ForeignKey("drug.drug_id"), index=True)
+  ae_term_id: Mapped[str | None] = mapped_column(ForeignKey("ae_term.ae_term_id"), index=True)
   event_type: Mapped[str] = mapped_column(String(64), nullable=False, default="ingest")
   payload_json: Mapped[str] = mapped_column(Text, nullable=False)
   payload_sha256: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
-  summary: Mapped[Optional[str]] = mapped_column(String(512))
+  summary: Mapped[str | None] = mapped_column(String(512))
   created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now(), nullable=False)

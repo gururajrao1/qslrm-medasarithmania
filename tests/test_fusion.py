@@ -33,3 +33,20 @@ def test_transcriptomic_split_when_s_trans_high():
   )
   assert r.attr_transcriptomic > r.attr_offtarget
   assert abs(_attr_sum(r) - 1.0) < 1e-6
+def test_roc_auc_perfect_and_degenerate():
+  from fusion.calibration import precision_at_k, roc_auc
+
+  assert roc_auc([1, 1, 0, 0], [0.9, 0.8, 0.2, 0.1]) == 1.0
+  assert roc_auc([1, 1, 1], [0.9, 0.8, 0.7]) is None
+  assert roc_auc([0, 0], [0.2, 0.1]) is None
+  assert precision_at_k([1, 1, 0, 0], [0.9, 0.8, 0.2, 0.1], k=2) == 1.0
+  assert precision_at_k([], [], k=2) is None
+
+
+def test_fused_band_contains_base():
+  from fusion.calibration import WEIGHT_KEYS, fused_band
+
+  weights = dict.fromkeys(WEIGHT_KEYS, 0.25)
+  band = fused_band((2.0, 1.0, 0.5, 0.3), (1.0, 0.5, 0.5), weights)
+  assert band["lo"] <= band["fused"] <= band["hi"]
+  assert band["lo"] >= 0.0 and band["hi"] <= 100.0

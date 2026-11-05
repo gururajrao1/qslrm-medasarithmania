@@ -522,3 +522,42 @@ html[data-theme="light"] .drawer-backdrop { background: rgba(15, 27, 45, 0.28); 
   .topbar, .hero, .toolbar, .sources, .layout, .foot { padding-left: 1rem; padding-right: 1rem; }
   .drawer { width: 100vw; }
 }
+
+.btn:disabled { opacity: 0.45; cursor: default; }
+
+.legend { padding: 0.5rem 1.75rem 0; font-size: 0.82rem; color: var(--muted); }
+.legend summary { cursor: pointer; }
+.legend p { margin: 0.4rem 0 0; max-width: 90ch; }
+
+.mini-input {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.82rem;
+  width: 7.5rem;
+}
+
+.pair-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+
+#queueBody tr:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
+#queueBody tr.active { background: var(--row-active, rgba(45, 212, 191, 0.08)); }
+
+#jobProgress { width: 10rem; height: 0.6rem; }
+.hidden { display: none !important; }
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.75rem 0;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}

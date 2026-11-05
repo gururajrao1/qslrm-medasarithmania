@@ -35,7 +35,22 @@ def compute_signal_velocity(session: Session) -> dict:
     delta = float(b.ror - a.ror)
     # assume adjacent quarterly periods → Δt = 1 quarter
     velocity = delta / 1.0
-    rising = (b.ror / a.ror >= 2.0) or (velocity >= settings.rising_velocity_threshold and delta > 0)
+    n_periods = len(ordered)
+    ratio = (b.ror / a.ror) if a.ror else 0.0
+    strong_step = ratio >= 2.0 and delta > 0 and velocity >= settings.rising_velocity_threshold
+    if n_periods >= 3:
+      c = ordered[-3]
+      monotonic = (
+        c.ror is not None and a.ror is not None and b.ror is not None
+        and c.ror <= a.ror <= b.ror and b.ror > c.ror
+      )
+      ci_gap = (
+        a.ror_ci_low is not None and b.ror_ci_low is not None
+        and b.ror_ci_low > (a.ror_ci_high if a.ror_ci_high is not None else a.ror)
+      )
+      rising = bool(strong_step and (monotonic or ci_gap))
+    else:
+      rising = bool(strong_step)
     existing = session.scalar(
       select(SignalVelocity).where(
         SignalVelocity.drug_id == drug_id,
@@ -45,18 +60,18 @@ def compute_signal_velocity(session: Session) -> dict:
         SignalVelocity.model_version == model_version,
       )
     )
-    payload = dict(
-      drug_id=drug_id,
-      ae_term_id=ae_term_id,
-      period_from=a.period,
-      period_to=b.period,
-      ror_from=float(a.ror),
-      ror_to=float(b.ror),
-      delta_ror=delta,
-      velocity=velocity,
-      rising=rising,
-      model_version=model_version,
-    )
+    payload = {
+      "drug_id": drug_id,
+      "ae_term_id": ae_term_id,
+      "period_from": a.period,
+      "period_to": b.period,
+      "ror_from": float(a.ror),
+      "ror_to": float(b.ror),
+      "delta_ror": delta,
+      "velocity": velocity,
+      "rising": rising,
+      "model_version": model_version,
+    }
     if existing is None:
       session.add(SignalVelocity(**payload))
       inserted += 1
@@ -79,7 +94,7 @@ def compute_signal_velocity(session: Session) -> dict:
 
 
 def ensure_velocity_fallback(session: Session) -> dict:
-  """Guarantee every risk_score pair has a SignalVelocity row (default ΔROR baseline)."""
+  """Neutral baseline row for pairs with no period history (ΔROR = 0, never rising)."""
   settings = get_settings()
   model_version = settings.model_version
   pairs = session.scalars(
@@ -97,16 +112,16 @@ def ensure_velocity_fallback(session: Session) -> dict:
     if existing is not None:
       continue
     ror = float(rs.ror or 1.0)
-    serious = float(rs.serious_rate or 0.0)
-    delta = round(0.05 + 0.25 * serious, 4)
+    # No seriousness bump: baseline rows stay neutral (ΔROR = 0, never rising).
+    delta = 0.0
     session.add(
       SignalVelocity(
         drug_id=rs.drug_id,
         ae_term_id=rs.ae_term_id,
-        period_from="2023q4",
-        period_to="2024q1",
-        ror_from=max(0.1, ror * 0.9),
-        ror_to=max(0.1, ror * 0.9 + delta),
+        period_from="baseline",
+        period_to="current",
+        ror_from=max(0.1, ror),
+        ror_to=max(0.1, ror),
         delta_ror=delta,
         velocity=delta,
         rising=False,

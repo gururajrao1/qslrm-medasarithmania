@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+import statistics
+from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy import func, select
@@ -24,6 +25,14 @@ from qslrm_erd.models import (
   TrialOnsetCurve,
 )
 from qslrm_erd.settings import get_settings
+from signals.disproportionality import triage_decision
+
+
+def _dash(v: object, nd: int = 2) -> str:
+  try:
+    return f"{float(v):.{nd}f}"  # type: ignore[arg-type]
+  except (TypeError, ValueError):
+    return "—"
 
 
 def build_dsur_payload(
@@ -85,6 +94,39 @@ def build_dsur_payload(
         DemographicSignal.model_version == rs.model_version,
       )
     ).all()
+    if sig is not None and sig.n11 is not None and sig.n1_ and sig.n_1 and sig.n__:
+      _masked, _watch, _m = triage_decision(sig.n11, sig.n1_, sig.n_1, sig.n__)
+    else:
+      _masked, _watch = (rs.n_reports or 0) >= 3, (rs.n_reports or 0) < 3
+    trial_rows = session.scalars(
+      select(TrialAe).where(TrialAe.drug_id == rs.drug_id, TrialAe.ae_term_id == rs.ae_term_id)
+    ).all()
+    _exposed = sum(t.subjects_at_risk or 0 for t in trial_rows)
+    _trial_events = sum(t.event_count or 0 for t in trial_rows)
+    _tto_weeks = sorted(
+      c.week
+      for c in session.scalars(
+        select(TrialOnsetCurve).where(
+          TrialOnsetCurve.drug_id == rs.drug_id, TrialOnsetCurve.ae_term_id == rs.ae_term_id
+        )
+      ).all()
+      if c.week is not None
+    )
+    _tto = None
+    if _tto_weeks:
+      _qs = statistics.quantiles(_tto_weeks, n=4) if len(_tto_weeks) >= 4 else []
+      _tto = {
+        "median_weeks": float(statistics.median(_tto_weeks)),
+        "iqr_weeks": float(_qs[2] - _qs[0]) if len(_qs) == 3 else None,
+        "n_points": len(_tto_weeks),
+      }
+    pair_ddi = session.scalars(
+      select(DdiRisk).where(DdiRisk.drug_id == rs.drug_id).limit(10)
+    ).all()
+    _poly = int(
+      session.scalar(select(func.count()).select_from(DdiRisk).where(DdiRisk.drug_id == rs.drug_id))
+      or 0
+    )
     cards = build_decisions(
       drug_name=drug.preferred_name if drug else rs.drug_id,
       pt_string=ae.pt_string if ae else rs.ae_term_id,
@@ -114,6 +156,15 @@ def build_dsur_payload(
         "n_reports": rs.n_reports,
         "serious_rate": rs.serious_rate,
         "ebgm": sig.ebgm if sig else None,
+        "n11": sig.n11 if sig else rs.n_reports,
+        "prr_chi2": getattr(sig, "prr_chi2", None) if sig else None,
+        "prr_ci": [getattr(sig, "prr_ci_low", None), getattr(sig, "prr_ci_high", None)]
+        if sig
+        else [None, None],
+        "ror_ci": [sig.ror_ci_low, sig.ror_ci_high] if sig else [None, None],
+        "ic025": getattr(sig, "ic025", None) if sig else None,
+        "eb05": getattr(sig, "eb05", None) if sig else None,
+        "watchlist": _watch,
         "rising_signal": rs.rising_signal,
         "action_flag": rs.action_flag,
         "attribution": {
@@ -153,6 +204,23 @@ def build_dsur_payload(
           for d in demos
         ],
         "decisions": [{"kind": c.kind, "title": c.title, "body": c.body} for c in cards],
+        "evaluation": {
+          "status": "association only — requires medical review; not a causality finding",
+          "benefit_risk": "not assessed in triage",
+        },
+        "exposure": {"subjects_at_risk": _exposed, "trial_events": _trial_events},
+        "time_to_onset": _tto,
+        "ddi": [
+          {
+            "concomitant": d.concomitant_name,
+            "enzyme": d.enzyme,
+            "risk_level": d.risk_level,
+            "mechanism": d.mechanism,
+            "notes": d.notes,
+          }
+          for d in pair_ddi
+        ],
+        "polypharmacy_concomitants": _poly,
       }
     )
 
@@ -169,7 +237,7 @@ def build_dsur_payload(
 
   return {
     "document": "DSUR/PBRER draft package",
-    "generated_at": datetime.now(timezone.utc).isoformat(),
+    "generated_at": datetime.now(UTC).isoformat(),
     "model_version": settings.model_version,
     "disclaimer": (
       "DRAFT ONLY — Hypothesis triage outputs. Not a final DSUR/PBRER submission. "
@@ -180,6 +248,34 @@ def build_dsur_payload(
     "trial_ae_count": int(session.scalar(select(func.count()).select_from(TrialAe)) or 0),
     "onset_curve_points": int(session.scalar(select(func.count()).select_from(TrialOnsetCurve)) or 0),
   }
+
+
+def _ci_line(s: dict[str, Any]) -> str:
+  rci = s.get("ror_ci") or [None, None]
+  pci = s.get("prr_ci") or [None, None]
+  return (
+    f"ROR 95% CI {_dash(rci[0])}–{_dash(rci[1])} · PRR 95% CI {_dash(pci[0])}–{_dash(pci[1])} "
+    f"· IC025 {_dash(s.get('ic025'))} · EB05 {_dash(s.get('eb05'))} · n11 {s.get('n11')}"
+  )
+
+
+def _context_line(s: dict[str, Any]) -> str:
+  bits = []
+  ev = s.get("evaluation") or {}
+  bits.append(ev.get("status") or "Association only — requires medical review.")
+  if s.get("watchlist"):
+    bits.append("Watchlist: thin PV support — do not action on disproportionality alone.")
+  tto = s.get("time_to_onset") or {}
+  if tto.get("median_weeks") is not None:
+    iqr = f" (IQR {_dash(tto.get('iqr_weeks'), 1)} wk)" if tto.get("iqr_weeks") is not None else ""
+    bits.append(f"Median time-to-onset {_dash(tto.get('median_weeks'), 1)} wk{iqr} over {tto.get('n_points')} points.")
+  exp = s.get("exposure") or {}
+  bits.append(
+    f"Trial exposure: {exp.get('subjects_at_risk', 0)} subjects at risk, {exp.get('trial_events', 0)} events."
+  )
+  if s.get("polypharmacy_concomitants"):
+    bits.append(f"{s.get('polypharmacy_concomitants')} tracked concomitants (see DDI).")
+  return " ".join(bits)
 
 
 def render_dsur_html(payload: dict[str, Any]) -> str:
@@ -193,8 +289,9 @@ def render_dsur_html(payload: dict[str, Any]) -> str:
       f"""
       <section class="pair">
         <h2>{s['drug_name']} ↔ {s['pt_string']}</h2>
-        <p>Fused {s.get('fused_score'):.1f} · PRR {s.get('prr')} · ROR {s.get('ror')} ·
+        <p>Fused {_dash(s.get('fused_score'), 1)} · PRR {_dash(s.get('prr'))} · ROR {_dash(s.get('ror'))} · {_ci_line(s)} ·
            flag {s.get('action_flag') or '—'} · rising={s.get('rising_signal')}</p>
+        <p><em>{_context_line(s)}</em></p>
         <h3>Decisions</h3><ul>{cards or '<li>None</li>'}</ul>
         <h3>Suggested protocol exclusions</h3>{excl or '<p>None generated.</p>'}
       </section>

@@ -9,7 +9,7 @@ from qslrm_erd.settings import get_settings
 
 @dataclass(frozen=True)
 class DecisionCard:
-  kind: str  # dose | genetic_filter | regulatory | rising
+  kind: str  # dose | genetic_filter | regulatory | rising | literature | monitor
   title: str
   body: str
   priority: int
@@ -39,7 +39,7 @@ def build_decisions(
   fused = fused_score or 0.0
 
   if a_off >= max(a_gen, a_tr, a_dose) and a_off >= 0.35:
-    drop = min(25, int(round(a_off * 40)))
+    drop = min(25, round(a_off * 40))
     cards.append(
       DecisionCard(
         kind="dose",
@@ -55,14 +55,15 @@ def build_decisions(
 
   if a_gen >= 0.25 or (metabolizer_impact and "PM" in metabolizer_impact.upper()):
     gene = metabolizer_impact or "pharmacogene variant"
-    reduction = min(80, int(round(max(a_gen, 0.5) * 100)))
+    reduction = min(80, round(max(a_gen, 0.5) * 100))
     cards.append(
       DecisionCard(
         kind="genetic_filter",
         title="Patient filter (genetic screening)",
         body=(
-          f"Genetic driver detected ({gene}). Screen / exclude poor metabolizers to potentially "
-          f"eliminate ~{reduction}% of severe {pt_string} events in subsequent cohorts."
+          f"Genetic driver detected ({gene}). Screen / exclude poor metabolizers."
+          f" Modeling suggests up to ~{reduction}% fewer severe {pt_string} events in screened cohorts;"
+          " validate prospectively before protocol change."
         ),
         priority=1,
       )
@@ -105,6 +106,25 @@ def build_decisions(
           "Export DSUR/PBRER draft sections and evidence JSON for safety committee review."
         ),
         priority=2,
+      )
+    )
+
+  if not cards and fused >= settings.action_fused_threshold:
+    dom_name, dom_val = max(
+      (("dose", a_dose), ("off-target", a_off), ("transcriptomic", a_tr), ("genetic", a_gen)),
+      key=lambda kv: kv[1],
+    )
+    cards.append(
+      DecisionCard(
+        kind="monitor",
+        title="Monitor / escalate",
+        body=(
+          f"No specific action trigger fired for {drug_name} ↔ {pt_string}, but fused risk "
+          f"is {fused:.1f} (highest attribution: {dom_name} {int(dom_val * 100)}%). "
+          "Keep on routine PV monitoring and escalate to full review if ΔROR rises "
+          "or serious cases accumulate."
+        ),
+        priority=3,
       )
     )
 

@@ -4,8 +4,11 @@ from __future__ import annotations
 
 import asyncio
 import csv
+import functools
 import io
 import json
+import time
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
 
@@ -13,11 +16,15 @@ from fastapi import Depends, FastAPI, HTTPException, Query, WebSocket, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
-from sqlalchemy import select
+from sqlalchemy import func, select, tuple_
 from sqlalchemy.orm import Session
 
-from fusion.decisions import build_decisions
+from fusion.calibration import fused_band as _fused_band
+from fusion.calibration import load_reference
+from fusion.decisions import build_decisions, protocol_exclusion_clause
 from fusion.dsur import build_dsur_payload, render_dsur_html
+from fusion.scoring import signal_strength, zscore
+from ingest.sec_edgar import directory_coverage as sec_edgar_coverage
 from ingest.sources import sources_manifest
 from qslrm_erd.db import get_engine
 from qslrm_erd.models import (
@@ -50,15 +57,26 @@ from stream import ledger as stream_ledger
 
 WEB_DIR = Path(__file__).resolve().parents[1] / "web"
 
+@asynccontextmanager
+async def _lifespan(_: FastAPI):
+  stream_ledger.set_event_loop(asyncio.get_running_loop())
+  Base = __import__("qslrm_erd.models", fromlist=["Base"]).Base
+  Base.metadata.create_all(get_engine(), tables=[EventLedger.__table__])
+  yield
+
+
 app = FastAPI(
   title="QSLRM API",
   description="Hypothesis triage & decision engine — not a causality oracle.",
-  version="1.0.0",
+  version="1.0.1",
+  lifespan=_lifespan,
 )
 
 
-@app.on_event("startup")
-async def _stream_startup() -> None:
+@asynccontextmanager
+async def _legacy_startup_block_unused():
+  """Inert placeholder — startup moved to the _lifespan lifespan handler above."""
+  yield
   stream_ledger.set_event_loop(asyncio.get_running_loop())
   # Ensure ledger table exists on existing SQLite DBs
   Base = __import__("qslrm_erd.models", fromlist=["Base"]).Base
@@ -67,10 +85,11 @@ async def _stream_startup() -> None:
 
 app.add_middleware(
   CORSMiddleware,
-  allow_origins=["*"],
+  allow_origins=get_settings().cors_origins(),
   allow_credentials=True,
-  allow_methods=["*"],
+  allow_methods=["GET", "POST"],
   allow_headers=["*"],
+  max_age=600,
 )
 
 
@@ -81,6 +100,62 @@ def get_db():
     yield session
   finally:
     session.close()
+
+
+def _row_to_item(
+  rs: RiskScore,
+  drug: Drug | None,
+  ae: AeTerm | None,
+  sig: SignalStat | None,
+  om: OmicScore | None,
+  vel: SignalVelocity | None,
+) -> dict[str, Any]:
+  """Pure projection of one queue row: no queries, shared by list + single GET."""
+  return {
+    "drug_id": rs.drug_id,
+    "drug_name": drug.preferred_name if drug else rs.drug_id,
+    "brand_name": drug.brand_name if drug else None,
+    "sponsor_company": drug.sponsor_company if drug else None,
+    "molecule_type": drug.molecule_type if drug else None,
+    "therapeutic_class": drug.therapeutic_class if drug else None,
+    "drug_class": drug.drug_class if drug else None,
+    "nda_bla": drug.nda_bla if drug else None,
+    "chembl_id": drug.chembl_id if drug else None,
+    "ae_term_id": rs.ae_term_id,
+    "pt_string": ae.pt_string if ae else rs.ae_term_id,
+    "n_reports": rs.n_reports,
+    "prr": rs.prr,
+    "ror": rs.ror,
+    "ebgm": sig.ebgm if sig else None,
+    "prr_chi2": getattr(sig, "prr_chi2", None) if sig else None,
+    "prr_ci_low": getattr(sig, "prr_ci_low", None) if sig else None,
+    "prr_ci_high": getattr(sig, "prr_ci_high", None) if sig else None,
+    "ic025": getattr(sig, "ic025", None) if sig else None,
+    "eb05": getattr(sig, "eb05", None) if sig else None,
+    "eb95": getattr(sig, "eb95", None) if sig else None,
+    "ic": sig.ic if sig else None,
+    "serious_rate": rs.serious_rate,
+    "omic_risk": rs.omic_risk,
+    "dose_risk": rs.dose_risk,
+    "fused_score": rs.fused_score,
+    "attr_dose": rs.attr_dose,
+    "attr_offtarget": rs.attr_offtarget,
+    "attr_transcriptomic": rs.attr_transcriptomic,
+    "attr_genetic": rs.attr_genetic,
+    "action_needed": rs.action_needed,
+    "action_flag": rs.action_flag,
+    "rising_signal": rs.rising_signal,
+    # Never blank ΔROR / velocity in UI — fallback 0.0 when no quarterly pair
+    "delta_ror": float(vel.delta_ror) if vel is not None else 0.0,
+    "signal_velocity": float(vel.velocity) if vel is not None else 0.0,
+    "s_off": om.s_off if om else None,
+    "s_path": om.s_path if om else None,
+    "s_trans": om.s_trans if om else None,
+    "s_gen": om.s_gen if om else None,
+    "omic_engine": om.engine if om else None,
+    "model_version": rs.model_version,
+  }
+
 
 
 def _enrich_row(session: Session, rs: RiskScore) -> dict[str, Any]:
@@ -108,51 +183,23 @@ def _enrich_row(session: Session, rs: RiskScore) -> dict[str, Any]:
       SignalVelocity.model_version == rs.model_version,
     )
   )
-  return {
-    "drug_id": rs.drug_id,
-    "drug_name": drug.preferred_name if drug else rs.drug_id,
-    "brand_name": drug.brand_name if drug else None,
-    "sponsor_company": drug.sponsor_company if drug else None,
-    "molecule_type": drug.molecule_type if drug else None,
-    "therapeutic_class": drug.therapeutic_class if drug else None,
-    "drug_class": drug.drug_class if drug else None,
-    "nda_bla": drug.nda_bla if drug else None,
-    "chembl_id": drug.chembl_id if drug else None,
-    "ae_term_id": rs.ae_term_id,
-    "pt_string": ae.pt_string if ae else rs.ae_term_id,
-    "n_reports": rs.n_reports,
-    "prr": rs.prr,
-    "ror": rs.ror,
-    "ebgm": sig.ebgm if sig else None,
-    "ic": sig.ic if sig else None,
-    "serious_rate": rs.serious_rate,
-    "omic_risk": rs.omic_risk,
-    "dose_risk": rs.dose_risk,
-    "fused_score": rs.fused_score,
-    "attr_dose": rs.attr_dose,
-    "attr_offtarget": rs.attr_offtarget,
-    "attr_transcriptomic": rs.attr_transcriptomic,
-    "attr_genetic": rs.attr_genetic,
-    "action_needed": rs.action_needed,
-    "action_flag": rs.action_flag,
-    "rising_signal": rs.rising_signal,
-    # Never blank ΔROR / velocity in UI — fallback 0.0 when no quarterly pair
-    "delta_ror": float(vel.delta_ror) if vel is not None else 0.0,
-    "signal_velocity": float(vel.velocity) if vel is not None else 0.0,
-    "s_off": om.s_off if om else None,
-    "s_path": om.s_path if om else None,
-    "s_trans": om.s_trans if om else None,
-    "s_gen": om.s_gen if om else None,
-    "omic_engine": om.engine if om else None,
-    "model_version": rs.model_version,
-  }
+  return _row_to_item(rs, drug, ae, sig, om, vel)
 
 
 @app.get("/health")
-def health() -> dict:
+def health(session: Session = Depends(get_db)) -> dict:  # noqa: B008 -- FastAPI DI requires call-in-default
+  s0 = get_settings()
+  try:
+    fused_pairs = int(session.scalar(select(func.count()).select_from(RiskScore).where(RiskScore.model_version == s0.model_version, RiskScore.fused_score.is_not(None))) or 0)
+    db_ok = True
+  except Exception:  # noqa: BLE001 -- degraded health instead of 500
+    fused_pairs = 0
+    db_ok = False
   s = get_settings()
   return {
-    "status": "ok",
+    "status": "ok" if db_ok else "degraded",
+    "db_ok": db_ok,
+    "fused_pairs": fused_pairs,
     "product": "QSLRM",
     "mvp_drug_class": s.mvp_drug_class,
     "model_version": s.model_version,
@@ -179,8 +226,34 @@ def list_sources() -> dict:
   }
 
 
+def _ttl_cache(ttl_seconds: int = 60, key=None):
+  """Tiny TTL cache for expensive read endpoints (keyed per database)."""
+  store: dict[Any, tuple[float, Any]] = {}
+
+  def wrap(fn):
+    @functools.wraps(fn)
+    def inner(*a, **k):
+      ck = key() if key else ()
+      hit = store.get(ck)
+      now = time.time()
+      if hit and now - hit[0] < ttl_seconds:
+        return hit[1]
+      val = fn(*a, **k)
+      store[ck] = (now, val)
+      return val
+
+    return inner
+
+  return wrap
+
+
+def _catalog_cache_key() -> tuple[str, str]:
+  return (str(get_engine().url), get_settings().model_version)
+
+
 @app.get("/v1/catalog")
-def catalog(session: Session = Depends(get_db)) -> dict:
+@_ttl_cache(60, key=_catalog_cache_key)
+def catalog(session: Session = Depends(get_db)) -> dict:  # noqa: B008 -- FastAPI DI requires call-in-default
   """Frontpage inventory — proves multi-source spine is populated."""
   from sqlalchemy import func
 
@@ -212,17 +285,20 @@ def catalog(session: Session = Depends(get_db)) -> dict:
       sponsors.append(d.sponsor_company)
   sponsors = sorted(set(sponsors))
 
-  # Pair counts per sponsor so UI can show Amgen (n) and skip empty shells
+  # Pair counts per sponsor in one GROUP BY (no per-row session.get).
   sponsor_counts: dict[str, int] = {s: 0 for s in sponsors}
-  for rs in session.scalars(
-    select(RiskScore).where(
+  for sponsor_name, pair_count in session.execute(
+    select(Drug.sponsor_company, func.count(RiskScore.drug_id))
+    .join(RiskScore, RiskScore.drug_id == Drug.drug_id)
+    .where(
       RiskScore.model_version == settings.model_version,
       RiskScore.fused_score.is_not(None),
+      Drug.sponsor_company.is_not(None),
     )
+    .group_by(Drug.sponsor_company)
   ).all():
-    drug = session.get(Drug, rs.drug_id)
-    if drug and drug.sponsor_company:
-      sponsor_counts[drug.sponsor_company] = sponsor_counts.get(drug.sponsor_company, 0) + 1
+    if sponsor_name:
+      sponsor_counts[sponsor_name] = int(pair_count)
   sponsor_options = [
     {"name": s, "pair_count": sponsor_counts.get(s, 0)}
     for s in sponsors
@@ -239,7 +315,8 @@ def catalog(session: Session = Depends(get_db)) -> dict:
         "sponsors": len(sponsors),
         "sponsor_list": sponsors,
         "sponsor_options": sponsor_options,
-        "source": "Sponsor directory + Orange Book / openFDA / RxNorm",
+        "sec_edgar": sec_edgar_coverage(),
+        "source": "Sponsor directory + Orange Book / openFDA / RxNorm + SEC EDGAR",
       },
       "transcriptomics": {"transcript_signature": n(TranscriptSignature), "source": "LINCS L1000 + Tox21 + DepMap"},
       "proteomics": {"drug_target": n(DrugTarget), "source": "ChEMBL + BindingDB"},
@@ -293,24 +370,70 @@ def catalog(session: Session = Depends(get_db)) -> dict:
   }
 
 
+def _enrich_page(
+  session: Session, triples: list[tuple[RiskScore, Drug, AeTerm]], model_version: str
+) -> list[dict[str, Any]]:
+  """Enrich one page with three batched queries (no per-row N+1)."""
+  keys = [(rs.drug_id, rs.ae_term_id) for rs, _, _ in triples]
+  if not keys:
+    return []
+  pair_in = tuple_(SignalStat.drug_id, SignalStat.ae_term_id).in_(keys)
+  sigs = {
+    (s.drug_id, s.ae_term_id): s
+    for s in session.scalars(
+      select(SignalStat).where(
+        pair_in, SignalStat.period == "all", SignalStat.model_version == model_version
+      )
+    ).all()
+  }
+  oms = {
+    (o.drug_id, o.ae_term_id): o
+    for o in session.scalars(
+      select(OmicScore).where(
+        tuple_(OmicScore.drug_id, OmicScore.ae_term_id).in_(keys),
+        OmicScore.model_version == model_version,
+      )
+    ).all()
+  }
+  vels = {
+    (v.drug_id, v.ae_term_id): v
+    for v in session.scalars(
+      select(SignalVelocity).where(
+        tuple_(SignalVelocity.drug_id, SignalVelocity.ae_term_id).in_(keys),
+        SignalVelocity.model_version == model_version,
+      )
+    ).all()
+  }
+  return [
+    _row_to_item(rs, drug, ae, sigs.get(key), oms.get(key), vels.get(key))
+    for (rs, drug, ae), key in zip(triples, keys, strict=True)
+  ]
+
+
 @app.get("/v1/risk-scores")
 def list_risk_scores(
-  limit: int = Query(100, ge=1, le=5000),
+  limit: int = Query(100, ge=1, le=500),
+  offset: int = Query(0, ge=0),
   action_needed: bool | None = Query(None),
   rising_only: bool = Query(False),
   sponsor: str | None = Query(None),
   molecule_type: str | None = Query(None),
   drug_class: str | None = Query(None),
+  min_fused: float | None = Query(None, ge=0, le=100),
+  min_n: int | None = Query(None, ge=1),
   region: str | None = Query(None, description="US | EU | Global — filters pairs with PV cases in region"),
   q: str | None = Query(None, description="Search drug or ADR"),
-  sort: str = Query("fused", pattern="^(fused|velocity|serious|n)$"),
-  session: Session = Depends(get_db),
+  sort: str = Query("fused", pattern="^(fused|velocity|serious|n|ebgm|ic)$"),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ) -> dict:
   settings = get_settings()
+  mv = settings.model_version
   qset = (
-    select(RiskScore)
+    select(RiskScore, Drug, AeTerm)
+    .join(Drug, Drug.drug_id == RiskScore.drug_id)
+    .join(AeTerm, AeTerm.ae_term_id == RiskScore.ae_term_id)
     .where(
-      RiskScore.model_version == settings.model_version,
+      RiskScore.model_version == mv,
       RiskScore.fused_score.is_not(None),
     )
   )
@@ -318,15 +441,48 @@ def list_risk_scores(
     qset = qset.where(RiskScore.action_needed.is_(action_needed))
   if rising_only:
     qset = qset.where(RiskScore.rising_signal.is_(True))
-  rows = session.scalars(qset).all()
-  items = [_enrich_row(session, r) for r in rows]
-
   if sponsor:
-    items = [i for i in items if (i.get("sponsor_company") or "").lower() == sponsor.lower()]
+    qset = qset.where(func.lower(Drug.sponsor_company) == sponsor.lower())
   if molecule_type:
-    items = [i for i in items if (i.get("molecule_type") or "") == molecule_type]
+    qset = qset.where(Drug.molecule_type == molecule_type)
   if drug_class:
-    items = [i for i in items if (i.get("drug_class") or "") == drug_class]
+    qset = qset.where(Drug.drug_class == drug_class)
+  if min_fused is not None:
+    qset = qset.where(RiskScore.fused_score >= min_fused)
+  if min_n is not None:
+    qset = qset.where(RiskScore.n_reports >= min_n)
+  if q and q.strip():
+    like = f"%{q.strip()}%"
+    qset = qset.where(
+      Drug.preferred_name.ilike(like)
+      | AeTerm.pt_string.ilike(like)
+      | Drug.sponsor_company.ilike(like)
+      | Drug.brand_name.ilike(like)
+    )
+  if sort == "serious":
+    qset = qset.order_by(RiskScore.serious_rate.desc().nullslast(), RiskScore.fused_score.desc())
+  elif sort == "n":
+    qset = qset.order_by(RiskScore.n_reports.desc(), RiskScore.fused_score.desc())
+  elif sort == "velocity":
+    qset = qset.outerjoin(
+      SignalVelocity,
+      (SignalVelocity.drug_id == RiskScore.drug_id)
+      & (SignalVelocity.ae_term_id == RiskScore.ae_term_id)
+      & (SignalVelocity.model_version == mv),
+    ).order_by(SignalVelocity.velocity.desc().nullslast(), RiskScore.fused_score.desc())
+  elif sort in ("ebgm", "ic"):
+    _col = SignalStat.ebgm if sort == "ebgm" else SignalStat.ic
+    qset = qset.outerjoin(
+      SignalStat,
+      (SignalStat.drug_id == RiskScore.drug_id)
+      & (SignalStat.ae_term_id == RiskScore.ae_term_id)
+      & (SignalStat.period == "all")
+      & (SignalStat.model_version == mv),
+    ).order_by(_col.desc().nullslast(), RiskScore.fused_score.desc())
+  else:
+    qset = qset.order_by(RiskScore.fused_score.desc())
+  triples = session.execute(qset).all()
+  rows = [(rs, drug, ae) for rs, drug, ae in triples]
   if region:
     region_key = "Global" if region.upper() == "GLOBAL" else region.upper()
     region_pairs = {
@@ -339,41 +495,29 @@ def list_risk_scores(
         )
       ).all()
     }
-    items = [i for i in items if (i["drug_id"], i["ae_term_id"]) in region_pairs]
-  if q:
-    qq = q.lower()
-    items = [
-      i
-      for i in items
-      if qq in f"{i.get('drug_name')} {i.get('pt_string')} {i.get('sponsor_company')} {i.get('brand_name')}".lower()
-    ]
-
-  key_fns = {
-    "fused": lambda i: i.get("fused_score") or 0,
-    "velocity": lambda i: i.get("signal_velocity") or 0,
-    "serious": lambda i: i.get("serious_rate") or 0,
-    "n": lambda i: i.get("n_reports") or 0,
-  }
-  items.sort(key=key_fns.get(sort, key_fns["fused"]), reverse=True)
-  total = len(items)
-  rising_all = sum(1 for it in items if it["rising_signal"])
-  items = items[:limit]
-  for i, item in enumerate(items, start=1):
-    item["rank"] = i
+    rows = [t for t in rows if (t[0].drug_id, t[0].ae_term_id) in region_pairs]
+  total = len(rows)
+  rising_all = sum(1 for rs, _, _ in rows if rs.rising_signal)
+  page = rows[offset : offset + limit]
+  items = _enrich_page(session, page, mv)
+  for pos, item in enumerate(items, start=offset + 1):
+    item["rank"] = pos
   rising_n = sum(1 for it in items if it["rising_signal"])
   return {
     "items": items,
     "limit": limit,
+    "offset": offset,
     "total": total,
     "rising_count": rising_all,
     "rising_count_page": rising_n,
     "model_version": settings.model_version,
+    "sort": sort,
     "disclaimer": "Disproportionality ≠ causality. Ranked hypotheses for triage only.",
   }
 
 
 @app.get("/v1/risk-scores/{drug_id}/{ae_term_id}")
-def get_risk_score(drug_id: str, ae_term_id: str, session: Session = Depends(get_db)) -> dict:
+def get_risk_score(drug_id: str, ae_term_id: str, session: Session = Depends(get_db)) -> dict:  # noqa: B008 -- FastAPI DI requires call-in-default
   settings = get_settings()
   rs = session.scalar(
     select(RiskScore).where(
@@ -388,7 +532,7 @@ def get_risk_score(drug_id: str, ae_term_id: str, session: Session = Depends(get
 
 
 @app.get("/v1/deep-dive/{drug_id}/{ae_term_id}")
-def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db)) -> dict:
+def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db)) -> dict:  # noqa: B008 -- FastAPI DI requires call-in-default
   settings = get_settings()
   rs = session.scalar(
     select(RiskScore).where(
@@ -402,7 +546,7 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
 
   base = _enrich_row(session, rs)
   drug = session.get(Drug, drug_id)
-  ae = session.get(AeTerm, ae_term_id)
+  _ae = session.get(AeTerm, ae_term_id)
   is_bbw = (
     session.scalar(
       select(GroundTruthLabel).where(
@@ -425,6 +569,18 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
   if lit_pair:
     label_sources = sorted(set(label_sources) | {x.source for x in lit_pair})
 
+  _all_variants = session.scalars(select(Variant)).all()
+  _pt_lower = (base.get("pt_string") or "").lower()
+  _scoped_variants = [
+    v for v in _all_variants if _pt_lower and (v.related_pt or "").lower() == _pt_lower
+  ][:25]
+  _card_metabolizer_impact = next(
+    (v.metabolizer_impact for v in _scoped_variants if v.metabolizer_impact), None
+  )
+  if _card_metabolizer_impact is None:
+    _card_metabolizer_impact = next(
+      (v.metabolizer_impact for v in _all_variants if v.metabolizer_impact), None
+    )
   cards = build_decisions(
     drug_name=base["drug_name"],
     pt_string=base["pt_string"],
@@ -437,6 +593,7 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
     is_bbw=is_bbw,
     literature_confirmed=bool(lit_pair),
     label_sources=label_sources or None,
+    metabolizer_impact=_card_metabolizer_impact,
   )
 
   proteomics = []
@@ -476,7 +633,7 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
       "effect_size": v.effect_size,
       "related_pt": v.related_pt,
     }
-    for v in session.scalars(select(Variant)).all()
+    for v in _scoped_variants
   ]
 
   trials = [
@@ -610,9 +767,15 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
       RiskScore.fused_score.is_not(None),
     )
   ).all()
+  _peer_drugs = {
+    d.drug_id: d
+    for d in session.scalars(
+      select(Drug).where(Drug.drug_id.in_([p.drug_id for p in peers]))
+    ).all()
+  }
   class_comparison = []
   for peer in peers:
-    pd = session.get(Drug, peer.drug_id)
+    pd = _peer_drugs.get(peer.drug_id)
     if not pd or pd.drug_class != (drug.drug_class if drug else "kinase_inhibitor"):
       continue
     class_comparison.append(
@@ -649,10 +812,16 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
   ]
   literature.sort(key=lambda x: (not x["matches_pair"], -(x["citation_count"] or 0)))
 
+  _sider_aes = {
+    a.ae_term_id: a
+    for a in session.scalars(
+      select(AeTerm).where(AeTerm.ae_term_id.in_([s.ae_term_id for s in sider_rows]))
+    ).all()
+  }
   sider = [
     {
       "ae_term_id": s.ae_term_id,
-      "pt_string": (session.get(AeTerm, s.ae_term_id).pt_string if session.get(AeTerm, s.ae_term_id) else s.ae_term_id),
+      "pt_string": (_sider_aes[s.ae_term_id].pt_string if s.ae_term_id in _sider_aes else s.ae_term_id),
       "frequency": s.frequency,
       "source": s.source,
       "matches_pair": s.ae_term_id == ae_term_id,
@@ -660,6 +829,67 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
     for s in sider_rows
   ]
   sider.sort(key=lambda x: (not x["matches_pair"], x["source"] or "", x["pt_string"] or ""))
+  _hist_rows = session.scalars(
+    select(SignalStat).where(
+      SignalStat.drug_id == drug_id,
+      SignalStat.ae_term_id == ae_term_id,
+      SignalStat.model_version == settings.model_version,
+      SignalStat.period != "all",
+    )
+  ).all()
+  velocity_history = [
+    {
+      "period": h.period,
+      "ror": h.ror,
+      "ror_ci_low": h.ror_ci_low,
+      "ror_ci_high": h.ror_ci_high,
+      "n11": h.n11,
+    }
+    for h in sorted(_hist_rows, key=lambda h: h.period or "")
+  ]
+  fused_band = None
+  _ref = load_reference()
+  if _ref and _ref.get("model_version") == settings.model_version and len(_ref.get("stats", [])) == 4:
+    try:
+      _w = {k: float(_ref["weights"][k]) for k in ("w_signal", "w_omic", "w_dose", "w_serious")}
+      _st = [(float(m), float(s)) for m, s in _ref["stats"]]
+      _sig_row = session.scalar(
+        select(SignalStat).where(
+          SignalStat.drug_id == drug_id,
+          SignalStat.ae_term_id == ae_term_id,
+          SignalStat.period == "all",
+          SignalStat.model_version == settings.model_version,
+        )
+      )
+      _om_row = session.scalar(
+        select(OmicScore).where(
+          OmicScore.drug_id == drug_id,
+          OmicScore.ae_term_id == ae_term_id,
+          OmicScore.model_version == settings.model_version,
+        )
+      )
+      _strength = signal_strength(
+        _sig_row.prr if _sig_row else base["prr"],
+        _sig_row.ror if _sig_row else base["ror"],
+        _sig_row.ebgm if _sig_row else None,
+        ror_ci_low=_sig_row.ror_ci_low if _sig_row else None,
+        ic025=getattr(_sig_row, "ic025", None) if _sig_row else None,
+        eb05=getattr(_sig_row, "eb05", None) if _sig_row else None,
+      )
+      _zv = (
+        zscore(_strength, *_st[0]),
+        zscore(float(_om_row.omic_risk) if _om_row and _om_row.omic_risk is not None else 0.0, *_st[1]),
+        zscore(float(rs.dose_risk or 0.0), *_st[2]),
+        zscore(float(rs.serious_rate or 0.0), *_st[3]),
+      )
+      _ov = (
+        float(_om_row.s_off) if _om_row else 0.0,
+        float(_om_row.s_trans) if _om_row else 0.0,
+        float(_om_row.s_gen) if _om_row else 0.0,
+      )
+      fused_band = _fused_band(_zv, _ov, _w)
+    except (TypeError, ValueError, KeyError, AttributeError):
+      fused_band = None
 
   return {
     **base,
@@ -692,7 +922,76 @@ def deep_dive(drug_id: str, ae_term_id: str, session: Session = Depends(get_db))
     "class_comparison": class_comparison,
     "literature": literature,
     "sider_labels": sider,
+    "velocity_history": velocity_history,
+    "fused_band": fused_band,
+    "calibration_source": "frozen" if fused_band is not None else None,
   }
+
+
+@app.post("/v1/protocol/draft", status_code=201)
+def draft_protocol_clause(
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
+  drug_id: str | None = Query(None),
+  ae_term_id: str | None = Query(None),
+  payload: dict | None = None,
+) -> dict:
+  """Generate (or refresh) a draft exclusion clause from the pair's top variant."""
+  body = payload or {}
+  drug_id = drug_id or body.get("drug_id")
+  ae_term_id = ae_term_id or body.get("ae_term_id")
+  if not drug_id or not ae_term_id:
+    raise HTTPException(status_code=422, detail="drug_id and ae_term_id required (query or JSON body)")
+  settings = get_settings()
+  rs = session.scalar(
+    select(RiskScore).where(
+      RiskScore.drug_id == drug_id,
+      RiskScore.ae_term_id == ae_term_id,
+      RiskScore.model_version == settings.model_version,
+    )
+  )
+  if rs is None:
+    raise HTTPException(status_code=404, detail="risk score not found")
+  ae = session.get(AeTerm, ae_term_id)
+  pt = ae.pt_string if ae else ae_term_id
+  variants = session.scalars(select(Variant)).all()
+  scoped = [v for v in variants if pt and (v.related_pt or "").lower() == pt.lower()]
+  top = next((v for v in scoped if v.metabolizer_impact), None)
+  if top is None:
+    top = next((v for v in variants if v.metabolizer_impact), None)
+  if top is None:
+    raise HTTPException(status_code=404, detail="no pharmacogene variant available")
+  genetic_mass = float(rs.attr_genetic or 0)
+  reduction = min(0.8, max(0.4, genetic_mass if genetic_mass >= 0.4 else 0.55))
+  drug = session.get(Drug, drug_id)
+  clause, rationale = protocol_exclusion_clause(
+    drug_name=drug.preferred_name if drug else drug_id,
+    pt_string=pt,
+    gene_symbol=top.gene_symbol,
+    metabolizer_impact=top.metabolizer_impact,
+    estimated_reduction=reduction,
+  )
+  existing = session.scalar(
+    select(ProtocolExclusion).where(
+      ProtocolExclusion.drug_id == drug_id,
+      ProtocolExclusion.ae_term_id == ae_term_id,
+      ProtocolExclusion.variant_id == top.variant_id,
+    )
+  )
+  payload = {
+    "drug_id": drug_id,
+    "ae_term_id": ae_term_id,
+    "variant_id": top.variant_id,
+    "clause_text": clause,
+    "rationale": rationale,
+    "estimated_adr_reduction": reduction,
+  }
+  created = existing is None
+  if created:
+    session.add(ProtocolExclusion(**payload))
+  else:
+    for k, v in payload.items():
+      setattr(existing, k, v)
+  return {"created": created, "status": "draft", **payload}
 
 
 @app.get("/v1/dsur")
@@ -700,7 +999,7 @@ def dsur_package(
   format: str = Query("json", pattern="^(json|html)$"),
   drug_id: str | None = Query(None),
   limit: int = Query(25, ge=1, le=100),
-  session: Session = Depends(get_db),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ):
   payload = build_dsur_payload(session, drug_id=drug_id, limit=limit)
   if format == "html":
@@ -714,8 +1013,13 @@ def dsur_package(
 @app.get("/v1/audit")
 def audit_export(
   format: str = Query("json", pattern="^(json|csv)$"),
-  limit: int = Query(100, ge=1, le=1000),
-  session: Session = Depends(get_db),
+  limit: int = Query(100, ge=1, le=500),
+  sponsor: str | None = Query(None),
+  molecule_type: str | None = Query(None),
+  drug_class: str | None = Query(None),
+  rising_only: bool = Query(False),
+  q: str | None = Query(None),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ):
   settings = get_settings()
   rows = session.scalars(
@@ -728,6 +1032,21 @@ def audit_export(
     .limit(limit)
   ).all()
   items = [_enrich_row(session, r) for r in rows]
+  if sponsor:
+    items = [it for it in items if (it["sponsor_company"] or "").lower() == sponsor.lower()]
+  if molecule_type:
+    items = [it for it in items if it["molecule_type"] == molecule_type]
+  if drug_class:
+    items = [it for it in items if it["drug_class"] == drug_class]
+  if rising_only:
+    items = [it for it in items if it["rising_signal"]]
+  if q and q.strip():
+    needle = q.strip().lower()
+    items = [
+      it
+      for it in items
+      if needle in f"{it['drug_name']} {it['pt_string']} {it['sponsor_company']} {it['brand_name']}".lower()
+    ]
   for i, item in enumerate(items, start=1):
     item["rank"] = i
 
@@ -745,6 +1064,9 @@ def audit_export(
     fields = [
       "rank",
       "drug_name",
+      "sponsor_company",
+      "brand_name",
+      "drug_class",
       "pt_string",
       "fused_score",
       "prr",
@@ -756,6 +1078,8 @@ def audit_export(
       "attr_transcriptomic",
       "attr_genetic",
       "action_flag",
+      "delta_ror",
+      "signal_velocity",
       "rising_signal",
       "s_off",
       "s_path",
@@ -784,7 +1108,7 @@ def start_cumulative_ingest(
   live: bool = Query(True, description="Hit live public APIs (openFDA, CT.gov, PubMed)"),
   faers_limit: int = Query(25, ge=5, le=100, description="Max FAERS reports per drug"),
   sync: bool = Query(False, description="Run inline (slow) instead of background job"),
-  session: Session = Depends(get_db),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ) -> dict:
   """Pull every wired dataset for all MVP drugs and recompute fusion (cumulative upserts)."""
   if sync:
@@ -815,11 +1139,21 @@ def get_ingest_job(job_id: str) -> dict:
   return job
 
 
+@app.post("/v1/ingest/jobs/{job_id}/cancel")
+def cancel_ingest_job(job_id: str) -> dict:
+  from ingest.jobs import cancel_job
+
+  job = cancel_job(job_id)
+  if not job:
+    raise HTTPException(404, f"Unknown job {job_id}")
+  return job
+
+
 @app.get("/v1/stream/events")
 def list_stream_events(
   limit: int = Query(50, ge=1, le=500),
   after_id: int = Query(0, ge=0),
-  session: Session = Depends(get_db),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ) -> dict:
   """REST replay of append-only event_ledger (CDC cursor substitute)."""
   rows = stream_ledger.recent_events(session, limit=limit, after_id=after_id)
@@ -836,7 +1170,7 @@ def stream_ingest_tick(
   drug_id: str | None = Query(None),
   ae_term_id: str | None = Query(None),
   summary: str | None = Query(None),
-  session: Session = Depends(get_db),
+  session: Session = Depends(get_db),  # noqa: B008 -- FastAPI DI requires call-in-default
 ) -> dict:
   """Append a synthetic ledger event and broadcast to WS subscribers."""
   settings = get_settings()
@@ -858,12 +1192,12 @@ def stream_ingest_tick(
     "drug_id": drug_id,
     "ae_term_id": ae_term_id,
     "model_version": settings.model_version,
-    "ts": __import__("datetime").datetime.utcnow().isoformat() + "Z",
+    "ts": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
   }
   entity_key = f"{drug_id or 'na'}|{ae_term_id or 'na'}|{payload['ts']}"
   row = stream_ledger.append_event(
     session,
-    source=source,
+    source=(source or "demo_worker")[:64],
     entity_key=entity_key,
     payload=payload,
     event_type="ingest_tick",
@@ -905,7 +1239,7 @@ async def websocket_stream(ws: WebSocket):
             data = {"type": "raw", "text": msg}
           if data.get("type") == "ping":
             await ws.send_text(json.dumps({"type": "pong"}))
-      except asyncio.TimeoutError:
+      except TimeoutError:
         await ws.send_text(json.dumps({"type": "heartbeat"}))
   except WebSocketDisconnect:
     pass
